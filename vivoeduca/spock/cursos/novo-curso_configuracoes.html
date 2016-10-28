@@ -34,8 +34,8 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="../resources/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#FFFFFF">
-    <link rel="shortcut icon" sizes="57x57" href="../resources/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" sizes="57x57" href="../resources/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../resources/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../resources/favicon/favicon.ico" type="image/x-icon">
   </head>
   <body class="crud-form skip-step">
     <aside>
@@ -48,7 +48,7 @@
       <h1>Novo curso:&nbsp;<span class="active slice-title">Introdução aos ingredientes coringas dentro da cozinha e das opções artesanais em nossa vida e cotidiano Árabe</span></h1>
     </section>
     <!-- MAIN-->
-    <section class="main-content main-margin">
+    <section class="main-content main-margin crumb-margin">
       <div class="feedback-msg alert-msg">
         <h3>Se preferir, você pode ajustar suas configurações depois.</h3>
         <p>Lembre-se que as configurações são obrigatórias para a publicação do curso, então em um outro momento você vai precisar atualizar as configurações para que seu curso possa ser publicado.</p>
@@ -65,6 +65,10 @@
         <textarea class="input aula-descricao characterCount" id="aula-descricao" maxlength="240" placeholder="Recomendamos que você estruture sua descrição do seu curso para que os alunos possam se interessar pelo conteúdo."></textarea><span class="counter aula-descricao"></span>
         <h2>Selecione até 3 tags relevantes desse conteúdo</h2>
         <p>As tags são importantes para a busca e oferecimento de novos cursos aos alunos.</p>
+        <div class="feedback-msg tags-over">
+          <h3>Você já selecionou 3 tags,</h3>
+          <p>o máximo permitido por curso. Você pode reordenar as tags, ativando ou não para ajustar as configurações do curso.</p>
+        </div>
         <div class="tags--container radio-img" id="res-tags">
           <!-- tags-->
           <input type="checkbox" name="res-tags" id="tags_1" value="Receitas fáceis">

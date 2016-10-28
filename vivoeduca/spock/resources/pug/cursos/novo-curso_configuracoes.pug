@@ -20,7 +20,7 @@ html(lang='pt-br')
                 span.active.slice-title Introdução aos ingredientes coringas dentro da cozinha e das opções artesanais em nossa vida e cotidiano Árabe
 
         // MAIN
-        section.main-content.main-margin
+        section.main-content.main-margin.crumb-margin
             .feedback-msg.alert-msg
                 h3 Se preferir, você pode ajustar suas configurações depois.
                 p Lembre-se que as configurações são obrigatórias para a publicação do curso, então em um outro momento você vai precisar atualizar as configurações para que seu curso possa ser publicado.
@@ -45,6 +45,11 @@ html(lang='pt-br')
 
                 h2 Selecione até 3 tags relevantes desse conteúdo
                 p As tags são importantes para a busca e oferecimento de novos cursos aos alunos.
+
+                .feedback-msg.tags-over
+                    h3 Você já selecionou 3 tags,
+                    p o máximo permitido por curso. Você pode reordenar as tags, ativando ou não para ajustar as configurações do curso.
+
                 .tags--container.radio-img(id='res-tags')
                     // tags
                     input(type='checkbox', name='res-tags' id='tags_1', value='Receitas fáceis')

@@ -45,7 +45,8 @@
 // large screens
 @media (min-width: 1280px) {
 	.grid-cards a,
-	.grid-cards a:visited {
+	.grid-cards a:visited,
+ 	.grid-cards.cards--categorias .cards {
 		width: 18.60%;
 	}
 }
