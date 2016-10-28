@@ -1,0 +1,63 @@
+// main: ../main.scss
+
+a.pending {
+	color: $red;
+	border-bottom: 2px solid rgba(255, 0, 80, 0.16);
+
+	&:hover {
+		border-color: $red;
+		color: $theblack;
+	}
+}
+
+.pending {
+	border-bottom: 2px solid rgba(255, 0, 80, 0.16) !important;
+}
+
+.feedback-msg {
+	background-color: rgba(255, 0, 80, 0.2);
+	width: 100%;
+	margin-bottom: 32px;
+	padding: 20px;
+
+	h3 {
+		color: $red;
+	}
+
+	ul {
+		padding-left: 20px;
+
+		li {
+			margin-bottom: 12px;
+			font-size: 1em;
+			color: $theblack;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.success-msg {
+	background-color: $success;
+}
+
+.alert-msg {
+	background-color: rgba(255, 153, 0, 0.12);
+
+	h3 {
+		color: rgba(255, 153, 0, 0.96);
+	}
+}
+
+.sidemodal__main-content {
+	h2, h3 {
+		color: $red;
+	}
+
+	.feedback-msg {
+		margin: 12px 0 32px;
+		font-size: 0.88em;
+	}
+}

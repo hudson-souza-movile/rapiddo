@@ -1,0 +1,38 @@
+// Navigation
+nav
+    ul.primary-nav
+        li
+            a.active(href='../cursos/list-publicados.html') Cursos
+        li
+            a(href='../cursos/list-drafts.html') - drafts
+        li
+            a(href='../cursos/detalhes-curso_novo.html') - detalhes (new)
+        li
+            a(href='../cursos/detalhes-curso.html') - detalhes (publicar)
+        li
+            a(href='../cursos/detalhes-curso_review.html') - detalhes (error)
+        li
+            a(href='../cursos/detalhes-curso_publicado.html') - detalhes (done!)
+        li
+            a(href='../cursos/revisar-curso.html') / - revisar
+        li
+            a(href='../cursos/editar.html') / - editar
+        li
+            a(href='../cursos/configuracoes.html') / - configuracoes
+        li
+            a.active(href='../aulas/index.html') Aulas
+        li
+            a(href='../aulas/nova-aula.html') / - nova aula (upload)
+        li
+            a(href='../aulas/editar.html') / - editar
+        li
+            a(href='../guideline/index.html') Guideline
+
+    // User details
+    .user-sidebar
+        .user-sidebar--avatar
+            img(src='../resources/img/logo-parceiro.png', alt='$Nome do Parceiro$')
+        .user-sidebar--details
+            | $Nome do Parceiro - Ensino e Educação à Distância$
+        .user-sidebar--logout
+            a(href='../logout.html') Sair do sistema

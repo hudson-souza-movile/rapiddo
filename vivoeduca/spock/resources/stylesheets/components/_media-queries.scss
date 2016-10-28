@@ -1,0 +1,86 @@
+// main: ../main.scss
+
+.mobile-only {
+	background-color: $accent;
+
+	.info {
+		display: block;
+		position: fixed;
+		z-index: 20;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 24px;
+		line-height: 1.375rem;
+		font-size: 1.125rem;
+		color: #FFF;
+	}
+}
+
+.upper-bar,
+.main-content {
+	display: none;
+}
+
+// tablets
+@media (min-width: 768px) {
+	.mobile-only {
+		background-color: #FFF;
+
+		.info {
+			display: none;
+		}
+	}
+
+	.info {
+		display: none;
+	}
+
+	.upper-bar,
+	.main-content {
+		@include flex;
+	}
+}
+
+// large screens
+@media (min-width: 1280px) {
+	.grid-cards a,
+	.grid-cards a:visited {
+		width: 18.60%;
+	}
+}
+
+// space
+@media (min-width: 1920px) {
+	aside,
+	.crumb-bar__cta.left {
+		width: 320px;
+	}
+
+	.upper-bar,
+	.main-content {
+		width: calc(100% - 320px);
+		margin-left: 320px;
+	}
+
+	#crumb-bar {
+		.primary-nav {
+			margin-left: 320px;
+		}
+	}
+
+	body.details {
+		.main-content {
+			margin-left: 320px;
+		}
+
+		.grade-aulas {
+			margin-top: 32px;
+		}
+	}
+
+	.grid-cards a,
+	.grid-cards a:visited {
+		width: 15.8%;
+	}
+}

@@ -1,0 +1,33 @@
+doctype html
+html(lang='pt-br')
+    head
+        include ../includes/head.pug
+
+    body.mobile-only
+        aside
+            .logo
+                a(href='../cursos/index.html')
+                    img.blue(src='../resources/img/logo-vivo_educa.png', alt='Vivo Educa')
+
+            include ../includes/aside-menu.pug
+
+
+        // MOBILE ALERT
+        .info
+            | Por favor, acesse pelo seu desktop ou notebook.
+
+        // UPPER BAR
+        section.upper-bar
+            h1 Guideline e recomendação de conteúdo
+
+        // MAIN
+        section.main-content.main-margin.index
+            h2 Resumo do produto
+            h3 Vídeos
+            h3 Imagens
+            h2 Materiais de apoio
+            h3 PDF
+            h3 XLS
+            h3 MP3
+
+        include ../includes/footer.pug

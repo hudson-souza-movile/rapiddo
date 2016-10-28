@@ -1,0 +1,94 @@
+// main: ../main.scss
+
+#crumb-bar {
+	position: fixed;
+	z-index: 20;
+	bottom: 0;
+	left: 0;
+	background-color: $accent-hover;
+	width: 100%;
+	font-size: 0.88rem;
+	@include box-shadow (-4px 0 12px $lighter-gray);
+
+	.primary-nav {
+		margin-left: 200px;
+		padding-left: 36px;
+
+		a {
+			font-size: 1em;
+			color: $accent-lighter;
+			border-bottom: 2px solid transparent;
+
+			&.active,
+			&:hover {
+				border-color: $accent;
+				color: $accent;
+			}
+		}
+
+		& li {
+			position: relative;
+			float: left;
+			padding: 24px 20px 18px 8px;
+			color: $theblack;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			&::after {
+				content: "";
+				position: absolute;
+				width: 12px;
+				height: 12px;
+				top: calc(50% - 3px);
+				right: 0;
+				background: url('../img/icons/arrow-right-purple.png') center center no-repeat;
+				background-size: 12px;
+			}
+
+			&:last-child::after {
+				background: none;
+			}
+		}
+	}
+}
+
+.crumb-bar__cta {
+	cursor: pointer;
+	background-color: $sidebar;
+	border: 0;
+	height: 58px;
+	padding: 18px 24px;
+	font-family: $base-font;
+	font-size: 1em;
+	color: $ice-white;
+	text-align: right;
+
+	&.right {
+		float: right;
+		background-color: $green;
+	}
+
+	&.left {
+		float: left;
+		width: 200px;
+		text-align: left;
+	}
+
+	&.gray {
+		background-color: $main-gray;
+	}
+
+	&:hover {
+		background-color: $accent;
+
+		&.left {
+			background-color: $accent-pressed;
+		}
+
+		&.right {
+			background-color: $green-hover;
+		}
+	}
+}

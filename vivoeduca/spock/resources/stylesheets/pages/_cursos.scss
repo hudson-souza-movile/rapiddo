@@ -1,0 +1,399 @@
+// main: ../main.scss
+
+.grid-cards {
+	width: 100%;
+	margin: 0 -8px;
+	line-height: 1.125rem;
+	font-size: 0.824rem;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	@include flex;
+
+	.main-label {
+		margin-bottom: 8px;
+		color: rgba(55, 71, 79, 0.32);
+	}
+
+	.cards {
+		background-color: #FFF;
+		border: 1px solid rgba(55, 71, 79, 0.08);
+
+		.cards--details {
+			h1 {
+				height: 80px;
+				overflow-y: hidden;
+				margin: 12px;
+				font-size: 1rem;
+				color: $theblack;
+			}
+
+			h2 {
+				display: inline-block;
+		        background-color: $accent;
+		        margin: 0 12px;
+		        padding: $padding-button;
+		        font-size: 0.72rem;
+		        font-weight: $bold;
+		        color: #FFF;
+				text-transform: uppercase;
+		    }
+
+			span {
+				display: block;
+				margin: 8px 12px 12px;
+				color: $main-gray;
+
+				&.premium {
+					font-weight: $bold;
+					color: $accent;
+				}
+			}
+		}
+	}
+}
+
+// cover
+.cards--cover {
+	position: relative;
+	border-bottom: 1px solid $lighter-gray;
+	margin: 0;
+
+	img {
+		max-width: 100%;
+		height: auto;
+		@include flex;
+	}
+
+	span {
+		position: absolute;
+		z-index: 10;
+		right: 12px;
+		bottom: 12px;
+		background-color: rgba(55, 71, 79, 0.64);
+		padding: $padding-button;
+		color: #FFF;
+
+		&.degustacao {
+			background-color: rgba(16, 164, 65, 0.72);
+			left: 0;
+		}
+	}
+}
+
+.banner {
+	width: 560px;
+
+	.cards--cover {
+		img {
+			@include img-grayscale (100%, 0.16);
+		}
+
+		&.preview {
+			img {
+				@include img-grayscale (0%, 1);
+			}
+		}
+
+		span {
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 24px;
+			font-size: 2em;
+		}
+	}
+}
+
+// link
+.grid-cards a,
+.grid-cards a:visited {
+	width: 22.8%;
+	margin: 24px 8px;
+	flex-flow: row wrap;
+	align-content: flex-start;
+	@include flex;
+
+	.main-label__number {
+		display: block;
+		background-color: $lighter-gray;
+		width: 32px;
+		height: 32px;
+		margin: auto;
+		margin-bottom: 12px;
+		line-height: 32px;
+		text-align: center;
+		@include border-radius (50%);
+	}
+
+	&:hover,
+	&:active {
+		.main-label {
+			color: $theblack;
+		}
+
+		.cards,
+		.cards--cover {
+			border-color: rgba(55, 71, 79, 0.24);
+		}
+
+		.cards {
+			@include box-shadow (0 0 12px 0 rgba(55, 71, 79, 0.12));
+		}
+
+		.cards--details {
+			h1 {
+				color: $accent;
+			}
+
+			span {
+				color: $theblack;
+
+				&.has-icon {
+					color: #FFF;
+
+					&:hover,
+					&:active {
+						color: #FFF;
+					}
+				}
+			}
+		}
+
+		.main-label__number {
+			background-color: rgba(55, 71, 79, 0.08);
+		}
+	}
+}
+
+// material de apoio
+.cards--details__apoio {
+	padding: 0 12px;
+
+	.main-label {
+		text-transform: uppercase;
+	}
+
+	ul {
+		margin-bottom: 12px;
+		padding: 0;
+		justify-content: flex-start;
+		@include flex;
+
+		li {
+			display: inline-block;
+			background-color: rgba(55, 71, 79, 0.08);
+			width: 32px;
+			height: 32px;
+			margin-right: 12px;
+
+			span {
+				display: block;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 64%;
+				width: 32px;
+				height: 32px;
+				margin: 0 !important;
+				padding: 0;
+				opacity: 0.24;
+				//check _icons.scss
+			}
+
+			&.checked {
+				background-color: $accent;
+
+				span {
+					opacity: 1;
+					//check _icons.scss
+				}
+			}
+		}
+	}
+}
+
+// publicados
+.cursos-publicados a,
+.cursos-publicados a:active {
+	.cards {
+		background-color: $accent-hover;
+	}
+
+	&:hover,
+	&:active {
+		.cards {
+			background-color: #FFF;
+		}
+	}
+}
+
+
+// drafts
+.cursos-drafts a,
+.cursos-drafts a:visited {
+	* {
+		opacity: 0.88;
+	}
+
+	&:hover,
+	&:active {
+		* {
+			opacity: 1;
+		}
+	}
+}
+
+// crud
+.grid-cards a.crud,
+.grid-cards a.crud:visited {
+	.cards--details h1 {
+		color: rgba(55, 71, 79, 0.04);
+	}
+
+	.cards--cover img {
+		@include img-grayscale (100%, 0.16);
+	}
+
+	.main-label {
+		margin: -3px auto 8px;
+		color: #FFF;
+	}
+
+	&:hover,
+	&:active {
+		h1 {
+			color: rgba(55, 71, 79, 0.24);
+		}
+
+		.main-label {
+			color: #FFF;
+		}
+	}
+
+	.cards--details__apoio ul li {
+		background-color: rgba(55, 71, 79, 0.04);
+	}
+}
+
+// detalhes
+body.details {
+	.main-margin {
+		h3 {
+			margin-top: 32px;
+
+			span {
+				border-bottom: 2px solid $lighter-gray;
+
+				&.premium {
+					border-color: $accent;
+					color: $accent;
+				}
+			}
+		}
+	}
+
+	.grade-curricular {
+		&:after {
+			display: none;
+		}
+
+		h2 {
+			color: $accent;
+		}
+	}
+
+	.gray-bg {
+		padding-bottom: 72px;
+	}
+}
+
+body.details {
+	.grid-cards a,
+	.grid-cards a:visited {
+		.click-sidemodal {
+			span.has-icon {
+				border: 1px solid rgba(255, 0, 80, 0.16);
+				margin: 8px auto 12px;
+				padding: $padding-button;
+				padding-left: 32px;
+				color: $lighter-gray;
+
+				&.left {
+					&:after {
+						left: 12px;
+					}
+				}
+
+				&:hover,
+				&:active {
+					background-color: $red;
+					color: #FFF;
+
+					&:after {
+						background-image: url('../img/icons/edit.png');
+					}
+				}
+			}
+		}
+	}
+}
+
+// Tags
+.tags-over {
+	display: none;
+	width: 480px;
+}
+
+
+// Index
+.main-content.index {
+	h3 {
+		margin-top: 32px;
+	}
+}
+
+// Revisão
+.re-check {
+	.feedback-msg {
+		p {
+			margin: 0;
+		}
+	}
+
+	.grade-curricular {
+		margin-bottom: 80px;
+	}
+}
+
+.check-content {
+	margin-bottom: 32px;
+
+	.main-label {
+		margin-top: 24px;
+		color: $main-gray;
+	}
+
+	.hours {
+		margin-top: 16px;
+		color: $main-gray;
+	}
+
+}
+
+.check-content.grids {
+	flex-flow: row nowrap;
+	align-items: flex-start;
+	@include flex;
+
+	.radio-img {
+		width: 280px;
+		margin: 0 24px 0 0;
+
+		label {
+			position: relative;
+			width: 100%;
+			margin: 0;
+			justify-content: space-between;
+		}
+	}
+}

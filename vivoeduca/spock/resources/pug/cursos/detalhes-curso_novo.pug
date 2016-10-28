@@ -1,0 +1,98 @@
+doctype html
+html(lang='pt-br')
+    head
+        include ../includes/head.pug
+
+    body.mobile-only.details
+        // SIDEMODAL
+        div.sidemodal__bg
+        aside#sidemodal
+            .sidemodal__wrapper
+                a.back-btn.main-label.has-icon-left.icon-arrow-left(href='#') Voltar
+                h1 Pendências do curso
+                .sidemodal__main-content
+                    h2 Revisar Configurações
+                    .feedback-msg
+                        ul
+                            li Envie uma imagem como banner desse curso.
+                            li Descreva o conteúdo do curso.
+                            li Selecione ao menos 1 tag para esse conteúdo.
+                            li Ajuste a carga horária desse curso.
+
+                    h3 Seu curso precisa ter no mínimo 3 aulas cadastradas.
+
+        aside
+            .logo
+                a(href='index.html')
+                    img.blue(src='../resources/img/logo-vivo_educa.png', alt='Vivo Educa')
+
+            include ../includes/aside-menu.pug
+
+
+        // MOBILE ALERT
+        .info
+            | Por favor, acesse pelo seu desktop ou notebook.
+
+        // UPPER BAR
+        section.upper-bar
+            h1 Introdução aos ingredientes coringas dentro da cozinha e das opções artesanais em nossa vida e cotidiano Árabe
+
+            .upper-bar__status
+                // PENDING
+                a.pending.click-sidemodal(href='#') Existem pendências para a publicação desse curso.
+
+            .upper-bar__actions
+                a(href='editar.html')
+                    span.has-icon.left.icon-edit-black Editar
+                a.pending(href='configuracoes.html')
+                    span.has-icon.left.icon-settings Configurações
+
+
+        // MAIN
+        section.main-content.main-margin
+            h2 Descrição do seu curso
+            p.pending Editar sua descrição, revise suas configurações.
+
+            h3 Curso de Gastronomia&nbsp;
+                span.premium premium
+                | , com duração de&nbsp;
+                span.pending (revise suas configurações)
+                | .
+
+        // GRADE
+        section.main-content
+            h2 Grade curricular
+
+            .grid-cards.cards--aulas
+                // cards cursos (nova aula)
+                a.crud(href='../aulas/nova-aula.html')
+                    // cta button
+                    .main-label.main-label__cta.cta.floating-cta
+                        span.has-icon.right.icon-plus Nova aula
+
+                    .cards
+                        // cover
+                        .cards--cover
+                            img(src='../resources/img/categorias/gastronomia.png', alt='Categoria do curso')
+
+                        // detalhes
+                        .cards--details
+                            h1 Cadastre uma nova aula para esse curso
+
+                            .cards--details__apoio
+                                .main-label
+                                    | Material de Apoio
+
+                                ul
+                                    li
+                                    li
+                                    li
+
+            p.pending Seu curso precisa ter no mínimo 3 aulas cadastradas.
+
+        // DRAFT
+        section.main-content.gray-bg
+            h2 Aulas Ao Vivo
+            p No momento, estamos configurando e ajustando o melhor formato para oferecer esse conteúdo aos nossos usuários. Em caso de dúvidas, por favor entre em contato para mais informações.
+
+        include ../includes/footer.pug

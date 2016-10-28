@@ -1,0 +1,111 @@
+// main: ../main.scss
+
+.upper-bar,
+.main-content {
+	position: relative;
+	background-color: $accent-hover;
+	width: calc(100% - 200px);
+	margin-left: 200px;
+	padding: 0 36px;
+	justify-content: space-between;
+	align-items: center;
+
+	h1 {
+		color: $accent;
+		line-height: 1.3;
+
+		span {
+			color: $lighter-gray;
+
+			&.active {
+				color: $theblack;
+			}
+		}
+	}
+}
+
+.upper-bar {
+	position: fixed;
+	top: 0;
+	z-index: 30;
+	height: 80px;
+	@include box-shadow (4px 0 12px $lighter-gray);
+}
+
+.upper-bar:after {
+	position: absolute;
+	z-index: 30;
+	content: "";
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #37474f;
+	background-color: rgba(55, 71, 79, 0.16);
+}
+
+
+// DETAILS
+.details {
+	.upper-bar {
+		height: auto;
+		padding: 24px 36px;
+		justify-content: flex-start;
+		flex-flow: row wrap;
+
+		h1,
+		h2,
+		.upper-bar__actions {
+			order: 2;
+			margin-top: 16px;
+		}
+
+		.upper-bar__actions {
+			width: 100%;
+			order: 3;
+		}
+
+		h1 {
+			width: 100%;
+			height: 62px;
+			overflow-y: hidden;
+		}
+
+		h2 {
+			width: auto;
+		}
+
+		a.cta {
+			order: 1;
+		}
+	}
+
+	.upper-bar__actions,
+	.upper-bar__status {
+		flex-flow: row wrap;
+		@include flex;
+	}
+
+	.upper-bar__status {
+		width: 100%;
+		justify-content: flex-end;
+	}
+
+	.upper-bar__actions {
+		a,
+		a:visited {
+			border-bottom: 2px solid transparent;
+			margin-right: 32px;
+			padding-bottom: 4px;
+			font-weight: $regular;
+			color: $theblack;
+			opacity: 0.48;
+
+			&:hover,
+			&:active {
+				border-color: $lighter-gray;
+				opacity: 1;
+			}
+		}
+	}
+}

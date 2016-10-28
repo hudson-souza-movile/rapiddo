@@ -1,0 +1,125 @@
+doctype html
+html(lang='pt-br')
+    head
+        include ../includes/head.pug
+
+    body.crud-form.skip-step
+        aside
+            .logo
+                a(href='index.html')
+                    img.blue(src='../resources/img/logo-vivo_educa.png', alt='Vivo Educa')
+
+
+        // MOBILE ALERT
+        .info
+            | Por favor, acesse pelo seu desktop ou notebook.
+
+        // UPPER BAR
+        section.upper-bar
+            h1 Novo curso:&nbsp;
+                span.active.slice-title Introdução aos ingredientes coringas dentro da cozinha e das opções artesanais em nossa vida e cotidiano Árabe
+
+        // MAIN
+        section.main-content.main-margin
+            .feedback-msg.alert-msg
+                h3 Se preferir, você pode ajustar suas configurações depois.
+                p Lembre-se que as configurações são obrigatórias para a publicação do curso, então em um outro momento você vai precisar atualizar as configurações para que seu curso possa ser publicado.
+
+            form(name='aula-nova', id='aula-nova-form', method='POST')
+                h2 Banner de destaque do curso
+                .upload--container.banner
+                    input(type='file', id='curso-banner', accept='.jpg, .png')
+                    label.cta.floating-cta(for='curso-banner')
+                        span.has-icon.right.icon-close Selecionar outra imagem
+
+                    .cards--cover.preview(style='display: none')
+                        span Ingredientes coringas na cozinha australiana, muita comida exótica
+                        img(src='../resources/img/categorias/gastronomia.png', alt='')
+                    p Sua imagem precisa ter uma resolução de 1280x720 (com largura mínima de 640 pixels), nos formatos como .JPG ou .PNG. Qualquer dúvida, consulte nosso&nbsp;
+                        a(href='../guideline/index.html') guideline
+                        | .
+
+                h2 Descrição do conteúdo
+                textarea(id='aula-descricao', maxlength='240', class='input aula-descricao characterCount', placeholder='Recomendamos que você estruture sua descrição do seu curso para que os alunos possam se interessar pelo conteúdo.')
+                span.counter.aula-descricao
+
+                h2 Selecione até 3 tags relevantes desse conteúdo
+                p As tags são importantes para a busca e oferecimento de novos cursos aos alunos.
+                .tags--container.radio-img(id='res-tags')
+                    // tags
+                    input(type='checkbox', name='res-tags' id='tags_1', value='Receitas fáceis')
+                    label.cards(for='tags_1')
+                        span.has-icon.left.icon-plus-gray Receitas fáceis
+
+                    // tags
+                    input(type='checkbox', name='res-tags' id='tags_2', value='Receitas intermediárias')
+                    label.cards(for='tags_2')
+                        span.has-icon.left.icon-plus-gray Receitas intermediárias
+
+                    // tags
+                    input(type='checkbox', name='res-tags' id='tags_3', value='Receitas difíceis')
+                    label.cards(for='tags_3')
+                        span.has-icon.left.icon-plus-gray Receitas difíceis
+
+                    // tags
+                    input(type='checkbox', name='res-tags' id='tags_4', value='Confeitaria')
+                    label.cards(for='tags_4')
+                        span.has-icon.left.icon-plus-gray Confeitaria
+
+                    // tags
+                    input(type='checkbox', name='res-tags' id='tags_5', value='Carnes')
+                    label.cards(for='tags_5')
+                        span.has-icon.left.icon-plus-gray Carnes
+
+                    // tags
+                    input(type='checkbox', name='res-tags' id='tags_6', value='Panificação')
+                    label.cards(for='tags_6')
+                        span.has-icon.left.icon-plus-gray Panificação
+
+                    // tags
+                    input(type='checkbox', name='res-tags' id='tags_7', value='Bebidas')
+                    label.cards(for='tags_7')
+                        span.has-icon.left.icon-plus-gray Bebidas
+
+                .feedback-msg.tags-over
+                    h3 Você já selecionou 3 tags,
+                    p o máximo permitido por curso. Você pode reordenar as tags, ativando ou não para ajustar as configurações do curso.
+
+                h2 Carga horária
+                .select-box.input
+                    select
+                        option(value='1hr') 1 hora
+                        option(value='2hr') 2 horas
+                        option(value='3hr') 3 horas
+                        option(value='4hr') 4 horas
+                        option(value='5hr') 5 horas
+                        option(value='6hr') 6 horas
+                        option(value='7hr') 7 horas
+                        option(value='8hr') 8 horas
+                        option(value='9hr') 9 horas
+                        option(value='10hr') 10 horas
+                        option(value='11hr') 1 horas
+                        option(value='12hr') 12 horas
+                        option(value='13hr') 13 horas
+                        option(value='14hr') 14 horas
+                        option(value='15hr') 15 horas
+                        option(value='16hr') 16 horas
+
+        // CRUM-BAR
+        #crumb-bar
+            button.crumb-bar__cta.left
+                span.has-icon.left.icon-close Fechar
+
+            ul.primary-nav
+                li
+                    a(href='list-publicados.html') Cursos
+                li
+                    a.active(href='list-publicados.html') Novo curso
+                li.slice-title Ingredientes coringas na cozinha australiana, muita comida exótica
+
+            button.crumb-bar__cta.right.gray
+                span.has-icon.right.icon-continue Pular
+
+        include ../includes/footer.pug
+        script(type='text/javascript', src='../resources/js/crud.js')
+        script(type='text/javascript', src='../resources/js/character-count.js')

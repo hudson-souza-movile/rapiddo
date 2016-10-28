@@ -1,0 +1,218 @@
+// main: ../main.scss
+
+// UPLOAD
+.upload--container {
+	margin-bottom: 32px;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	@include flex;
+
+	input[type='file'] {
+		position: absolute;
+		z-index: -1;
+		display: none;
+		overflow: hidden;
+	}
+
+	label {
+		background-color: $main-gray;
+		border: 0;
+		margin: 8px 0 12px;
+		text-transform: none;
+		cursor: pointer;
+
+		&:hover {
+			background-color: rgba(102, 0, 153, 0.84);
+			@include box-shadow (0px 0px 8px 0px rgba(102, 0, 153, 0.64));
+		}
+
+		span.icon-close {
+			padding-right: 32px;
+		}
+	}
+
+	p {
+		color: $main-gray;
+	}
+}
+
+.input {
+	border: 1px solid $main-gray;
+	font-size: 1.125rem;
+	color: $accent;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:focus {
+		border-color: $accent;
+		color: $accent-pressed;
+	}
+}
+
+span.counter {
+	margin: 8px 0 24px;
+	font-size: 0.96rem;
+	color: $main-gray;
+	justify-content: flex-end;
+	@include flex;
+}
+
+.select-box {
+	width: 160px;
+
+	select {
+		background: transparent;
+		border: 0;
+		width: 100%;
+		height: auto;
+		font-size: 0.88em;
+		color: $accent;
+	}
+}
+
+// CRUD
+.radio-img {
+	width: 640px;
+	margin: 12px 0 32px;
+	cursor: pointer;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	@include flex;
+
+	input[type='radio'],
+	input[type='checkbox'] {
+		display: none;
+	}
+
+	label {
+		background-color: #FFF;
+		border: 1px solid rgba(55, 71, 79, 0.08);
+		width: 48%;
+		padding: 12px;
+		opacity: 0.32;
+		cursor: pointer;
+		flex-flow: column nowrap;
+		@include flex;
+
+		.cta {
+			background-color: $main-gray;
+			margin-top: 12px;
+		}
+
+		&:hover {
+			opacity: 1;
+			@include box-shadow (0 0 12px 0 rgba(55, 71, 79, 0.12));
+
+			h3,
+			.cards--details h1 {
+				color: $accent;
+			}
+
+			.cta {
+				background-color: $accent;
+				@include box-shadow (0px 0px 8px 0px rgba(102, 0, 153, 0.64));
+			}
+		}
+	}
+}
+
+.radio-img input:checked+label {
+	border-color: rgba(55, 71, 79, 0.24);
+	color: $accent;
+	opacity: 1;
+	@include box-shadow (0 0 12px 0 rgba(55, 71, 79, 0.12));
+
+	.cta {
+		background-color: $accent;
+		@include box-shadow (0px 0px 8px 0px rgba(102, 0, 153, 0.64));
+	}
+
+	p {
+		color: $accent;
+	}
+}
+
+.radio-img label {
+	&:hover {
+		.cards--cover {
+			&:after {
+				content: '';
+				@include purple-bg;
+			}
+		}
+	}
+}
+
+.cards--categorias.radio-img input:checked+label {
+	background-color: $accent;
+
+	.cards--details h1 {
+		color: #FFF;
+	}
+
+	.cards--cover {
+		&:after {
+			content: '';
+			@include purple-bg;
+		}
+	}
+}
+
+
+// Categorias
+.grid-cards.cards--categorias {
+	width: 100%;
+
+	.cards {
+		width: 22.8%;
+		margin: 12px 8px 0;
+		padding: 0;
+
+		.cards--details {
+			h1 {
+				height: 40px;
+			}
+		}
+	}
+}
+
+.cards--details_hauto {
+	height: auto !important;
+}
+
+// Tags
+.tags--container {
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	@include flex;
+
+	label {
+		width: auto;
+		margin: 0 20px 20px 0;
+		opacity: 1;
+
+		&:hover {
+			color: $accent;
+
+			.icon-plus-gray {
+				&:after {
+					background-image: url('../img/icons/arrow-right-purple.png');
+				}
+			}
+		}
+	}
+}
+
+.tags--container input:checked+label {
+	background-color: $accent;
+	color: #FFF;
+	@include box-shadow (0px 0px 8px 0px rgba(102, 0, 153, 0.64));
+
+	.icon-plus-gray {
+		&:after {
+			background-image: url('../img/icons/check.png');
+		}
+	}
+}

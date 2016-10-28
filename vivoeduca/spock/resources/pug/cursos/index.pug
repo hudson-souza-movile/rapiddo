@@ -1,0 +1,38 @@
+doctype html
+html(lang='pt-br')
+    head
+        include ../includes/head.pug
+
+    body.mobile-only
+        aside
+            .logo
+                a(href='index.html')
+                    img.blue(src='../resources/img/logo-vivo_educa.png', alt='Vivo Educa')
+
+            include ../includes/aside-menu.pug
+
+
+        // MOBILE ALERT
+        .info
+            | Por favor, acesse pelo seu desktop ou notebook.
+
+        // UPPER BAR
+        section.upper-bar
+            h1 Bem vindo a nossa plataforma de conteúdo.
+            a.cta.floating-cta(href='novo-curso.html')
+                span.has-icon.right.icon-plus Novo curso
+
+        // MAIN
+        section.main-content.main-margin.index
+            h2 Você não possui nenhum curso cadastrado até o momento.
+            h3 Vamos começar?
+            p Para criar um novo curso, você precisa clicar no botão&nbsp;
+                strong "Novo Curso"
+                |  a sua direita, no canto superior e preenhcer as informações do seu conteúdo.
+
+        // #HASHTAG
+        section.main-content.hashtag
+            h2 #GoVivoEduca
+            p Queremos oferecer a melhor experiência à você por aqui, qualquer dúvida ou sugestão, nos procure.
+
+        include ../includes/footer.pug
