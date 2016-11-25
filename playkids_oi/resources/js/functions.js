@@ -22,6 +22,7 @@ $(document).ready(function() {
 
         } else if (isMobile.iOS()) {
             $('.help-android').hide();
+            $('.help-ios').show();
 
         } else {
             $('.help-ios').hide();
