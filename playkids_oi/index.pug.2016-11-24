@@ -1,0 +1,90 @@
+doctype html
+html(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title PlayKids Oi - Ajuda para iniciar os 3 meses grátis Oi Pós Pago
+
+        // CSS
+        link(rel='stylesheet', href='resources/css/main.css')
+
+        // FAVICON
+        link(rel='icon', type='image/x-icon', href='resources/images/favicon.ico')
+
+    body
+        #container
+            section.brand
+                .playkids
+                    img(src='resources/images/logo-pk.png', alt='PlayKids')
+                .oi
+                    img(src='resources/images/logo-oi.png', alt='Oi Pós Pago')
+
+            #help
+                #help--android
+                    .cards.cards-start
+                        h1 Parabéns! Agora você tem uma conta PlayKids Premium!
+                        h2 Siga as instruções de como&nbsp;
+                            span baixar o app e ganhar 3 MESES GRÁTIS
+                            |  que a Oi reservou para você curtir com toda sua família!
+
+                        .nav
+                            a(href='#') Começar &#10230;
+
+                    .cards.cards-1
+                        p Para começar, você precisa instalar o aplicativo em seu telefone ou tablet.
+                        .app
+                            img(src='resources/images/logo-pk_app.png', alt='PlayKids')
+                            h3 PlayKids
+                            p Vídeos e jogos educativos para crianças e bebês aprenderem brincando
+                            a(href='googleplay', target='_blank').btn-default Baixar e instalar
+
+                        .nav
+                            a(href='#').back &#10229;
+                            a(href='#').next Acessar sua conta &#10230;
+
+                    .cards.cards-2
+                        p Ao acessar o app, você verá a tela para acessar sua conta, como na imagem abaixo.
+                        .screen
+                            img(src='resources/images/ios/IMG_0540.png', alt='')
+                        label Clique em "Já tenho conta"
+
+                        .nav
+                            a(href='#').back &#10229;
+                            a(href='#').next Inserir seu telefone &#10230;
+
+                    .cards.cards-3
+                        p Selecione a opção "Telefone" para acessar sua conta já criada pela Oi.
+                        .screen
+                            img(src='resources/images/ios/IMG_0541.png', alt='')
+                        label Insira seu número para receber o código de confirmação
+
+                        .nav
+                            a(href='#').back &#10229;
+                            a(href='#').next Confirmar PIN &#10230;
+
+                    .cards.cards-4
+                        p Será enviado um SMS ao número informado com o PIN
+                        .screen
+                            img(src='resources/images/ios/IMG_0541.png', alt='')
+                        label Digite o código enviado por mensagem
+
+                        .nav
+                            a(href='#').back &#10229;
+                            a(href='#').next Finalizar &#10230;
+
+                    .cards.cards-5
+                        h1 3 meses grátis liberado!
+                        p Sua conta foi criada com sucesso! Aproveite e curta com sua família durante esse período.
+
+                        .nav
+                            a(href='#').back &#10229;
+                            a(href='#').next Finalizar &#10230;
+
+        .support
+            a(href='mailto:suporte@playkids.com') Precisa de ajuda?
+
+
+        // jQuery & JS FILES
+        script(src='resources/js/jquery-3.1.0.min.js')
+        script(src='resources/js/functions.js')

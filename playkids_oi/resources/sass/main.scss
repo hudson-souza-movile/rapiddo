@@ -1,0 +1,232 @@
+// compileCompressed: ../css/$1.css
+@import "_variables";
+
+* {
+	@include border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	list-style: none;
+}
+
+body {
+	background-color: $blue-pastel;
+	font-family: $base-font;
+	font-size: $base-font-size;
+	color: $base-font-color;
+	text-align: center;
+	line-height: 1.2;
+	-webkit-font-smoothing: antialiased;
+}
+
+a,
+a:visited {
+	border-bottom: 1px solid transparent;
+	color: $purple;
+	text-decoration: none;
+	cursor: pointer;
+	@include transition (0.4s);
+
+	&:hover,
+	&:active {
+		border-color: $purple;
+		color: $theblack;
+	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+h1 {
+	margin-bottom: 1em;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: $purple;
+}
+
+h2 {
+	margin-bottom: 1em;
+	font-size: 1.16em;
+	font-weight: normal;
+	color: $gray-text;
+
+	span {
+		border-bottom: 2px solid $purple;
+		font-weight: bold;
+	}
+}
+
+.btn-default {
+	background-color: $white;
+	border: 1px solid $blue;
+	width: auto;
+	margin: 16px auto;
+	padding: 8px 12px;
+	font-size: 1em;
+	color: $blue;
+	@include flex;
+	@include border-radius (4px);
+
+	&:hover,
+	&:active {
+		border: 1px solid $purple;
+		color: $purple;
+		text-decoration: underline;
+		@include box-shadow (0 4px 8px 0 rgba(35, 82, 124, 0.56));
+	}
+}
+
+
+// CONTAINER
+#container {
+	background-color: $white;
+	padding: 16px;
+}
+
+.brand {
+	.playkids {
+		width: 152px;
+		margin: 16px auto 0;
+	}
+
+	.oi {
+		width: 56px;
+		margin: 16px auto;
+	}
+}
+
+
+// SUPPORT
+#support {
+	padding: 24px;
+
+	a {
+		color: $gray-text;
+	}
+}
+
+
+// HELP
+#help {
+	.help-nav {
+		margin-top: 24px;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		@include flex;
+
+		li {
+			background-color: $gray-lighter;
+			width: 16px;
+			height: 16px;
+			margin: 8px;
+			font-size: 0;
+			color: $gray-lighter;
+			text-align: center;
+			@include border-radius (50%);
+
+			&.active {
+				background-color: $purple;
+				width: 28px;
+				height: 28px;
+				font-size: .88em;
+				font-weight: bold;
+				line-height: 28px;
+				color: #fff;
+			}
+		}
+	}
+}
+
+// Cards
+#cards {
+	min-height: 360px;
+
+	section {
+		min-height: 360px;
+		flex-flow: column wrap;
+		justify-content: space-between;
+		@include flex;
+
+		label {
+			display: block;
+			margin-bottom: 24px;
+			font-size: .88em;
+			color: $gray-text;
+		}
+
+		&.card-one,
+		&.card-two,
+		&.card-three,
+		&.card-four,
+		&.card-five {
+			display: none;
+		}
+	}
+
+
+
+	.slide {
+		font-size: .88em;
+		font-weight: bold;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		@include flex;
+
+		.back {
+			color: $gray-text;
+		}
+	}
+
+	.start {
+		.slide {
+			justify-content: flex-end;
+		}
+	}
+}
+
+.app {
+	font-size: .88em;
+	color: $gray-text;
+	flex-flow: column wrap;
+	@include flex;
+
+	img {
+		width: 80px;
+		margin: auto;
+	}
+
+	h4 {
+		margin: 8px 0;
+	}
+}
+
+.screens img {
+	width: 72%;
+	margin: 24px auto 16px;
+	@include box-shadow (0 0 16px 0 rgba(160, 160, 160, 0.48));
+}
+
+
+// TABLET
+@media (min-width: 768px) {
+	#container {
+		border: 1px solid $gray-lighter;
+		max-width: 960px;
+		margin: 20px;
+		padding: 32px;
+		text-align: center;
+		@include border-radius (8px);
+	}
+}
+
+
+// MEDIUM SCREENS
+@media (min-width: 1024px) {
+	#container {
+		margin: 32px auto;
+		@include border-radius (12px);
+	}
+}
