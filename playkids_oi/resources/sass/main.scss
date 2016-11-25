@@ -125,15 +125,6 @@ h3 {
 		align-items: center;
 		@include flex;
 
-		&:after {
-			content: '';
-			position: absolute;
-			z-index: 1;
-			background-color: $gray-lighter;
-			width: 168px;
-			height: 4px;
-		}
-
 		li {
 			background-color: $gray-lighter;
 			width: 16px;
