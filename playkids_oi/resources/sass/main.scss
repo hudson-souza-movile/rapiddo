@@ -220,6 +220,10 @@ h2 {
 		text-align: center;
 		@include border-radius (8px);
 	}
+
+	.screens img {
+		width: 40%;
+	}
 }
 
 
