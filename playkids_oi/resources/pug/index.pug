@@ -8,156 +8,72 @@ html(lang='pt-br')
 
         // CSS
         link(rel='stylesheet', href='resources/css/main.css')
+        link(rel='stylesheet', href='resources/css/swiper.min.css')
 
         // FAVICON
         link(rel='icon', type='image/x-icon', href='resources/images/favicon.ico')
 
     body
-        #container
+        .container
             section.brand
                 .playkids
                     img(src='resources/images/logo-pk.png', alt='PlayKids')
                 .oi
                     img(src='resources/images/logo-oi.png', alt='Oi Pós Pago')
 
-            #help
-                nav
-                    ul.help-nav
-                        li.active 1
-                        li 2
-                        li 3
-                        li 4
-                        li 5
-                        li 6
+            section.swiper-container
+                .swiper-wrapper
+                    .swiper-slide
+                        h1 Parabéns! Agora você tem uma conta PlayKids Premium!
+                        h2 Siga as instruções de como ativar os&nbsp;
+                            span 3 MESES GRÁTIS
+                            |  que a Oi reservou para você curtir com toda sua família!
+                        .next
+                            | Continuar &#10230;
 
-                .help-android
-                    #cards
-                        section.start
-                            h1 Parabéns! Agora você tem uma conta PlayKids Premium.
-                            h2 A Oi oferece à você&nbsp;
-                                span 3 meses grátis
-                                |  do app para curtir com toda sua família.
-                            h3 Para começar, você precisa baixar e instalar o app em seu aparelho.
-                            .app
-                                img(src='resources/images/logo-pk_app.png', alt='PlayKids')
-                                h4 PlayKids
-                                p Vídeos e jogos educativos para crianças e bebês aprenderem brincando
-                                a(href='https://play.google.com/store/apps/details?id=com.movile.playkids', target='_blank').btn-default Baixar na Google Play
+                    .swiper-slide
+                        h3 Clique em "Já tenho uma conta"
+                        .screens
+                            img(src='resources/images/android/2.png', alt='')
 
-                            .slide
-                                a(href='#').next Se você já instalou, continue &#10230;
+                    .swiper-slide
+                        h3 Clique em "Entrar com telefone"
+                        .screens
+                            img(src='resources/images/android/3.png', alt='')
 
-                        section.card-two
-                            h3 Clique em "Já tenho uma conta"
-                            .screens
-                                img(src='resources/images/android/2.png', alt='')
+                    .swiper-slide
+                        h3 Digite o seu número Oi
+                        .screens
+                            img(src='resources/images/android/4.png', alt='')
 
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Continuar &#10230;
+                    .swiper-slide
+                        h3 Insira o código que você vai receber por SMS
+                        .screens
+                            img(src='resources/images/android/5.png', alt='')
 
-                        section.card-three
-                            h3 Clique em "Entrar com telefone"
-                            .screens
-                                img(src='resources/images/android/3.png', alt='')
+                    .swiper-slide
+                        h3 Pronto, seus 3 meses grátis estão válidos a partir de agora!
+                        label Aproveite e curta com toda a família todo conteúdo do app PlayKids.
+                        .screens
+                            img(src='resources/images/congrats.png', alt='')
 
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Continuar &#10230;
+                // nav
+                .swiper-pagination
 
-                        section.card-four
-                            h3 Digite o seu número Oi
-                            .screens
-                                img(src='resources/images/android/4.png', alt='')
+            section.download
+                .icon
+                    img(src='resources/images/logo-pk_app.png', alt='PlayKids')
+                h4 Baixe e instale o PlayKids
+                .link
+                    a(href='googleplay', target='_blank').btn-default Disponível na Google Play
+                .details
+                    p Vídeos e jogos educativos para crianças e bebês aprenderem brincando
 
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Continuar &#10230;
-
-                        section.card-five
-                            h3 Insira o código que você vai receber por SMS
-                            .screens
-                                img(src='resources/images/android/5.png', alt='')
-
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Finalizar &#10230;
-
-                        section.final
-                            h3 Pronto, seus 3 meses grátis estão válidos a partir de agora!
-                            label Aproveite e curta com toda a família todo conteúdo do app PlayKids.
-                            .screens
-                                img(src='resources/images/congrats.png', alt='')
-
-                            .slide
-                                a(href='#').back &#10229; Voltar
-
-                .help-ios
-                    #cards
-                        section.start
-                            h1 Parabéns, agora você tem uma conta PlayKids Premium.
-                            h2 A Oi oferece a você&nbsp;
-                                span 3 meses grátis
-                                |  do app para curtir com toda sua família.
-                            h3 Para começar, você precisa baixar e instalar o app em seu aparelho.
-                            .app
-                                img(src='resources/images/logo-pk_app.png', alt='PlayKids')
-                                h4 PlayKids
-                                p Vídeos e jogos educativos para crianças e bebês aprenderem brincando
-                                a(href='https://itunes.apple.com/br/app/playkids-videos-jogos-e-livros/id613398383?mt=8', target='_blank').btn-default Baixar na AppStore
-
-                            .slide
-                                a(href='#').next Se você já instalou, continue &#10230;
-
-                        section.card-two
-                            h3 Clique em "Já tenho conta"
-                            .screens
-                                img(src='resources/images/ios/2.png', alt='')
-
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Próximo &#10230;
-
-                        section.card-three
-                            h3 Clique em "Telefone"
-                            .screens
-                                img(src='resources/images/ios/3.png', alt='')
-
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Próximo &#10230;
-
-                        section.card-four
-                            h3 Digite o seu número Oi
-                            .screens
-                                img(src='resources/images/ios/4.png', alt='')
-
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Finalizar &#10230;
-
-                        section.card-five
-                            h3 Insira o código que você vai receber por SMS
-                            .screens
-                                img(src='resources/images/ios/5.png', alt='')
-
-                            .slide
-                                a(href='#').back &#10229; Voltar
-                                a(href='#').next Finalizar &#10230;
-
-                        section.final
-                            h3 Pronto, seus 3 meses grátis estão válidos a partir de agora!
-                            label Aproveite e curta com toda a família todo conteúdo do app PlayKids.
-                            .screens
-                                img(src='resources/images/congrats.png', alt='')
-
-                            .slide
-                                a(href='#').back &#10229; Voltar
-
-        section#support
+        section.support
             a(href='mailto:suporte@playkids.com') Precisa de ajuda?
 
 
         // jQuery & JS FILES
         script(src='resources/js/jquery-3.1.0.min.js')
+        script(src='resources/js/swiper.min.js')
         script(src='resources/js/functions.js')

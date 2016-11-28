@@ -36,14 +36,6 @@ $base-font-color: #343434;
 	border-radius: $radius;
 }
 
-@mixin vertical-center {
-	top: 50%;
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
 @mixin text-replacement {
 	text-indent: 100%;
 	white-space: nowrap;

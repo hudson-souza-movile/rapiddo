@@ -32,19 +32,10 @@ $(document).ready(function() {
     mobileClass();
 
 
-    // HELP
-    $('#help .next').click(function() {
-        $('.help-nav .active').removeClass('active').next().addClass('active');
-        $(this).parent().parent().hide().next().fadeIn();
-        return false;
-
-    });
-
-    $('#help .back').click(function() {
-        $('.help-nav .active').removeClass('active').prev().addClass('active');
-        $(this).parent().parent().hide().prev().fadeIn();
-        return false;
-
+    // Swiper
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
     });
 
 });

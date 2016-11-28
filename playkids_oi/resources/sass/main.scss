@@ -1,5 +1,7 @@
 // compileCompressed: ../css/$1.css
+
 @import "_variables";
+@import "_swiper";
 
 * {
 	@include border-box;
@@ -21,16 +23,12 @@ body {
 
 a,
 a:visited {
-	border-bottom: 1px solid transparent;
-	color: $purple;
 	text-decoration: none;
 	cursor: pointer;
 	@include transition (0.4s);
 
 	&:hover,
 	&:active {
-		border-color: $purple;
-		color: $theblack;
 	}
 }
 
@@ -74,161 +72,82 @@ h3 {
 	color: $blue;
 	@include flex;
 	@include border-radius (4px);
+	@include box-shadow (0 2px 4px 0 rgba(112, 112, 112, 0.56));
 
 	&:hover,
 	&:active {
-		border: 1px solid $purple;
+		border-color: $purple;
 		color: $purple;
 		text-decoration: underline;
-		@include box-shadow (0 4px 8px 0 rgba(35, 82, 124, 0.56));
+		@include box-shadow (0 0 8px 0 rgba(112, 112, 112, 0.24));
 	}
 }
 
 
 // CONTAINER
-#container {
+.container {
 	background-color: $white;
 	padding: 16px;
 }
 
 .brand {
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	@include flex;
+
 	.playkids {
-		width: 152px;
-		margin: 16px auto 0;
+		width: 120px;
 	}
 
 	.oi {
 		width: 56px;
-		margin: 16px auto;
 	}
 }
 
 
 // SUPPORT
-#support {
+.support {
 	padding: 24px;
 
 	a {
+		border-bottom: 2px solid $gray-lighter;
+		color: $gray-text;
+
+		&:hover,
+		&:active {
+			border-color: $theblack;
+			color: $purple;
+		}
+	}
+}
+
+
+// DOWNLOAD
+.download {
+	flex-flow: column wrap;
+	align-items: center;
+	@include flex;
+
+	h4 {
+		width: 100%;
+		margin-top: 8px;
+	}
+
+	.icon {
+		width: 72px;
+	}
+
+	.details {
+		font-size: .92em;
 		color: $gray-text;
 	}
 }
 
 
-// HELP
-#help {
-	.help-nav {
-		position: relative;
-		z-index: 10;
-		margin: 0 auto 8px;
-		flex-flow: row nowrap;
-		justify-content: center;
-		align-items: center;
-		@include flex;
-
-		li {
-			background-color: $gray-lighter;
-			width: 16px;
-			height: 16px;
-			margin: 8px;
-			font-size: 0;
-			color: $gray-lighter;
-			text-align: center;
-			@include border-radius (50%);
-
-			&.active {
-				background-color: $purple;
-				width: 28px;
-				height: 28px;
-				font-size: .88em;
-				font-weight: bold;
-				line-height: 28px;
-				color: #fff;
-			}
-		}
-	}
-
-	.help-ios {
-		display: none;
-	}
-}
-
-// Cards
-#cards {
-	min-height: 360px;
-
-	section {
-		min-height: 360px;
-		flex-flow: column wrap;
-		justify-content: space-between;
-		@include flex;
-
-		label {
-			display: block;
-			margin-bottom: 24px;
-			font-size: .88em;
-			color: $gray-text;
-		}
-
-		&.card-one,
-		&.card-two,
-		&.card-three,
-		&.card-four,
-		&.card-five,
-		&.final {
-			display: none;
-		}
-	}
-
-
-
-	.slide {
-		border-top: 1px solid $gray-lighter;
-		margin-top: 16px;
-		padding-top: 16px;
-		font-size: .88em;
-		font-weight: bold;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		@include flex;
-
-		.back {
-			color: $gray-text;
-		}
-	}
-
-	.start {
-		.slide {
-			justify-content: flex-end;
-		}
-	}
-}
-
-.app {
-	font-size: .88em;
-	color: $gray-text;
-	flex-flow: column wrap;
-	@include flex;
-
-	img {
-		width: 80px;
-		margin: auto;
-	}
-
-	h4 {
-		margin: 8px 0;
-	}
-}
-
-.screens img {
-	width: 64%;
-	margin: auto;
-	@include box-shadow (0 0 16px 0 rgba(160, 160, 160, 0.48));
-}
-
-
 // TABLET
 @media (min-width: 768px) {
-	#container {
+	.container {
 		border: 1px solid $gray-lighter;
 		max-width: 960px;
 		margin: 20px;
@@ -237,15 +156,24 @@ h3 {
 		@include border-radius (8px);
 	}
 
-	.screens img {
-		width: 40%;
+	.brand {
+		width: 72%;
+		margin: auto;
+
+		.playkids {
+			width: 152px;
+		}
+
+		.oi {
+			width: 64px;
+		}
 	}
 }
 
 
 // MEDIUM SCREENS
 @media (min-width: 1024px) {
-	#container {
+	.container {
 		margin: 32px auto;
 		@include border-radius (12px);
 	}
