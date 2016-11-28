@@ -88,6 +88,12 @@ h3 {
 .container {
 	background-color: $white;
 	padding: 16px;
+
+	label {
+		margin-bottom: 1em;
+		font-size: 14px;
+		color: $gray-text;
+	}
 }
 
 .brand {
