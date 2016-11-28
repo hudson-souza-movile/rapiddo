@@ -97,11 +97,11 @@ h3 {
 	@include flex;
 
 	.playkids {
-		width: 120px;
+		width: 96px;
 	}
 
 	.oi {
-		width: 56px;
+		width: 52px;
 	}
 }
 
@@ -136,12 +136,21 @@ h3 {
 
 	.icon {
 		width: 72px;
+		height: 72px;
+
+		img {
+			@include border-radius (16px);
+		}
 	}
 
 	.details {
 		font-size: .92em;
 		color: $gray-text;
 	}
+}
+
+.swiper-ios {
+	display: none;
 }
 
 

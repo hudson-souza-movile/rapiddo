@@ -21,7 +21,7 @@ html(lang='pt-br')
                 .oi
                     img(src='resources/images/logo-oi.png', alt='Oi Pós Pago')
 
-            section.swiper-container
+            section.swiper-container.swiper-android
                 .swiper-wrapper
                     .swiper-slide
                         h1 Parabéns! Agora você tem uma conta PlayKids Premium!
@@ -47,27 +47,70 @@ html(lang='pt-br')
                             img(src='resources/images/android/4.png', alt='')
 
                     .swiper-slide
-                        h3 Insira o código que você vai receber por SMS
+                        h3 Insira o código enviado por SMS
                         .screens
                             img(src='resources/images/android/5.png', alt='')
 
                     .swiper-slide
-                        h3 Pronto, seus 3 meses grátis estão válidos a partir de agora!
-                        label Aproveite e curta com toda a família todo conteúdo do app PlayKids.
-                        .screens
-                            img(src='resources/images/congrats.png', alt='')
+                        h3 Pronto, você já pode aproveitar os 3 meses grátis!
+                        label Caso não tenha o app instalado, baixe agora e siga os passos.
+                        .download
+                            .icon
+                                img(src='resources/images/logo-pk_app.jpg', alt='PlayKids')
+                            h4 PlayKids
+                            .details
+                                p Vídeos e jogos educativos para crianças e bebês aprenderem brincando
+                            .link
+                                a(href='https://play.google.com/store/apps/details?id=com.movile.playkids', target='_blank').btn-default Disponível na Google Play
 
                 // nav
                 .swiper-pagination
 
-            section.download
-                .icon
-                    img(src='resources/images/logo-pk_app.png', alt='PlayKids')
-                h4 Baixe e instale o PlayKids
-                .link
-                    a(href='googleplay', target='_blank').btn-default Disponível na Google Play
-                .details
-                    p Vídeos e jogos educativos para crianças e bebês aprenderem brincando
+            // iOS
+            section.swiper-container.swiper-ios
+                .swiper-wrapper.swiper-ios
+                    .swiper-slide
+                        h1 Parabéns! Agora você tem uma conta PlayKids Premium!
+                        h2 Siga as instruções de como ativar os&nbsp;
+                            span 3 MESES GRÁTIS
+                            |  que a Oi reservou para você curtir com toda sua família!
+                        .next
+                            | Deslize para continuar &#10230;
+
+                    .swiper-slide
+                        h3 Clique em "Já tenho conta"
+                        .screens
+                            img(src='resources/images/ios/2.png', alt='')
+
+                    .swiper-slide
+                        h3 Clique em "Telefone"
+                        .screens
+                            img(src='resources/images/ios/3.png', alt='')
+
+                    .swiper-slide
+                        h3 Digite o seu número Oi
+                        .screens
+                            img(src='resources/images/ios/4.png', alt='')
+
+                    .swiper-slide
+                        h3 Insira o código enviado por SMS
+                        .screens
+                            img(src='resources/images/ios/5.png', alt='')
+
+                    .swiper-slide
+                        h3 Pronto, você já pode aproveitar os 3 meses grátis!
+                        label Caso não tenha o app instalado, baixe agora e siga os passos.
+                        .download
+                            .icon
+                                img(src='resources/images/logo-pk_app.jpg', alt='PlayKids')
+                            h4 PlayKids
+                            .details
+                                p Vídeos e jogos educativos para crianças e bebês aprenderem brincando
+                            .link
+                                a(href='https://itunes.apple.com/br/app/playkids-videos-jogos-e-livros/id613398383?mt=8', target='_blank').btn-default Disponível na App Store
+
+                // nav
+                .swiper-pagination
 
         section.support
             a(href='mailto:suporte@playkids.com') Precisa de ajuda?

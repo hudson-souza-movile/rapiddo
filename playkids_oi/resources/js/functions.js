@@ -18,14 +18,14 @@ $(document).ready(function() {
 
     function mobileClass() {
         if (isMobile.Android()) {
-            $('.help-ios').hide();
+            $('.swiper-android').show();
 
         } else if (isMobile.iOS()) {
-            $('.help-android').hide();
-            $('.help-ios').show();
+            $('.swiper-android').hide();
+            $('.swiper-ios').show();
 
         } else {
-            $('.help-ios').hide();
+            $('.swiper-ios').hide();
         }
     }
 
