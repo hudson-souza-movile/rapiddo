@@ -21,6 +21,8 @@ html(lang='pt-br')
 
         // MAIN
         section.main-content.main-margin
+            span.degustacao Aula degustação
+
             form(name='aula-nova', id='aula-nova-form', method='POST')
                 h2 Qual o nome da aula?
                 input(type='text', maxlength='120', id='aula-nome', class='input aula-nome characterCount use-title', placeholder='Ex.: Introdução à inteligência artificial', value='Carangueijos e mariscos, qual a melhor forma de prepará-los e cozinhar para família')
@@ -28,39 +30,39 @@ html(lang='pt-br')
 
                 h2 Vídeo dessa aula
                 .upload--container
-                    input(type='file', id='aula-video', accept='.mp4')
-                    label.cta.floating-cta(for='aula-video')
-                        span.has-icon.right.icon-close Substituir vídeo
-
                     // VIDEO (depois do upload)
-                    .video--container
+                    .video--container.itens-locked
+                        .feedback-msg
+                            h3 Não é possível remover ou substituir esse vídeo,
+                            p porque esse curso esta publicado. Caso for preciso realizar alguma dessas modificações, por favor entre em contato.
+
                         video(width='640', height='auto', controls)
                             source(src='../resources/video/movie.mp4', type='video/mp4')
                             source(src='../resources/video/movie.ogg', type='video/ogg')
                             | Your browser does not support the video tag.
 
-                        h3 Selecione a miniatura do seu vídeo
-                        .grid-cards.cards--categorias.radio-img.video--container__thumbs(id='res-video_thumb')
-                            // video (thumbs)
-                            input(type='radio', name='res-video_thumb' id='video-thumb_1', value='1')
-                            label.cards(for='video-thumb_1')
-                                // cover
-                                .cards--cover
-                                    img(src='../resources/video/thumb.png', alt='')
+                    h3 Selecione a miniatura do seu vídeo
+                    .grid-cards.cards--categorias.radio-img.video--container__thumbs(id='res-video_thumb')
+                        // video (thumbs)
+                        input(type='radio', name='res-video_thumb' id='video-thumb_1', value='1')
+                        label.cards(for='video-thumb_1')
+                            // cover
+                            .cards--cover
+                                img(src='../resources/video/thumb.png', alt='')
 
-                            // video (thumbs)
-                            input(type='radio', name='res-video_thumb' id='video-thumb_2', value='2' checked)
-                            label.cards(for='video-thumb_2')
-                                // cover
-                                .cards--cover
-                                    img(src='../resources/video/thumb.png', alt='')
+                        // video (thumbs)
+                        input(type='radio', name='res-video_thumb' id='video-thumb_2', value='2' checked)
+                        label.cards(for='video-thumb_2')
+                            // cover
+                            .cards--cover
+                                img(src='../resources/video/thumb.png', alt='')
 
-                            // video (thumbs)
-                            input(type='radio', name='res-video_thumb' id='video-thumb_3', value='3')
-                            label.cards(for='video-thumb_3')
-                                // cover
-                                .cards--cover
-                                    img(src='../resources/video/thumb.png', alt='')
+                        // video (thumbs)
+                        input(type='radio', name='res-video_thumb' id='video-thumb_3', value='3')
+                        label.cards(for='video-thumb_3')
+                            // cover
+                            .cards--cover
+                                img(src='../resources/video/thumb.png', alt='')
 
                     p No momento, aceitamos apenas arquivos em HD ou Full HD, com extensão .mp4. Para mais detalhes, consulte&nbsp;
                         a(href='') nossas recomendações

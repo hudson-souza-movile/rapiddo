@@ -398,3 +398,42 @@ body.details {
 		}
 	}
 }
+
+// LOCKED
+.itens-locked {
+	* {
+		cursor: auto !important;
+	}
+
+	.feedback-msg {
+		width: 640px;
+		margin-top: 40px;
+	}
+
+	h2 {
+		color: $main-gray;
+	}
+	.radio-img {
+		opacity: .4;
+
+		input:checked+label {
+			h3,
+			p {
+				color: $main-gray;
+			}
+
+			h4 {
+				background-color: $main-gray;
+				@include box-shadow (0 0 0 0);
+			}
+		}
+	}
+
+	.cards--categorias.radio-img input:checked+label {
+		background-color: $main-gray;
+
+		.cards--cover::after {
+			display: none;
+		}
+	}
+}

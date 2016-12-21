@@ -83,3 +83,19 @@ textarea.aula-descricao {
 		}
 	}
 }
+
+.video--container.itens-locked {
+	.feedback-msg {
+		width: 640px;
+		margin: 0;
+	}
+}
+
+.degustacao {
+	display: block;
+	background-color: $green-hover;
+	font-size: .88em;
+	margin-bottom: 16px;
+	padding: $padding-button;
+	color: #FFF;
+}

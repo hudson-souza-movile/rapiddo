@@ -22,12 +22,90 @@ html(lang='pt-br')
 
         // MAIN
         section.main-content.main-margin.index
-            h2 Resumo do produto
-            h3 Vídeos
-            h3 Imagens
+            h2 Vídeos
+            table
+                tr
+                    th Largura
+                    th Altura
+                    th Pixel Aspect Ratio
+                    th Screen Aspect Ratio
+                    th Observação
+                tr
+                    td 1920
+                    td 1080
+                    td Square (1:1)
+                    td 16:9
+                    td Full HD 1080p
+                tr
+                    td 1280
+                    td 720
+                    td Square (1:1)
+                    td 16:9
+                    td HD 720p
+                tr
+                    td.h3_fake(colspan='5') Especificações do arquivo e de áudio
+                tr
+                    td.th_fake(colspan='2') Container
+                    td(colspan='3') MOV, MP4, AVI
+                tr
+                    td.th_fake(colspan='2') Vídeo Codec
+                    td(colspan='3') h.264
+                tr
+                    td.th_fake(colspan='2') Vídeo bitrate
+                    td(colspan='3') 2500 kbps ou superior
+                tr
+                    td.th_fake(colspan='2') Áudio Coded
+                    td(colspan='3') AAC
+                tr
+                    td.th_fake(colspan='2') Áudio bitrate
+                    td(colspan='3') 96 kbps ou superior
+                tr
+                    td.th_fake(colspan='2') Áudio samplerate
+                    td(colspan='3') 44.1 ou 48 kHz
+                tr
+                    td.th_fake(colspan='2') Canais
+                    td(colspan='3') 2
+                tr
+                    td.th_fake(colspan='2') Áudio Level
+                    td(colspan='3') -9dB ou superior
+                tr
+                    td.th_fake(colspan='2') Tamanho do arquivo
+                    td(colspan='3') Limite máximo de 1GB
+
             h2 Materiais de apoio
-            h3 PDF
-            h3 XLS
-            h3 MP3
+            p Como forma de enriquecer nosso conteúdo dos cursos e aulas, você pode enviar até 3 materiais de apoio ao nosso aluno. Materiais digitalizados em arquivos PDF, exercícios sobre o conteúdo abordado para o aluno avaliar seu aprendizado e ainda um arquivo em áudio, que deve explorar algum assunto mais a fundo.
+
+            h3 Arquivos ou documentos em PDF
+            p Pense em enriquecer todo o conteúdo aprensentado em uma aula, com o conteúdo digitalizado ou criado como PDF. Assim o aluno pode facilmente fazer qualquer interação com o conteúdo abordado, junto com o material de apoio disponbilizado.
+
+            h3 Exercícios
+            p Você tem até 5 alternativas para trabalhar em cada questão. Tente sempre lembrar que este é um produto com foco na interação mobile, então perguntas e respostas muito extensas, não serão bem aproveitadas nesse formato.
+
+            h3 Áudio ou podcast
+            table
+                tr
+                    td.th_fake Áudio Codec
+                    td MP3
+                tr
+                    td.th_fake Áudio bitrate
+                    td 96 kpbs ou superior
+                tr
+                    td.th_fake Áudio samplerate
+                    td 44.1 ou 48 kHz
+                tr
+                    td.th_fake Canais
+                    td 2
+
+            h2 Banners dos cursos
+            table
+                tr
+                    td.th_fake Resolução
+                    td 1280x720, com largura mínima de 640 pixels. Use sempre uma proporção de 16:9, pois é a mesma que estamos usando nos vídeos.
+                tr
+                    td.th_fake Extensão
+                    td JPG ou PNG
+                tr
+                    td.th_fake Tamanho do arquivo
+                    td Até 2MB
 
         include ../includes/footer.pug

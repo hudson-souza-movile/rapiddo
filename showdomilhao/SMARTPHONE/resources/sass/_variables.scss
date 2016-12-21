@@ -1,0 +1,69 @@
+// main: main.scss
+
+// COLORS
+$white: #FFFFFF;
+$theblack: #141E23;
+$blue: #0D47A1;
+$blue-dark: #00275C;
+$blue-lighter: #3F95B4;
+$yellow: #FFD34E;
+$gray: #DCDCDC;
+$gray-border: #B4B4B4;
+$gray-dark: #787878;
+$gray-blue: #607D8B;
+$orange: #F46410;
+
+// TYPOGRAPHY
+$base-font: "Montserrat", Helvetica, Arial, sans-serif;
+$base-font-size: 16px;
+$regular: 400;
+$bold: 700;
+
+
+// MIXINS
+@mixin transition ($time) {
+	-webkit-transition: all ease-in-out $time;
+	-ms-transition: all ease-in-out $time;
+	-o-transition: all ease-in-out $time;
+	transition: all ease-in-out $time;
+}
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin border-radius ($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin vertical-center {
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+@mixin text-replacement {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin box-shadow ($specs) {
+	-webkit-box-shadow: $specs;
+	-moz-box-shadow: $specs;
+	box-shadow: $specs;
+}

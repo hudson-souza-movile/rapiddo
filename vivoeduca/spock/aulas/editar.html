@@ -48,41 +48,43 @@
       <h1>Editar aula 3:&nbsp;<span>Carangueijos e mariscos, qual a melhor forma de prepará-los e cozinhar para família</span></h1>
     </section>
     <!-- MAIN-->
-    <section class="main-content main-margin">
+    <section class="main-content main-margin"><span class="degustacao">Aula degustação</span>
       <form name="aula-nova" id="aula-nova-form" method="POST">
         <h2>Qual o nome da aula?</h2>
         <input class="input aula-nome characterCount use-title" type="text" maxlength="120" id="aula-nome" placeholder="Ex.: Introdução à inteligência artificial" value="Carangueijos e mariscos, qual a melhor forma de prepará-los e cozinhar para família"><span class="counter aula-nome"></span>
         <h2>Vídeo dessa aula</h2>
         <div class="upload--container">
-          <input type="file" id="aula-video" accept=".mp4">
-          <label class="cta floating-cta" for="aula-video"><span class="has-icon right icon-close">Substituir vídeo</span></label>
           <!-- VIDEO (depois do upload)-->
-          <div class="video--container">
+          <div class="video--container itens-locked">
+            <div class="feedback-msg">
+              <h3>Não é possível remover ou substituir esse vídeo,</h3>
+              <p>porque esse curso esta publicado. Caso for preciso realizar alguma dessas modificações, por favor entre em contato.</p>
+            </div>
             <video width="640" height="auto" controls>
               <source src="../resources/video/movie.mp4" type="video/mp4">
               <source src="../resources/video/movie.ogg" type="video/ogg">Your browser does not support the video tag.
             </video>
-            <h3>Selecione a miniatura do seu vídeo</h3>
-            <div class="grid-cards cards--categorias radio-img video--container__thumbs" id="res-video_thumb">
-              <!-- video (thumbs)-->
-              <input type="radio" name="res-video_thumb" id="video-thumb_1" value="1">
-              <label class="cards" for="video-thumb_1">
-                <!-- cover-->
-                <div class="cards--cover"><img src="../resources/video/thumb.png" alt=""></div>
-              </label>
-              <!-- video (thumbs)-->
-              <input type="radio" name="res-video_thumb" id="video-thumb_2" value="2" checked>
-              <label class="cards" for="video-thumb_2">
-                <!-- cover-->
-                <div class="cards--cover"><img src="../resources/video/thumb.png" alt=""></div>
-              </label>
-              <!-- video (thumbs)-->
-              <input type="radio" name="res-video_thumb" id="video-thumb_3" value="3">
-              <label class="cards" for="video-thumb_3">
-                <!-- cover-->
-                <div class="cards--cover"><img src="../resources/video/thumb.png" alt=""></div>
-              </label>
-            </div>
+          </div>
+          <h3>Selecione a miniatura do seu vídeo</h3>
+          <div class="grid-cards cards--categorias radio-img video--container__thumbs" id="res-video_thumb">
+            <!-- video (thumbs)-->
+            <input type="radio" name="res-video_thumb" id="video-thumb_1" value="1">
+            <label class="cards" for="video-thumb_1">
+              <!-- cover-->
+              <div class="cards--cover"><img src="../resources/video/thumb.png" alt=""></div>
+            </label>
+            <!-- video (thumbs)-->
+            <input type="radio" name="res-video_thumb" id="video-thumb_2" value="2" checked>
+            <label class="cards" for="video-thumb_2">
+              <!-- cover-->
+              <div class="cards--cover"><img src="../resources/video/thumb.png" alt=""></div>
+            </label>
+            <!-- video (thumbs)-->
+            <input type="radio" name="res-video_thumb" id="video-thumb_3" value="3">
+            <label class="cards" for="video-thumb_3">
+              <!-- cover-->
+              <div class="cards--cover"><img src="../resources/video/thumb.png" alt=""></div>
+            </label>
           </div>
           <p>No momento, aceitamos apenas arquivos em HD ou Full HD, com extensão .mp4. Para mais detalhes, consulte&nbsp;<a href="">nossas recomendações</a> para vídeos.</p>
         </div>

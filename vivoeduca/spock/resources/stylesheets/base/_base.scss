@@ -54,3 +54,29 @@ img {
 	max-width: 100%;
 	height: auto;
 }
+
+table, tr, th, td {
+	background-color: #FFF;
+	border: 1px solid $main-gray;
+	border-collapse: collapse;
+	min-width: 120px;
+	margin: 12px 0 24px;
+	text-align: center;
+
+	th, td {
+		padding: $padding-button;
+	}
+
+	th {
+		background-color: $lighter-gray;
+		font-weight: $bold;
+		color: $theblack;
+	}
+
+	td.h3_fake,
+	td.th_fake {
+		background-color: rgba(55, 71, 79, 0.08);
+		color: $theblack;
+		text-align: left;
+	}
+}

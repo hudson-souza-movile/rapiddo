@@ -49,21 +49,17 @@
     </section>
     <!-- MAIN-->
     <section class="main-content main-margin crumb-margin">
-      <div class="feedback-msg">
-        <h3>Antes de efetuar qualquer alteração,</h3>
-        <p>pois tenha certeza do impacto que isso poderá ocorrer, pois este curso já esta publicado e sendo utilizado por nossos alunos. Por favor, efetue alterações no curso apenas quando for necessário.</p>
-      </div>
       <form name="aula-nova" id="aula-nova-form" method="POST">
         <h2>Qual o nome do curso?</h2>
         <input class="input aula-nome characterCount use-title" type="text" maxlength="120" id="aula-nome" placeholder="Ex.: Introdução à inteligência artificial" value="Ingredientes coringas na cozinha australiana, muita comida exótica"><span class="counter aula-nome"></span>
-        <h2>Será um curso..</h2>
+      </form>
+      <div class="itens-locked">
+        <div class="feedback-msg">
+          <h3>Curso já publicado e com usuários cursando,</h3>
+          <p>por isso não é mais possível editar se este é um curso Premium/Gratuito ou até mesmo mudar sua categoria. Caso for preciso realizar alguma dessas modificações, por favor entre em contato.</p>
+        </div>
+        <h2>Será um curso...</h2>
         <div class="offer--container radio-img" id="res-type">
-          <input type="radio" name="res-type" id="curso-gratuito" value="Free">
-          <label for="curso-gratuito">
-            <h3>Gratuito</h3>
-            <p>Conteúdo aberto à todos os alunos e usuários do produto, assim como seu material de apoio.</p>
-            <h4 class="cta floating-cta"><span class="has-icon left icon-plus">Conteúdo Gratuito</span></h4>
-          </label>
           <input type="radio" name="res-type" id="curso-premium" value="Premium" checked>
           <label for="curso-premium">
             <h3>Premium</h3>
@@ -83,18 +79,8 @@
               <h1>Gastronomia</h1>
             </div>
           </label>
-          <!-- categorias (tecnologia)-->
-          <input type="radio" name="res-categoria" id="categoria-tecnologia" value="Tecnologia">
-          <label class="cards" for="categoria-tecnologia">
-            <!-- cover-->
-            <div class="cards--cover"><img src="../resources/img/categorias/tecnologia.png" alt="Tecnologia"></div>
-            <!-- detalhes-->
-            <div class="cards--details">
-              <h1>Tecnologia</h1>
-            </div>
-          </label>
         </div>
-      </form>
+      </div>
     </section>
     <!-- CRUM-BAR-->
     <div id="crumb-bar">

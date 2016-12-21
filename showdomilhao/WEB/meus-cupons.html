@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Show do Milhão - Baixe e instale o jogo grátis!</title>
+    <meta name="author" content="SBT Copyright © 2016 - Sistema Brasileiro de Televisão. Movile © 2016">
+    <meta name="keywords" content="show do milhão, show do milhão gratis, show do milhão silvio santos, show do milhão download, show do milhão 2016, show do milhão sbt, show do milhão dinheiro, show do milhão promoção, show do milhão game, silvio santos dinheiro, silvio santos promocão, sbt promoção">
+    <meta name="description" content="O jogo de maior sucesso da TV Brasileira agora em seu smartphone. Jogo disponível no Google Play (Android) e na App Store (iOS), baixe agora!">
+    <!-- CSS-->
+    <link rel="stylesheet" href="resources/css/main.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <!-- FAVICON-->
+    <link rel'apple-touch-icon sizes="57x57" href="resources/img/favicon/apple-icon-57x57.png">
+    <link rel'apple-touch-icon sizes="60x60" href="resources/img/favicon/apple-icon-60x60.png">
+    <link rel'apple-touch-icon sizes="72x72" href="resources/img/favicon/apple-icon-72x72.png">
+    <link rel'apple-touch-icon sizes="76x76" href="resources/img/favicon/apple-icon-76x76.png">
+    <link rel'apple-touch-icon sizes="114x114" href="resources/img/favicon/apple-icon-114x114.png">
+    <link rel'apple-touch-icon sizes="120x120" href="resources/img/favicon/apple-icon-120x120.png">
+    <link rel'apple-touch-icon sizes="144x144" href="resources/img/favicon/apple-icon-144x144.png">
+    <link rel'apple-touch-icon sizes="152x152" href="resources/img/favicon/apple-icon-152x152.png">
+    <link rel'apple-touch-icon sizes="180x180" href="resources/img/favicon/apple-icon-180x180.png">
+    <link rel'icon sizes="16x16" href="resources/img/favicon/android-icon-16x16.png">
+    <link rel'icon sizes="32x32" href="resources/img/favicon/android-icon-32x32.png">
+    <link rel'icon sizes="96x96" href="resources/img/favicon/android-icon-96x96.png">
+    <link rel'icon sizes="192x192" href="resources/img/favicon/android-icon-192x192.png">
+    <link rel'manifest href="resources/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="resources/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#FFFFFF">
+    <link rel'shortcut icon sizes="57x57" href="resources/img/favicon/favicon.ico" type="image/x-icon">
+    <link rel'icon sizes="57x57" href="resources/img/favicon/favicon.ico" type="image/x-icon">
+    <!-- TWITTER Cards-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@sbtgamesbrasil">
+    <meta name="twitter:title" content="Show do Milhão - Será que você vai ganhar R$ 1 Milhão?">
+    <meta name="twitter:description" content="O jogo de maior sucesso da TV Brasileira agora em seu smartphone. Jogo disponível no Google Play (Android) e na App Store (iOS), baixe agora!">
+    <meta name="twitter:creator" content="@sbtgamesbrasil">
+    <meta name="twitter:image" content="http://showdomilhao.com.br/lp/sdm/default/index/resources/img/share.png">
+    <!-- FACEBOOK Open Graph-->
+    <meta property="og:title" content="Show do Milhão - Será que você vai ganhar R$ 1 Milhão?">
+    <meta property="og:type" content="game">
+    <meta property="og:url" content="http://www.showdomilhao.com.br">
+    <meta property="og:image" content="http://showdomilhao.com.br/lp/sdm/default/index/resources/img/share.png">
+    <meta property="og:description" content="O jogo de maior sucesso da TV Brasileira agora em seu smartphone. Jogo disponível no Google Play (Android) e na App Store (iOS), baixe agora!">
+    <meta property="og:site_name" content="Show do Milhão">
+  </head>
+  <body class="account">
+    <!--MODAL-->
+    <div class="modal-overlay"></div>
+    <div id="modal">
+      <div class="content regulamento">
+        <div class="title">
+          <h4>Regulamento<a class="close" href="#">Fechar</a></h4>
+        </div>
+        #if(${messagesMap['modal-regulamento']})
+        ${messagesMap['modal-regulamento']}
+        #else
+        <p>Regulamento precisa ser atualizado, volte mais tarde.</p>#end
+      </div>
+      <div class="content faq">
+        <div class="title">
+          <h4>FAQ<a class="close" href="#">Fechar</a></h4>
+        </div>
+        #if(${messagesMap['modal-faq']})
+        ${messagesMap['modal-faq']}
+        #else
+        <p>Não existem perguntas no momento, caso tenha alguma dúvida, por favor entrar em contato através do e-mail<a href="mailto:contato@sbt.com.br">contato@sbt.com.br</a>.</p>#end
+      </div>
+      <div class="content termos">
+        <div class="title">
+          <h4>Termos e Condições<a class="close" href="#">Fechar</a></h4>
+        </div>
+        #if(${messagesMap['modal-termos']})
+        ${messagesMap['modal-termos']}
+        #else
+        <p>Termos e Condições precisa ser atualizado, volte mais tarde.</p>#end
+      </div>
+    </div>
+    <!--HEADER-->
+    <section id="header">
+      <div class="wrapper">
+        <h1>
+          Minha Conta#if ($loginFb)<a class="exit" href="" title="Sair" onClick="logout()">Sair</a>#else<a class="exit" href="/lp/sdm/default/meus-cupons/?action=logout" title="Sair">Sair</a>#end</h1>
+        <!--h2 (011) 99876-5432-->
+        <div class="assinatura">
+          <p>Usuário: $userLogin</p>
+          <!--
+          <p>R$ 9,90 por mês.</p>
+          <p>Você se tornou PRO em <strong> 02/10/2016</strong> e a última renovação foi em<strong> 10/10/2016</strong>.</p>
+        -->
+        </div>
+      </div>
+    </section>
+    <!-- MAIN-->
+    <section id="main">
+      <div class="wrapper">
+        <ul class="tab-col">
+          <li><a class="cupons show" href="meus-cupons.html?action=coupon">Meus Cupons</a></li>
+          <li><a class="winners" href="ganhadores.html">Ganhadores</a></li>
+        </ul>
+        <div class="pages-view cupons">
+    		  #if ($coupons && $coupons.size() > 0)
+    		  <div class="my_cupons">
+    			<table class="rtable">
+    				<thead>
+    					<tr>
+    						<th class="meuscupons">Meus Cupons</th>
+    						<th class="proximosorteio">Próximo sorteio</th>
+    					</tr>
+    				</thead>
+    				#foreach($cupom in $coupons)
+    				<tbody>
+    					<tr>
+    						<td class="cupom">$cupom.number</td>
+    						<td class="date">$cupom.lotteryDate</td>
+    					</tr>
+    				</tbody>#end
+    			</table>
+    		  </div>
+    		  #else
+    		  <div class="no_cupons">
+    			<p>Que Pena! você ainda não possui cupons, comece a jogar pelo nosso aplicativo para ganhar cupons!</p>
+    		  </div>#end
+          <!-- <div class="sorteio">
+            <h4>Próximo sorteio</h4>
+            <p>Acabamos de realizar o sorteio da semana! Aguarde enquanto a lista é atualizada...</p>
+          </div> -->
+          <!-- <p><a class="btn-default" href="" onClick="loadCoupons()" title="Ver meus cupons">Ver meus cupons</a></p> -->
+        </div>
+      </div>
+    </section>
+    <!-- TABS-->
+    <section id="tabs">
+      <div class="wrapper">
+          <ul class="tab-row">
+            <li><a class="gift" href="#">Onde comprar o Código de Ativação?</a></li>
+            <li><a class="regulamento" href="#">Regulamento</a></li>
+            <li><a class="faq" href="https://showdomilhao.zendesk.com/hc/pt-br">Perguntas Frequentes</a></li>
+            <li><a class="termos" href="#">Termos e Condições</a></li>
+          </ul>
+      </div>
+    </section>
+    <!-- FOOTER-->
+    <section id="footer">
+      <div class="wrapper">
+        <div class="sbt"><a href="http://www.sbt.com.br" target="_blank" title="SBT - Sistema Brasileiro de Televisão">SBT - Sistema Brasileiro de Televisão</a></div>
+        <div class="rights">
+          <p>SBT Copyright © 2016 - Sistema Brasileiro de Televisão</p>
+        </div>
+        <div class="movile"><a href="http://www.movile.com" target="_blank" title="Powered by Movile">Powered by Movile</a></div>
+      </div>
+    </section>
+    <!-- jQuery & JS FILES-->
+    <script src="resources/js/jquery-3.1.0.min.js"></script>
+    <script src="resources/js/login.js"></script>
+    <script src="resources/js/functions.js"></script>
+    <!-- ALBATROSS-->
+    #if( $pixel )
+      $pixel
+    #end
+    #if( $analytics )
+      $analytics
+    #end
+  </body>
+</html>

@@ -20,25 +20,18 @@ html(lang='pt-br')
 
         // MAIN
         section.main-content.main-margin.crumb-margin
-            .feedback-msg
-                h3 Antes de efetuar qualquer alteração,
-                p pois tenha certeza do impacto que isso poderá ocorrer, pois este curso já esta publicado e sendo utilizado por nossos alunos. Por favor, efetue alterações no curso apenas quando for necessário.
-
             form(name='aula-nova', id='aula-nova-form', method='POST')
                 h2 Qual o nome do curso?
                 input(type='text', maxlength='120', id='aula-nome', class='input aula-nome characterCount use-title', placeholder='Ex.: Introdução à inteligência artificial' value='Ingredientes coringas na cozinha australiana, muita comida exótica')
                 span.counter.aula-nome
 
-                h2 Será um curso..
+            .itens-locked
+                .feedback-msg
+                    h3 Curso já publicado e com usuários cursando,
+                    p por isso não é mais possível editar se este é um curso Premium/Gratuito ou até mesmo mudar sua categoria. Caso for preciso realizar alguma dessas modificações, por favor entre em contato.
+
+                h2 Será um curso...
                 .offer--container.radio-img(id='res-type')
-                    input(type='radio', name='res-type' id='curso-gratuito', value='Free')
-                    label(for='curso-gratuito')
-                        h3 Gratuito
-                        p Conteúdo aberto à todos os alunos e usuários do produto, assim como seu material de apoio.
-                        h4.cta.floating-cta
-                            span.has-icon.left.icon-plus Conteúdo Gratuito
-
-
                     input(type='radio', name='res-type' id='curso-premium', value='Premium' checked)
                     label(for='curso-premium')
                         h3 Premium
@@ -58,17 +51,6 @@ html(lang='pt-br')
                         // detalhes
                         .cards--details
                             h1 Gastronomia
-
-                    // categorias (tecnologia)
-                    input(type='radio', name='res-categoria' id='categoria-tecnologia', value='Tecnologia')
-                    label.cards(for='categoria-tecnologia')
-                        // cover
-                        .cards--cover
-                            img(src='../resources/img/categorias/tecnologia.png', alt='Tecnologia')
-
-                        // detalhes
-                        .cards--details
-                            h1 Tecnologia
 
         // CRUM-BAR
         #crumb-bar
