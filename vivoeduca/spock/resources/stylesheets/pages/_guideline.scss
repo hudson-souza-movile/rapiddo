@@ -1,0 +1,23 @@
+// main: ../main.scss
+
+.guideline {
+	table {
+		max-width: 720px;
+	}
+
+	h2 {
+		margin-top: 32px;
+	}
+
+	h2:first-child {
+		margin-top: 0;
+	}
+
+	h3 {
+		border-bottom: 2px solid $lighter-gray;
+	}
+
+	.showcase {
+		max-width: 720px;
+	}
+}
