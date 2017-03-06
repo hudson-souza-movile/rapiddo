@@ -20,7 +20,7 @@ html(lang='pt-br')
                 h2 Qual sua preferência?
                 p Selecione uma ou mais opções.
 
-                form(action='https://script.google.com/macros/s/AKfycbxsptJEqfdNEcPjL73OsDQzYoVz1SIhsSff1M3BIYsXImBRaAM/exec', method='post')
+                form(action='https://script.google.com/macros/s/AKfycbxsptJEqfdNEcPjL73OsDQzYoVz1SIhsSff1M3BIYsXImBRaAM/exec', method='post', id='gform')
                     #products
                         // Tickets
                         input(type='checkbox', id='pick-tickets', value='Tickets - Ingresso Rápido')
@@ -60,3 +60,8 @@ html(lang='pt-br')
                     // Footer
                     footer
                         button(type='submit').btn-cta Escolher e continuar
+
+                #thankyou_message(style='display: none')
+                    h3 Thanks
+
+        script(src='sources/js/form-submission.js')

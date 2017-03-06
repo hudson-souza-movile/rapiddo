@@ -18,7 +18,7 @@
       <div class="wrapper">
         <h2>Qual sua preferência?</h2>
         <p>Selecione uma ou mais opções.</p>
-        <form action="https://script.google.com/macros/s/AKfycbxsptJEqfdNEcPjL73OsDQzYoVz1SIhsSff1M3BIYsXImBRaAM/exec" method="post">
+        <form action="https://script.google.com/macros/s/AKfycbxsptJEqfdNEcPjL73OsDQzYoVz1SIhsSff1M3BIYsXImBRaAM/exec" method="post" id="gform">
           <div id="products">
             <!-- Tickets-->
             <input type="checkbox" id="pick-tickets" value="Tickets - Ingresso Rápido">
@@ -66,7 +66,11 @@
             <button class="btn-cta" type="submit">Escolher e continuar</button>
           </footer>
         </form>
+        <div id="thankyou_message" style="display: none">
+          <h3>Thanks</h3>
+        </div>
       </div>
     </div>
+    <script src="sources/js/form-submission.js"></script>
   </body>
 </html>
