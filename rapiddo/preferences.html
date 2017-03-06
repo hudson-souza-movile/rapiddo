@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rapiddo Prime</title>
+    <!-- CSS Files-->
+    <link rel="stylesheet" href="sources/styles/main.css">
+  </head>
+  <body>
+    <!-- Header-->
+    <header>
+      <h1>Rapiddo Prime</h1>
+    </header>
+    <!-- Main-->
+    <div id="main">
+      <div class="wrapper">
+        <h2>Qual sua preferência?</h2>
+        <p>Selecione uma ou mais opções.</p>
+        <form action="https://script.google.com/macros/s/AKfycbxsptJEqfdNEcPjL73OsDQzYoVz1SIhsSff1M3BIYsXImBRaAM/exec" method="post">
+          <div id="products">
+            <!-- Tickets-->
+            <input type="checkbox" id="pick-tickets" checked>
+            <label for="pick-tickets">
+              <div class="cards tickets">
+                <div class="logo"></div>
+                <h3>Ingressos antecipados</h3>
+              </div>
+            </label>
+            <!-- Food-->
+            <input type="checkbox" id="pick-food">
+            <label for="pick-food">
+              <div class="cards food">
+                <div class="logo"></div>
+                <h3>Não pagar pelo frete</h3>
+              </div>
+            </label>
+            <!-- Music-->
+            <input type="checkbox" id="pick-music">
+            <label for="pick-music">
+              <div class="cards music">
+                <div class="logo"></div>
+                <h3>Streaming prime grátis</h3>
+              </div>
+            </label>
+            <!-- Kids-->
+            <input type="checkbox" id="pick-kids">
+            <label for="pick-kids">
+              <div class="cards kids">
+                <div class="logo"></div>
+                <h3>Vídeos kids free </h3>
+              </div>
+            </label>
+            <!-- Recharge-->
+            <input type="checkbox" id="pick-recharge">
+            <label for="pick-recharge">
+              <div class="cards recharge">
+                <div class="logo"></div>
+                <h3>Recarregue e ganhe 10%</h3>
+              </div>
+            </label>
+          </div>
+          <!-- Footer-->
+          <footer>
+            <button class="btn-cta" type="submit">Escolher e continuar</button>
+          </footer>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

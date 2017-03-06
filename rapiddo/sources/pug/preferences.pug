@@ -1,0 +1,62 @@
+doctype html
+html(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Rapiddo Prime
+
+        // CSS Files
+        link(rel='stylesheet', href='sources/styles/main.css')
+
+    body
+        // Header
+        header
+            h1 Rapiddo Prime
+
+        // Main
+        #main
+            .wrapper
+                h2 Qual sua preferência?
+                p Selecione uma ou mais opções.
+
+                form(action='https://script.google.com/macros/s/AKfycbxsptJEqfdNEcPjL73OsDQzYoVz1SIhsSff1M3BIYsXImBRaAM/exec', method='post')
+                    #products
+                        // Tickets
+                        input(type='checkbox', id='pick-tickets', checked)
+                        label(for='pick-tickets')
+                            .cards.tickets
+                                .logo
+                                h3 Ingressos antecipados
+
+                        // Food
+                        input(type='checkbox', id='pick-food')
+                        label(for='pick-food')
+                            .cards.food
+                                .logo
+                                h3 Não pagar pelo frete
+
+                        // Music
+                        input(type='checkbox', id='pick-music')
+                        label(for='pick-music')
+                            .cards.music
+                                .logo
+                                h3 Streaming prime grátis
+
+                        // Kids
+                        input(type='checkbox', id='pick-kids')
+                        label(for='pick-kids')
+                            .cards.kids
+                                .logo
+                                h3 Vídeos kids free 
+
+                        // Recharge
+                        input(type='checkbox', id='pick-recharge')
+                        label(for='pick-recharge')
+                            .cards.recharge
+                                .logo
+                                h3 Recarregue e ganhe 10%
+
+                    // Footer
+                    footer
+                        button(type='submit').btn-cta Escolher e continuar
