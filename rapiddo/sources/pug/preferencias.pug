@@ -27,47 +27,47 @@ html(lang='pt-br')
             .error
                 p Você precisa selecionar algum dos produtos abaixo.
 
-            form(id='form-prefs')
-                // Tickets
-                input(type='checkbox', id='pick-tickets', name='Tickets (brand)', value='Tickets (brand)')
-                label(for='pick-tickets')
-                    .inputs.tickets
-                        .brand
-                            img(src='sources/images/brands-ingresso.png')
-                        h4 Ingressos antecipados
+            form(id='form-prefs', action='share.html', method='POST')
+            // Tickets
+            input(type='checkbox', id='pick-tickets', name='Tickets (brand)', value='Tickets (brand)')
+            label(for='pick-tickets')
+                .inputs.tickets
+                    .brand
+                        img(src='sources/images/brands-ingresso.png')
+                    h4 Ingressos antecipados
 
-                // Comida
-                input(type='checkbox', id='pick-food', name='Food (brand)', value='Food (brand)')
-                label(for='pick-food')
-                    .inputs.food
-                        .brand
-                            img(src='sources/images/brands-ifood.png')
-                        h4 Não pagar pelo frete
-                            
+            // Comida
+            input(type='checkbox', id='pick-food', name='Food (brand)', value='Food (brand)')
+            label(for='pick-food')
+                .inputs.food
+                    .brand
+                        img(src='sources/images/brands-ifood.png')
+                    h4 Não pagar pelo frete
+                        
 
-                // Música
-                input(type='checkbox', id='pick-music', name='Music (brand)', value='Music (brand)')
-                label(for='pick-music')
-                    .inputs.music
-                        .brand
-                            img(src='sources/images/brands-superplayer.png')
-                        h4 Streaming Prime grátis
+            // Música
+            input(type='checkbox', id='pick-music', name='Music (brand)', value='Music (brand)')
+            label(for='pick-music')
+                .inputs.music
+                    .brand
+                        img(src='sources/images/brands-superplayer.png')
+                    h4 Streaming Prime grátis
 
-                // Kids
-                input(type='checkbox', id='pick-kids', name='Kids (brand)', value='Kids (brand)')
-                label(for='pick-kids')
-                    .inputs.kids
-                        .brand
-                            img(src='sources/images/brands-playkids.png')
-                        h4 Conteúdo infantil
+            // Kids
+            input(type='checkbox', id='pick-kids', name='Kids (brand)', value='Kids (brand)')
+            label(for='pick-kids')
+                .inputs.kids
+                    .brand
+                        img(src='sources/images/brands-playkids.png')
+                    h4 Conteúdo infantil
 
-                // Recarga
-                input(type='checkbox', id='pick-recharge', name='Recharge (brand)', value='Recharge (brand)')
-                label(for='pick-recharge')
-                    .inputs.recharge
-                        .brand
-                            img(src='sources/images/brands-recarga.png')
-                        h4 Recarregue e ganhe 10%
+            // Recarga
+            input(type='checkbox', id='pick-recharge', name='Recharge (brand)', value='Recharge (brand)')
+            label(for='pick-recharge')
+                .inputs.recharge
+                    .brand
+                        img(src='sources/images/brands-recarga.png')
+                    h4 Recarregue e ganhe 10%
 
         // Footer
         footer
