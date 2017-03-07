@@ -153,7 +153,7 @@ header {
 		background-size: contain;
 		background-repeat: no-repeat;
 		width: calc(100% - 32px);
-		height: 16px;
+		height: 24px;
 	}
 
 	h2, p {
@@ -234,16 +234,6 @@ footer {
 	section.products {
 		margin-bottom: 56px;
 		padding: 16px;
-	}
-
-	.cta-button {
-		background-color: $grey;
-		opacity: 0.48;
-
-		&.checked {
-			background-color: $green;
-			opacity: 1;
-		}
 	}
 }
 
