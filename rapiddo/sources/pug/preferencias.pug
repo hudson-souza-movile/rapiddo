@@ -90,8 +90,8 @@ html(lang='pt-br')
                     for (i = 0; i < inputs.length; i++) {
                         ga('send', 'event', '[picked]', inputs[i].name);
                     }
-
-                    document.getElementById("form-prefs").submit();
+                    document.location = "share.html";
+                    //- document.getElementById("form-prefs").submit();
                     return false;
 
                 } else {
