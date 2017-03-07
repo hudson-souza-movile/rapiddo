@@ -72,8 +72,8 @@
 
           <!-- Footer-->
           <footer>
-            <button class="btn-cta" type="submit">Escolher e continuar</button>
-            <a href="#" class="teste"> teste teste teste teste</a>
+            <button class="btn-cta" type="button">Escolher e continuar</button>
+            <!-- <a href="#" class="teste"> teste teste teste teste</a> -->
 
           </footer>
         </form>
@@ -102,13 +102,15 @@
 
     <script type="text/javascript">
 
-      $(".teste").on( "click", function() {
+      $(".btn-cta").on( "click", function() {
         console.log("testando...");
         var inputs = $("input:checked");
         for (i = 0; i < inputs.length; i++) { 
           console.log('selected '+ inputs[i].name);
-          ga('selected', inputs[i].name);
+          ga('send', 'event', 'Selected', inputs[i].name);
         }
+
+        document.getElementById("pick-pref").submit();
 
       });
     </script>
