@@ -25,50 +25,53 @@
       <div class="error">
         <p>Você precisa selecionar algum dos produtos abaixo.</p>
       </div>
-      <form id="form-prefs" action="share.html" method="POST"></form>
-      <!-- Tickets-->
-      <input type="checkbox" id="pick-tickets" name="Tickets (brand)" value="Tickets (brand)">
-      <label for="pick-tickets">
-        <div class="inputs tickets">
-          <div class="brand"><img src="sources/images/brands-ingresso.png"></div>
-          <h4>Ingressos antecipados</h4>
-        </div>
-      </label>
-      <!-- Comida-->
-      <input type="checkbox" id="pick-food" name="Food (brand)" value="Food (brand)">
-      <label for="pick-food">
-        <div class="inputs food">
-          <div class="brand"><img src="sources/images/brands-ifood.png"></div>
-          <h4>Não pagar pelo frete</h4>
-        </div>
-      </label>
-      <!-- Música-->
-      <input type="checkbox" id="pick-music" name="Music (brand)" value="Music (brand)">
-      <label for="pick-music">
-        <div class="inputs music">
-          <div class="brand"><img src="sources/images/brands-superplayer.png"></div>
-          <h4>Streaming Prime grátis</h4>
-        </div>
-      </label>
-      <!-- Kids-->
-      <input type="checkbox" id="pick-kids" name="Kids (brand)" value="Kids (brand)">
-      <label for="pick-kids">
-        <div class="inputs kids">
-          <div class="brand"><img src="sources/images/brands-playkids.png"></div>
-          <h4>Conteúdo infantil</h4>
-        </div>
-      </label>
-      <!-- Recarga-->
-      <input type="checkbox" id="pick-recharge" name="Recharge (brand)" value="Recharge (brand)">
-      <label for="pick-recharge">
-        <div class="inputs recharge">
-          <div class="brand"><img src="sources/images/brands-recarga.png"></div>
-          <h4>Recarregue e ganhe 10%</h4>
-        </div>
-      </label>
+      <form id="form-prefs" action="share.html" method="POST">
+        <!-- Tickets-->
+        <input type="checkbox" id="pick-tickets" name="Tickets (brand)" value="Tickets (brand)">
+        <label for="pick-tickets">
+          <div class="inputs tickets">
+            <div class="brand"><img src="sources/images/brands-ingresso.png"></div>
+            <h4>Ingressos antecipados</h4>
+          </div>
+        </label>
+        <!-- Comida-->
+        <input type="checkbox" id="pick-food" name="Food (brand)" value="Food (brand)">
+        <label for="pick-food">
+          <div class="inputs food">
+            <div class="brand"><img src="sources/images/brands-ifood.png"></div>
+            <h4>Não pagar pelo frete</h4>
+          </div>
+        </label>
+        <!-- Música-->
+        <input type="checkbox" id="pick-music" name="Music (brand)" value="Music (brand)">
+        <label for="pick-music">
+          <div class="inputs music">
+            <div class="brand"><img src="sources/images/brands-superplayer.png"></div>
+            <h4>Streaming Prime grátis</h4>
+          </div>
+        </label>
+        <!-- Kids-->
+        <input type="checkbox" id="pick-kids" name="Kids (brand)" value="Kids (brand)">
+        <label for="pick-kids">
+          <div class="inputs kids">
+            <div class="brand"><img src="sources/images/brands-playkids.png"></div>
+            <h4>Conteúdo infantil</h4>
+          </div>
+        </label>
+        <!-- Recarga-->
+        <input type="checkbox" id="pick-recharge" name="Recharge (brand)" value="Recharge (brand)">
+        <label for="pick-recharge">
+          <div class="inputs recharge">
+            <div class="brand"><img src="sources/images/brands-recarga.png"></div>
+            <h4>Recarregue e ganhe 10%</h4>
+          </div>
+        </label>
+      </form>
     </section>
     <!-- Footer-->
-    <footer><a class="cta-button" href="#" onclick="ga('send', 'event', '[btn] Escolher e continuar', 'click', '2o Funil');">Escolher e continuar</a></footer>
+    <footer>
+      <button class="cta-button" type="submit" onclick="ga('send', 'event', '[btn] Escolher e continuar', 'click', '2o Funil');">Escolher e continuar</button>
+    </footer>
     <script type="text/javascript">
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

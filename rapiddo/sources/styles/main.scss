@@ -95,7 +95,8 @@ img {
 	height: auto;
 }
 
-.cta-button {
+.cta-button,
+button.cta-button {
 	@include border-radius (8px);
 	@include box-shadow (0 2px 4px 0 rgba(55, 71, 79, 0.48));
 	display: block;
@@ -103,6 +104,7 @@ img {
 	width: 200px;
 	margin: 16px auto;
 	padding: 12px;
+	font-size: 1em;
 	color: #FFF;
 	text-align: center;
 	text-transform: uppercase;
@@ -137,7 +139,7 @@ header {
 		z-index: 50;
 		top: 48px;
 		right: 0;
-		width: 48%;
+		width: 40%;
 		overflow: hidden;
 
 		img {
