@@ -113,6 +113,14 @@ img {
 	}
 }
 
+.error {
+	@include border-radius (8px);
+	display: none;
+	background-color: #F6BAC1;
+	margin-bottom: 16px;
+	padding: 16px;
+}
+
 
 // HEADER
 header {
@@ -226,6 +234,16 @@ footer {
 	section.products {
 		margin-bottom: 56px;
 		padding: 16px;
+	}
+
+	.cta-button {
+		background-color: $grey;
+		opacity: 0.48;
+
+		&.checked {
+			background-color: $green;
+			opacity: 1;
+		}
 	}
 }
 
