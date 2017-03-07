@@ -73,12 +73,10 @@
     <script src="sources/js/jquery.min.js" type="text/javascript"></script>
     <script type="text/javascript">
       $(".cta-button").on( "click", function() {
-          console.log("testando...");
           var inputs = $("input:checked");
           
           for (i = 0; i < inputs.length; i++) {
-              console.log('selected '+ inputs[i].name);
-              ga('send', 'event', 'Chosen', inputs[i].name);
+              ga('send', 'event', '[picked]', inputs[i].name);
           }
       
           document.getElementById("form-prefs").submit();
