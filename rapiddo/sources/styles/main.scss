@@ -188,6 +188,8 @@ section {
 }
 
 .brand {
+	margin-right: 8px;
+	
 	img {
 		@include border-radius (12px);
 		width: 56px;
