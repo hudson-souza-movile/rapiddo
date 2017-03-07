@@ -61,7 +61,7 @@ html(lang='pt-br')
 
         // Footer
         footer
-            a(href='share.html').cta-button Escolher e continuar
+            a(href='share.html', onclick="ga('send', 'event', '[btn] Escolhi', 'click', '2o Funil');").cta-button Escolher e continuar
 
         script(type='text/javascript').
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
