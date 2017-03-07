@@ -107,7 +107,7 @@
         var inputs = $("input:checked");
         for (i = 0; i < inputs.length; i++) { 
           console.log('selected '+ inputs[i].name);
-          ga('send', 'event', 'Selected', inputs[i].name);
+          ga('send', 'event', 'Chosen', inputs[i].name);
         }
 
         document.getElementById("pick-pref").submit();
