@@ -1,36 +1,6 @@
 // FUNCTIONS
 $(document).ready(function() {
 
-    // Mobile View
-    var isMobile = {
-        Android: function() {
-            return /Android/i.test(navigator.userAgent);
-        },
-
-        iOS: function() {
-            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
-        },
-
-        any: function() {
-            return (isMobile.Android() || isMobile.iOS());
-        }
-    };
-
-    function mobileClass() {
-        if (isMobile.Android()) {
-            $('body').addClass('hidden--ios');
-
-        } else if (isMobile.iOS()) {
-            $('body').addClass('hidden--android');
-
-        } else {
-            $('body').addClass('unrecognized');
-        }
-    }
-
-	function loadCoupons() {
-		window.location= "/lp/sdm/default/meus-cupons/?action=coupon";
-	}
 
     if ($(window).width() >= 960) {
         $('body').addClass('unrecognized');
@@ -86,6 +56,28 @@ $(document).ready(function() {
             $('#modal .content.gift').fadeIn(560);
 
         }
+
+        return false;
+
+    });
+
+    // Modal Payments
+    $('#purchase ul.tab-col a').click(function() {
+        if ($(this).hasClass('pay-credit')) {
+            $('.modal-overlay, #modal').fadeIn(400);
+            $('#modal .content.pay-credit-modal').fadeIn(560);
+
+        } else if ($(this).hasClass('pay-debit')) {
+            $('.modal-overlay, #modal').fadeIn(400);
+            $('#modal .content.pay-debit-modal').fadeIn(560);
+
+        } else if ($(this).hasClass('pay-gift'))  {
+            $('.modal-overlay, #modal').fadeIn(400);
+            $('#modal .content.pay-gift-modal').fadeIn(560);
+
+        }
+
+        return false;
 
     });
 

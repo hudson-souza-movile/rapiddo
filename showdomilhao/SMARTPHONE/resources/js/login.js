@@ -45,6 +45,12 @@ function logout() {
     });
 }
 
+
+function loadCoupons() {
+	alert("teste");
+	window.location= "/lp/sdm/default/meus-cupons/?action=coupon";
+}
+
 // LOGIN
 $(document).ready(function() {
     window.fbAsyncInit = function() {

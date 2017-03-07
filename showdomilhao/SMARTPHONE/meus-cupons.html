@@ -108,6 +108,7 @@
     					<tr>
     						<th class="meuscupons">Meus Cupons</th>
     						<th class="proximosorteio">Próximo sorteio</th>
+                <th class="premio">Valor do Prêmio</th>
     					</tr>
     				</thead>
     				#foreach($cupom in $coupons)
@@ -115,6 +116,7 @@
     					<tr>
     						<td class="cupom">$cupom.number</td>
     						<td class="date">$cupom.lotteryDate</td>
+                <td class="premio">$cupom.value</td>
     					</tr>
     				</tbody>#end
     			</table>

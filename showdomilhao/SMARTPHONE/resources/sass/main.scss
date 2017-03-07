@@ -214,6 +214,12 @@ table.rtable {
 	}
 }
 
+#modal .content {
+	p.alert {
+		font-size: .88em;
+	}
+}
+
 // HEADER
 #header {
 	background-color: $blue;
@@ -256,13 +262,13 @@ table.rtable {
 }
 
 .stores {
-	background-image: url('../img/devices.png');
+	background-image: url('../img/devices-android.png');
 	background-position: 40% 100%;
 	background-repeat: no-repeat;
 	background-size: contain;
 
 	p {
-		margin: 1em 0 12em;
+		margin: 1em 0 14em;
 		color: $white;
 	}
 
@@ -481,6 +487,73 @@ table.rtable {
 }
 
 
+// PURCHASE
+#purchase {
+	width: 100%;
+
+	h2 {
+		font-weight: $bold;
+		color: $blue;
+	}
+
+	ul.offers {
+		li {
+			background-image: url("../img/icon--done.png");
+			background-position: center left;
+			background-repeat: no-repeat;
+			background-size: 24px;
+			min-height: 24px;
+			margin: 16px auto;
+			padding-left: 32px;
+			line-height: 24px;
+			color: $green;
+			text-align: left;
+		}
+	}
+
+	.tab-col {
+		margin-top: 16px;
+		flex-flow: row wrap;
+
+		li {
+			width: 100%;
+			margin: 12px 0 0;
+		}
+	}
+}
+
+.form-flex {
+	@include flex;
+	flex-flow: column nowrap;
+
+	label {
+		display: block;
+		width: 100%;
+	}
+
+	input {
+		max-width: 420px;
+	}
+
+	#payform-credit_cpf,
+	#payform-credit_bday,
+	#payform-credit_cep,
+	#payform-credit_num,
+	#payform-credit_compl {
+		width: 56%;
+		max-width: 160px;
+	}
+
+	#payform-credit_bday {
+		width: 72%;
+	}
+
+	#payform-gift {
+		width: 120px;
+	}
+}
+
+
 // FOOTER
 #footer {
 	font-size: 0.8em;
@@ -561,9 +634,11 @@ table.rtable {
 	}
 
 	.stores {
-		background-position: 0% 100%;
-		background-size: 64%;
+		background-position: 12% 100%;
+		background-size: contain;
 		width: 100%;
+		height: 320px;
+		margin-top: 32px;
 
 		.mobile {
 			display: none;
@@ -571,7 +646,7 @@ table.rtable {
 
 		p {
 			margin-bottom: 16%;
-			padding-left: 64%;
+			padding-left: 54%;
 		}
 
 		ul {
@@ -580,8 +655,12 @@ table.rtable {
 			justify-content: flex-end;
 			margin: 1em auto;
 
-			li a {
-				margin-left: 1em;
+			li {
+				width: 46%;
+
+				a {
+					margin: auto;
+				}
 			}
 		}
 	}
@@ -667,6 +746,13 @@ table.rtable {
 		}
 	}
 
+	#purchase {
+		ul.offers {
+			width: 56%;
+			margin: auto;
+		}
+	}
+
 	#footer {
 		.wrapper {
 			padding: 0 24px 24px;
@@ -728,24 +814,19 @@ table.rtable {
 		margin: auto;
 	}
 
-	.stores ul {
-		justify-content: center;
+	.stores {
+		background-position: -8% 100%;
+		height: 400px;
 
-		li a {
-			margin: 0.4em 0.8em;
+		p {
+			font-size: 2em;
 		}
-	}
-
-	.stores p {
-		margin-bottom: 12%;
-		padding: 8% 0 0 64%;
-		font-size: 2em;
 	}
 
 	.hidden--ios,
 	.hidden--android {
 		.stores ul {
-			padding-right: 7%;
+			padding-right: 12%;
 		}
 	}
 

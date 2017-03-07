@@ -99,7 +99,7 @@
         <ul class="tab-col">
           <li><a class="cupons" href="meus-cupons.html?action=coupon">Meus Cupons</a></li>
           <li><a class="winners show" href="ganhadores.html">Ganhadores</a></li>
-        </ul>#if ($coupons)
+        </ul>
         <div class="pages-view winners">
           <table class="rtable">
             <thead>
@@ -107,30 +107,183 @@
                 <th class="name">Nome</th>
                 <th class="phone">Celular</th>
                 <th class="city">Cidade</th>
-                <th class="date">Data do Sorteio</th>
                 <th class="cupom">Número do Cupom</th>
                 <th class="premio">Valor do Prêmio</th>
+                <th class="date">Data do Sorteio</th>
               </tr>
-            </thead>#if(!$coupons)
+            </thead>
             <tbody>
               <tr>
-                <td colspan="6">$resultMessage</td>
+                <td class="name">Diego Rafael Cunha</td>
+                <td class="phone">(47) *****-7957</td>
+                <td class="city">São Bento do Sul</td>
+                <td class="cupom">598766906</td>
+                <td class="premio">R$ 1.000,00</td>
+                <td class="date">24/12/2016</td>
               </tr>
+              <tr>
+                <td class="name">Sérgio dos Santos Ribeiro</td>
+                <td class="phone">(11) *****-3541</td>
+                <td class="city">São Paulo</td>
+                <td class="cupom">601422190</td>
+                <td class="premio">R$ 4.000,00</td>
+                <td class="date">24/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Luiz Henrique da Silva</td>
+                <td class="phone">(45) *****-2387</td>
+                <td class="city">Cascavel</td>
+                <td class="cupom">597827128</td>
+                <td class="premio">R$ 2.500,00</td>
+                <td class="date">24/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Guilherme Almeida Monteiro</td>
+                <td class="phone">(21) *****-6856</td>
+                <td class="city">São Gonçalo</td>
+                <td class="cupom">598766906</td>
+                <td class="premio">R$ 5.000,00</td>
+                <td class="date">24/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Tamiris dos Santos Vicente</td>
+                <td class="phone">(11) *****-3493</td>
+                <td class="city">São Paulo</td>
+                <td class="cupom">597827128</td>
+                <td class="premio">R$ 2.000,00</td>
+                <td class="date">24/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Cristiane Pissoni</td>
+                <td class="phone">(51) *****-1828</td>
+                <td class="city">Porto Alegre</td>
+                <td class="cupom">598037608</td>
+                <td class="premio">R$ 10.000,00</td>
+                <td class="date">24/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Jociele Baruffi</td>
+                <td class="phone">(49) *****-5584</td>
+                <td class="city">Concórdia</td>
+                <td class="cupom">597827128</td>
+                <td class="premio">R$ 1.000,00</td>
+                <td class="date">24/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Davi Figueiredo</td>
+                <td class="phone">(31) *****-2132</td>
+                <td class="city">Belo Horizonte</td>
+                <td class="cupom">390206484</td>
+                <td class="premio">R$ 5.000,00</td>
+                <td class="date">31/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Elton Ferraz</td>
+                <td class="phone">(87) *****-3724</td>
+                <td class="city">Carnaíba</td>
+                <td class="cupom">390599269</td>
+                <td class="premio">R$ 1.000,00</td>
+                <td class="date">31/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Cristiano Somavilla Marzari</td>
+                <td class="phone">(53) *****-7071</td>
+                <td class="city">Bagé</td>
+                <td class="cupom">390409121</td>
+                <td class="premio">R$ 5.000,00</td>
+                <td class="date">31/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Filipe de Jesus Carvalho</td>
+                <td class="phone">(21) *****-4761</td>
+                <td class="city">Maricá</td>
+                <td class="cupom">390184673</td>
+                <td class="premio">R$ 500,00</td>
+                <td class="date">31/12/2016</td>
+              </tr>
+              <tr>
+                <td class="name">Leonora Warnke Renck</td>
+                <td class="phone">(79) *****-7122</td>
+                <td class="city">Aracaju</td>
+                <td class="cupom">390206484</td>
+                <td class="premio">R$ 1.500,00</td>
+                <td class="date">31/12/2016</td>
+              </tr> 
+              <tr>
+                <td class="name">Cleofas Adriano Miranda Cardoso</td>
+                <td class="phone">(96) ****-0670</td>
+                <td class="city">Macapá</td>
+                <td class="cupom">391817800</td>
+                <td class="premio">R$ 40.000,00</td>
+                <td class="date">31/12/2016</td>
+              </tr> 
+              <tr>
+                <td class="name">lucas máximo rodrigues</td>
+                <td class="phone">(32) *****-1433</td>
+                <td class="city">Cataguases</td>
+                <td class="cupom">390409121</td>
+                <td class="premio">R$ 3.000,00</td>
+                <td class="date">31/12/2016</td>
+              </tr> 
+              <tr>
+                <td class="name">em processo de validação...</td>
+                <td class="phone">(11) *****-5415</td>
+                <td class="city">São Paulo</td>
+                <td class="cupom">435222599</td>
+                <td class="premio">R$ 1.000,00</td>
+                <td class="date">07/01/2017</td>
+              </tr>  
+              <tr>
+                <td class="name">em processo de validação...</td>
+                <td class="phone">(85) *****-4531</td>
+                <td class="city">Fortaleza</td>
+                <td class="cupom">435513843</td>
+                <td class="premio">R$ 2.500,00</td>
+                <td class="date">07/01/2017</td>
+              </tr>  
+              <tr>
+                <td class="name">em processo de validação...</td>
+                <td class="phone">(83) *****-1065</td>
+                <td class="city">Campina Grande</td>
+                <td class="cupom">439795095</td>
+                <td class="premio">R$ 1.000,00</td>
+                <td class="date">07/01/2017</td>
+              </tr>  
+              <tr>
+                <td class="name">em processo de validação...</td>
+                <td class="phone">(44) *****-6069</td>
+                <td class="city">Paranavaí</td>
+                <td class="cupom">2435518311</td>
+                <td class="premio">R$ 100.000,00</td>
+                <td class="date">07/01/2017</td>
+              </tr>  
+              <tr>
+                <td class="name">em processo de validação...</td>
+                <td class="phone">(66) *****-0199</td>
+                <td class="city">Sinop</td>
+                <td class="cupom">439108019</td>
+                <td class="premio">R$ 5.000,00</td>
+                <td class="date">07/01/2017</td>
+              </tr>  
+              <tr>
+                <td class="name">em processo de validação...</td>
+                <td class="phone">(11) *****-4081</td>
+                <td class="city">São Paulo</td>
+                <td class="cupom">435513843</td>
+                <td class="premio">R$ 2.000,00</td>
+                <td class="date">07/01/2017</td>
+              </tr>  
+              <tr>
+                <td class="name">em processo de validação...</td>
+                <td class="phone">(95) *****-6327</td>
+                <td class="city">Boa Vista</td>
+                <td class="cupom">439518427</td>
+                <td class="premio">R$ 4.000,00</td>
+                <td class="date">07/01/2017</td>
+              </tr>  
             </tbody>
-            #else
-            #foreach($cupom in $coupons)
-            <tbody>
-              <tr>
-                <td class="name">Greg Torres</td>
-                <td class="phone">(420) ***-9114</td>
-                <td class="city">San Fracisco, CA</td>
-                <td class="date">$cupom.lotteryDate</td>
-                <td class="cupom">$cupom.number</td>
-                <td class="premio">$cupom.value</td>
-              </tr>
-            </tbody>#end
-          </table>#end
-        </div>#end
+          </table>
+        </div>
       </div>
     </section>
     <!-- TABS-->

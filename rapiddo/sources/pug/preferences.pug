@@ -25,38 +25,38 @@ html(lang='pt-br')
                 h2 Qual sua preferência?
                 p Selecione uma ou mais opções.
 
-                form(action='', method='POST')
+                form(id='pick-pref', action='thanks.html', method='POST')
                     #products
                         // Tickets
-                        input(type='checkbox', id='pick-tickets', name='entry.858755329', value='Tickets')
+                        input(type='checkbox', id='pick-tickets', name='Tickets', value='Tickets')
                         label(for='pick-tickets')
                             .cards.tickets
                                 .logo
                                 h3 Ingressos antecipados
 
                         // Food
-                        input(type='checkbox', id='pick-food', name='entry.858755329', value='Food')
+                        input(type='checkbox', id='pick-food', name='Food', value='Food')
                         label(for='pick-food')
                             .cards.food
                                 .logo
                                 h3 Não pagar pelo frete
 
                         // Music
-                        input(type='checkbox', id='pick-music', name='entry.858755329', value='Music')
+                        input(type='checkbox', id='pick-music', name='Music', value='Music')
                         label(for='pick-music')
                             .cards.music
                                 .logo
                                 h3 Streaming prime grátis
 
                         // Kids
-                        input(type='checkbox', id='pick-kids', name='entry.858755329', value='Kids')
+                        input(type='checkbox', id='pick-kids', name='Kids', value='Kids')
                         label(for='pick-kids')
                             .cards.kids
                                 .logo
                                 h3 Vídeos kids free 
 
                         // Recharge
-                        input(type='checkbox', id='pick-recharge', name='entry.858755329', value='Recharge')
+                        input(type='checkbox', id='pick-recharge', name='Recharge', value='Recharge')
                         label(for='pick-recharge')
                             .cards.recharge
                                 .logo
