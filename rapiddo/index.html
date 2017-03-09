@@ -85,18 +85,14 @@
               autoHeight: true,
               watchSlidesVisibility: true,
               simulateTouch: true,
-              autoplay: 3000,
-              autoplayDisableOnInteraction: false
+              preventClicks: true,
+              autoplay: 3000
           })
-      
-          function toggleClass() {
-              $('.nav > li').removeClass('active');
-              $(this).addClass('active');
-          }
       
           $('.nav > li[data-slide]').on('click', function () {
               mySwiper.slideTo($(this).data('slide'));
-              toggleClass();
+              $('.nav > li').removeClass('active');
+              $(this).addClass('active');
           })
       });
       
