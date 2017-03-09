@@ -222,7 +222,7 @@ header {
 				font-size: 12px;
 
 				img {
-					width: calc(100% - 16px);
+					width: calc(100% - 32px);
 					height: auto;
 					margin: 16px auto 8px;
 				}
@@ -244,18 +244,39 @@ footer {
 
 
 // SLIDES
-.slides {
-	.slides-view {
-		background-image: url("../img/cover-food.png");
+.swiper-container {
+	width: 100%;
+
+	.swiper-slide {
 		background-position: left center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		min-height: calc(320px - 48px);
-		padding: 24px;
+		cursor: pointer;
 
 		h2 {
-			padding-left: 32%;
+			padding: 24px 24px 0 32%;
 			text-align: right;
+		}
+
+		&.food {
+			background-image: url("../img/cover-food.png");
+		}
+
+		&.music {
+			background-image: url("../img/cover-music.png");
+		}
+
+		&.tickets {
+			background-image: url("../img/cover-tickets.png");
+		}
+
+		&.kids {
+			background-image: url("../img/cover-kids.png");
+		}
+
+		&.recharge {
+			background-image: url("../img/cover-recharge.png");
 		}
 	}
 }
