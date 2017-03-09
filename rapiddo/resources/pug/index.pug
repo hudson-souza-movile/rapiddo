@@ -64,7 +64,7 @@ html(lang='pt-br')
 
                     // Recharge
                     .swiper-slide.recharge
-                        h2  Recarregue seu celular mais rápido e barato
+                        h2  Recarregue seu celular  mais rápido e barato
 
                 .swiper-pagination
                 
@@ -113,16 +113,19 @@ html(lang='pt-br')
                     autoHeight: true,
                     watchSlidesVisibility: true,
                     simulateTouch: true,
-                    preventClicks: true
-                });
+                    preventClicks: true,
+                    autoplay: 3000
+                })
+
+                function toggleClass() {
+                    $('.nav > li').removeClass('active');
+                    $(this).addClass('active');
+                }
 
                 $('.nav > li[data-slide]').on('click', function () {
                     mySwiper.slideTo($(this).data('slide'));
-                    $('.nav > li').removeClass('active');
-                    $(this).addClass('active');
-
-                });
-
+                    toggleClass();
+                })
             });
 
         script(type='text/javascript').
