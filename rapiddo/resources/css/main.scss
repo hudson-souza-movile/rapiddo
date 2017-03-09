@@ -136,12 +136,9 @@ button.cta-button {
 	}
 }
 
-.error {
-	@include border-radius (8px);
-	display: none;
-	background-color: #F6BAC1;
-	margin-bottom: 16px;
-	padding: 16px;
+.legend {
+	margin: 8px 0 -16px;
+	color: rgba(0, 0, 0, 0.32);
 }
 
 
@@ -229,6 +226,15 @@ header {
 			}
 		}
 	}
+
+	.error {
+		@include border-radius (8px);
+		display: none;
+		background-color: #F9C0C7;
+		margin: 0 16px;
+		padding: 8px;
+		color: #F92942;
+	}
 }
 
 
@@ -283,6 +289,64 @@ footer {
 			h2 {
 				padding-left: 16%;
 			}
+		}
+	}
+}
+
+
+// FORM
+form {
+	margin-bottom: 24%;
+	padding: 16px;
+
+	[type="checkbox"] {
+		display: none;
+
+		&:checked + label {
+			.inputs {
+				@include box-shadow (0 2px 4px 0 rgba(55, 71, 79, 0.32));
+				font-weight: 700;
+
+				img {
+					opacity: 1;
+				}
+
+				&::after {
+					position: absolute;
+					z-index: 10;
+					top: 0;
+					right: 0;
+					content: '';
+					display: block;
+					background-image: url('../img/icons-checked.png');
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+					@include border-radius (24px);
+					width: 48px;
+					height: 48px;
+				}
+			}
+		}
+	}
+
+	.inputs {
+		@include flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		position: relative;
+		border: 1px solid rgba(0, 0, 0, 0.16);
+		@include border-radius (24px);
+		margin-bottom: 12px;
+		color: rgba(0, 0, 0, 0.48);
+		cursor: pointer;
+
+		img {
+			width: 48px;
+			height: 48px;
+			margin-right: 16px;
+			opacity: 0.32;
 		}
 	}
 }
