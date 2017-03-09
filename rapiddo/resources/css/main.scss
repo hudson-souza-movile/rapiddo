@@ -1,0 +1,310 @@
+/* Rapiddo */
+
+@font-face {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 300;
+  src:  url('../fonts/CircularStd-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 500;
+  src:  url('../fonts/CircularStd-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: "Circular Std";
+  font-style: normal;
+  font-weight: 700;
+  src:  url('../fonts/CircularStd-Black.woff') format('woff');
+}
+
+
+// VARIABLES
+$base-font: "Circular Std", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+// COLORS
+$black: #383838;
+$grey: #D7DADC;
+$orange: #FF9800;
+$green: #20B52B;
+
+
+// MIXINS
+@mixin transition ($time) {
+	-webkit-transition: all ease-in-out $time;
+	-ms-transition: all ease-in-out $time;
+	-o-transition: all ease-in-out $time;
+	transition: all ease-in-out $time;
+}
+
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin hidden-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin border-radius ($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin box-shadow ($specs) {
+	-webkit-box-shadow: $specs;
+	-moz-box-shadow: $specs;
+	box-shadow: $specs;
+}
+
+
+// WEB
+* {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	outline: none;
+}
+
+body {
+	line-height: 148%;
+	font-family: $base-font;
+	font-size: 16px;
+	font-weight: 300;
+	color: $black;
+}
+
+a, a:link {
+	@include transition (0.4s);
+	text-decoration: none;
+}
+
+img {
+	display: block;
+}
+
+h2, h3, h4 {
+	font-weight: 700;
+}
+
+h2 {
+	line-height: 116%;
+	font-size: 1.8em;
+}
+
+h3, h4 {
+	line-height: 124%;
+	font-size: 1.4em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+strong, b {
+	font-weight: 500;
+}
+
+.cta-button,
+button.cta-button {
+	@include border-radius (48px);
+	display: block;
+	background-color: $green;
+	width: 200px;
+	margin: 16px auto;
+	padding: 12px;
+	font-family: $base-font;
+	font-size: 1em;
+	font-weight: 500;
+	color: #FFF;
+	text-align: center;
+	cursor: pointer;
+
+	&:hover, &:active {
+		@include box-shadow (0 2px 4px 0 rgba(55, 71, 79, 0.48));
+		background-color: $orange;
+	}
+}
+
+.error {
+	@include border-radius (8px);
+	display: none;
+	background-color: #F6BAC1;
+	margin-bottom: 16px;
+	padding: 16px;
+}
+
+
+// HEADER
+header {
+	position: relative;
+	z-index: 50;
+	@include flex;
+	flex-flow: row wrap;
+	@include box-shadow (0 1px 8px 0 rgba(32, 32, 32, 0.12));
+	padding: 16px;
+
+	h1 {
+		@include hidden-text;
+		background-image: url("../img/logo.png");
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width: 73px;
+		height: 24px;
+		margin: auto;
+	}
+
+	.nav {
+		@include flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		width: 100%;
+		margin-top: 8px;
+
+		li {
+			@include transition (0.4s);
+			opacity: 0.24;
+			line-height: 100%;
+			font-size: 11px;
+			font-weight: 500;
+			text-transform: uppercase;
+			cursor: pointer;
+
+			img {
+				width: 24px;
+				height: 24px;
+				margin: 8px auto;
+			}
+
+			&:hover {
+				opacity: 0.72;
+			}
+
+			&.active {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+// MAIN
+.main {
+	> div {
+		padding: 24px 16px;
+		text-align: center;
+	}
+
+	.servicos {
+		background-color: $black;
+		padding: 24px 8px;
+		color: #FFF;
+
+		ul {
+			@include flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			margin: 16px auto 24%;
+
+			li {
+				width: 33.33%;
+				font-size: 12px;
+
+				img {
+					width: calc(100% - 16px);
+					height: auto;
+					margin: 16px auto 8px;
+				}
+			}
+		}
+	}
+}
+
+
+// FOOTER
+footer {
+	position: fixed;
+	z-index: 100;
+	bottom: 0;
+	background: linear-gradient(0deg, rgba(47, 54, 60, 0.64), rgba(47, 54, 60, 0));
+	width: 100%;
+	padding-top: 24px;
+}
+
+
+// SLIDES
+.slides {
+	.slides-view {
+		background-image: url("../img/cover-food.png");
+		background-position: left center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: calc(320px - 48px);
+		padding: 24px;
+
+		h2 {
+			padding-left: 32%;
+			text-align: right;
+		}
+	}
+}
+
+
+// TABLET
+@media (min-width: 768px) {
+	body {
+		font-size: 24px;
+	}
+
+	.cta-button, button.cta-button {
+		width: 32%;
+		margin: 4% auto;
+		padding: 16px;
+		font-size: 1em;
+	}
+
+	header {
+		padding: 16px 24%;
+	}
+
+	.slides {
+		.slides-view {
+			height: calc(480px - 72px);
+			padding: 4% 24%;
+		}
+	}
+
+	.main {
+		> div {
+			padding: 4% 24%;
+		}
+
+		.servicos {
+			padding: 4%;
+
+			ul {
+				margin: 2% auto 12%;
+
+				li {
+					width: 20%;
+					font-size: 20px;
+
+					img {
+						width: calc(72% - 16px);
+					}
+				}
+			}
+		}
+	}
+}

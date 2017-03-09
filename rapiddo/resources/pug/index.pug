@@ -1,0 +1,87 @@
+doctype html
+html(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Rapiddo Prime
+
+        // CSS Files
+        link(rel='stylesheet', href='resources/css/main.css')
+
+        // Facebook
+        meta(property='og:url', content='http://thiago-rocha-movile.github.io/rapiddo/')
+        meta(property='og:type', content='website')
+        meta(property='og:title', content='Rapiddo')
+        meta(property='og:description', content='Rapiddo - Seja rápido e tenha vantagens exclusivas')
+        meta(property='og:image', content='http://thiago-rocha-movile.github.io/rapiddo/sources/images/share.png')
+
+    body
+        // Header
+        header
+            h1 Rapiddo
+            ul.nav
+                li.delivery.active
+                    img(src="resources/img/icons-food.png", alt="Delivery")
+                    | Comida
+
+                li.music
+                    img(src="resources/img/icons-music.png", alt="Música")
+                    | Música
+
+                li.tickets
+                    img(src="resources/img/icons-tickets.png", alt="Ingresso")
+                    | Ingresso
+
+                li.kids
+                    img(src="resources/img/icons-kids.png", alt="Infantil")
+                    | Infantil
+
+                li.recharge
+                    img(src="resources/img/icons-recharge.png", alt="Recarga")
+                    | Recarga
+
+        // Slides
+        section.slides
+            .slides-view.food
+                h2 Sua pizza em 30 minutos em um clique
+
+        // Main
+        section.main
+            .vantagens
+                h3 Seja rápido e tenha vantagens exclusivas em nossos serviços.
+
+            .servicos
+                h4 Em apenas um clique
+                ul
+                    li
+                        img(src="resources/img/footer-tickets.png", alt="Ingresso")
+                        | Melhores Eventos
+
+                    li
+                        img(src="resources/img/footer-food.png", alt="Delivery")
+                        | Entrega Rápida
+
+                    li
+                        img(src="resources/img/footer-kids.png", alt="Infantil")
+                        | Desenhos Infantis
+
+                    li
+                        img(src="resources/img/footer-music.png", alt="Música")
+                        | Músicas Grátis
+
+                    li
+                        img(src="resources/img/footer-recharge.png", alt="Recarga")
+                        | Recarga Barata
+
+        // Footer
+        footer
+            a(href='preferencias.html', onclick="ga('send', 'event', '[btn] Eu quero', 'click', '1o Funil');").cta-button Eu quero!
+
+        script(type='text/javascript').
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-93185721-1', 'auto');
+            ga('send', 'pageview');
