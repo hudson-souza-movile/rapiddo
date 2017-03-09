@@ -278,6 +278,12 @@ footer {
 		&.recharge {
 			background-image: url("../img/cover-recharge.png");
 		}
+
+		&.tickets, &.music, &.kids {
+			h2 {
+				padding-left: 16%;
+			}
+		}
 	}
 }
 
