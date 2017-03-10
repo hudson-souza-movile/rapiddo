@@ -254,7 +254,7 @@ footer {
 	width: 100%;
 
 	.swiper-slide {
-		background-position: left center;
+		background-position: left bottom;
 		background-repeat: no-repeat;
 		background-size: cover;
 		min-height: calc(320px - 48px);
@@ -369,10 +369,9 @@ form {
 		padding: 16px 24%;
 	}
 
-	.slides {
-		.slides-view {
-			height: calc(480px - 72px);
-			padding: 4% 24%;
+	.swiper-container {
+		.swiper-slide {
+			height: calc(560px - 48px);
 		}
 	}
 

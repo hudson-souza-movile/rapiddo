@@ -4,25 +4,29 @@ html(lang='pt-br')
         meta(charset='UTF-8')
         meta(http-equiv='x-ua-compatible', content='ie=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        title Rapiddo Prime
+        title Rapiddo
 
         // CSS Files
         link(rel='stylesheet', href='resources/css/swiper.css')
         link(rel='stylesheet', href='resources/css/main.css')
 
         // Facebook
-        meta(property='og:url', content='http://thiago-rocha-movile.github.io/rapiddo/')
+        meta(property='og:url', content='http://lp.mvl.im/lp/rapiddo/produto/')
         meta(property='og:type', content='website')
         meta(property='og:title', content='Rapiddo')
         meta(property='og:description', content='Rapiddo - Seja rápido e tenha vantagens exclusivas')
-        meta(property='og:image', content='http://thiago-rocha-movile.github.io/rapiddo/sources/images/share.png')
+        meta(property='og:image', content='http://lp.mvl.im/lp/rapiddo/produto/resources/img/share.png')
+
+        // Favicon
+        link(rel='shortcut icon', href='resources/img/favicon.ico', type='image/x-icon')
+        link(rel='icon', href='resources/img/favicon.ico', type='image/x-icon')
 
     body
         // Header
         header
             h1 Rapiddo
             ul.nav
-                li.delivery.active(data-slide='1')
+                li.food(data-slide='1')
                     img(src="resources/img/icons-food.png", alt="Delivery")
                     | Comida
 
@@ -114,8 +118,39 @@ html(lang='pt-br')
                     watchSlidesVisibility: true,
                     simulateTouch: true,
                     preventClicks: true,
-                    autoplay: 3000,
-                    autoplayDisableOnInteraction: false
+                    //- autoplay: 3000,
+                    //- autoplayDisableOnInteraction: false,
+                    hashnav: true,
+
+                    onSlideChangeStart: function (swiper) {
+                        var checkTab = swiper.realIndex;
+                        
+                        if (swiper.realIndex == 1) {
+                            console.log('music', checkTab);
+                            $('.nav > li').removeClass('active');
+                            $('.nav .music').addClass('active');
+
+                        } else if (swiper.realIndex == 2) {
+                            console.log('tickets', checkTab);
+                            $('.nav > li').removeClass('active');
+                            $('.nav .tickets').addClass('active');
+                            
+                        } else if (swiper.realIndex == 3) {
+                            console.log('kids', checkTab);
+                            $('.nav > li').removeClass('active');
+                            $('.nav .kids').addClass('active');
+                            
+                        } else if (swiper.realIndex == 4) {
+                            console.log('recharge', checkTab);
+                            $('.nav > li').removeClass('active');
+                            $('.nav .recharge').addClass('active');
+                            
+                        } else {
+                            console.log('food', checkTab);
+                            $('.nav > li').removeClass('active');
+                            $('.nav .food').addClass('active');
+                        }
+                    }
                 })
 
                 $('.nav > li[data-slide]').on('click', function () {
@@ -123,6 +158,10 @@ html(lang='pt-br')
                     $('.nav > li').removeClass('active');
                     $(this).addClass('active');
                 })
+
+                //- mySwiper.on('slideChangeStart', function () {
+                //-     console.log('slide change start');
+                //- });
             });
 
             // Hide address bar
@@ -138,5 +177,5 @@ html(lang='pt-br')
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-            ga('create', 'UA-93185721-1', 'auto');
+            ga('create', 'UA-93185721-2', 'auto');
             ga('send', 'pageview');
