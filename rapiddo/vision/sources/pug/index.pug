@@ -1,0 +1,94 @@
+doctype html
+html(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Rapiddo
+
+        // CSS FILES
+        link(rel='stylesheet', href='sources/css/main.css')
+
+    body
+        section#services
+            .wrapper
+                h2 Serviços
+
+                mixin cards-services(name, className)
+                    .cards-serv(class= className)
+                        .cards-serv_cover
+                            h3= name
+                            .cards-serv_icon.sprite
+                            img(src='sources/img/services/' + className + '.png', alt='', border='0')
+                        .cards-serv_legend
+                            block
+
+                .cards-group
+                    +cards-services('Recarga', 'recharge')
+                        p 10% do valor da recarga efetuada
+                    +cards-services('Táxi', 'taxi')
+                        p 10% do valor da recarga efetuada caso tenha mais texto
+                    +cards-services('Contas', 'bills')
+                        p 10% do valor da recarga efetuada
+                    +cards-services('Pizza', 'pizza')
+                        p 10% do valor da recarga efetuada e esse você pode dizer
+                    +cards-services('Música', 'music')
+                        p 10% do valor da recarga efetuada mas é bom esse tamanho
+                    +cards-services('Conteúdo', 'news')
+                        p 10% do valor da recarga efetuada
+
+        section#cashback
+            .wrapper
+                h2 Economia das suas compras
+                p Com o Rapiddo, o preço é o mesmo que você vê por ai, com a vantagem de receber 10% do valor da compra de volta.
+
+                h3 Como funciona?
+                ul.how-to
+                    mixin cashback-steps(className)
+                        li(class=className)
+                            .illustration
+                            .oval
+                                .icon.sprite
+                            block
+
+                    +cashback-steps('app')
+                        label Você usa nossos serviços disponíveis no aplicativo
+                    +cashback-steps('stamp')
+                        label Recarga, táxi e pizza dão até 10% do valor de volta
+                    +cashback-steps('wallet')
+                        label E assim você acumula mais dinheiro na sua carteira!
+
+        section#wallet
+            .wrapper
+                h2 Dinheiro na sua carteira
+                p A cada compra são 10% do valor de volta na sua carteira.
+                p Com esta economia, você pode pagar menos na sua próxima compra de recarga, pizza, no seu taxi, etc.
+                h3 Aqui você é dono do seu dinheiro.
+
+        section#download
+            .wrapper
+                h2 Baixe Grátis
+                p Faça parte do clube, baixe grátis e tenha vantagens exclusivas Rapiddo.
+                a(href='http://play.google.com', target='_blank').badge.sprite GooglePlay
+
+        footer
+            .wrapper
+                p 
+                    span.logo.sprite Rapiddo
+                    |  é uma empresa 
+                    strong Movile
+                    | .
+
+                ul.brands
+                    mixin footer-brands(brand, className)
+                        li(class=className)
+                            span(title= brand).logo.sprite= brand
+
+                    +footer-brands('iFood', 'ifood')
+                    +footer-brands('PlayKids', 'playkids')
+                    +footer-brands('Apontador', 'apontador')
+                    +footer-brands('Superplayer', 'superplayer')
+
+        script(src='https://use.typekit.net/svw0pdx.js', type='text/javascript')
+        script(type='text/javascript').
+            try{Typekit.load({ async: true });}catch(e){}

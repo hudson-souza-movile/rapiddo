@@ -1,0 +1,61 @@
+doctype html
+html(lang='pt-br')
+    include header.pug
+
+    body.fix-bg
+        // Header
+        header
+            .wrapper
+                h1.sprite Rapiddo
+
+        // Banners
+        section#banners
+            .wrapper
+                span.sprite.icon-market
+                h2 Faça seu mercado
+                    span e ganhe 10% de volta
+
+        // Works
+        section#works
+            .wrapper
+                h3 Como funciona?
+                p Baixe o app e ganhe 10% de volta do valor da fatura destes serviços.
+
+                ul
+                    li
+                        span.sprite.icon-bills
+                        | Contas
+                    li
+                        span.sprite.icon-market
+                        | Mercado
+                    li
+                        span.sprite.icon-food
+                        | Comida
+                    li
+                        span.sprite.icon-delivery
+                        | Entrega
+                    li
+                        span.sprite.icon-music
+                        | Música
+                    li
+                        span.sprite.icon-tickets
+                        | Ingresso
+                    li
+                        span.sprite.icon-news
+                        | Conteúdo
+                    li
+                        span.sprite.icon-recharge
+                        | Recarga
+
+        // Footer
+        footer
+            a(href='preferencias.html', onclick="ga('send', 'event', '[btn] Eu quero', 'click', '1o Funil');").cta-button Eu quero!
+
+        // GA
+        script(type='text/javascript').
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-93185721-9', 'auto');
+            ga('send', 'pageview');

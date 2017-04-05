@@ -1,0 +1,427 @@
+// compileCompressed: ../css/$1.css
+@import "_variables";
+
+* {
+	@include border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	list-style: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+body {
+	background-color: $grey-bg;
+	font-family: 'europa';
+	font-size: 16px;
+	font-weight: 400;
+	color: $grey;
+	line-height: 132%;
+}
+
+h1, h3 {
+	font-weight: 700;
+	color: $theblack;
+}
+
+h2 {
+	position: relative;
+	margin-bottom: 40px;
+	line-height: 1em;
+	font-size: 1.6em;
+	font-weight: 400;
+	color: $theblack;
+
+	&::after {
+		@include content-obj;
+		bottom: -12px;
+		background-color: $orange;
+		background-image: -webkit-linear-gradient(-90deg, $orange 0%, $orange-dark 100%);
+		background-image: 	 -moz-linear-gradient(-90deg, $orange 0%, $orange-dark 100%);
+		background-image: 		  linear-gradient(-90deg, $orange 0%, $orange-dark 100%);
+		width: 40px;
+		height: 4px;
+	}
+}
+
+h3 {
+	margin: 40px 0 24px;
+	line-height: 1em;
+	font-size: 1.24em;
+}
+
+p {
+	font-size: 1em;
+}
+
+a,
+a:visited {
+	@include transition (0.4s);
+	text-decoration: none;
+}
+
+a:active,
+a:hover {
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.sprite {
+	display: inline-block;
+	background-image: url('../img/sprite.png');
+	background-repeat: no-repeat;
+	background-size: 335px;
+}
+
+.wrapper {
+	padding: 40px 16px;
+}
+
+#services {
+	.wrapper {
+		padding: 40px 0;
+	}
+}
+
+
+// Zebra Grid
+#services,
+#wallet,
+footer {
+	background-color: #FFF;
+}
+
+#download {
+	background-color: $orange;
+	background-image: -webkit-linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
+	background-image: 	 -moz-linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
+	background-image: 		  linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
+}
+
+
+// Services
+#services {
+	h2 {
+		text-align: center;
+
+		&::after {
+			@include align-hor (50%);
+		}
+	}
+
+	.cards-group {
+		@include flex;
+		flex-flow: row nowrap;
+		flex: 0 0 240px;
+		overflow: auto
+	}
+
+	.cards-serv {
+		@include flex;
+		flex-flow: column wrap;
+
+		p {
+			margin: 10px 16px 24px;
+		}
+
+		&_cover,
+		&_legend {
+			width: 240px;
+			margin: 0 8px;
+		}
+
+		&_cover {
+			position: relative;
+			height: 96px;
+
+			h3 {
+				position: absolute;
+				z-index: 10;
+				bottom: 16px;
+				left: 16px;
+				margin: 0;
+				color: #FFF;
+			}
+
+			.cards-serv_icon {
+				position: absolute;
+				z-index: 10;
+				right: 16px;
+				bottom: -8px;
+				background-color: #FFF;
+				@include border-radius (24px);
+				@include box-shadow (0 4px 8px 0 rgba(55, 71, 79, 0.24));
+				width: 48px;
+				height: 48px;
+			}
+		}
+
+		&.recharge .cards-serv_cover,
+		&.recharge .cards-serv_legend {
+			margin-left: 16px;
+		}
+
+		&.news .cards-serv_cover,
+		&.news .cards-serv_legend {
+			margin-right: 16px;
+		}
+	}
+}
+
+
+//Cashback
+#cashback {
+	.how-to {
+		&::before {
+			@include content-obj;
+			@include align-hor (50%);
+			z-index: 1;
+			background-color: rgba(55, 71, 79, 0.08);
+			width: 8px;
+			height: 64%;
+		}
+
+		@include flex;
+		flex-flow: column wrap;
+		flex: 0 0 100%;
+
+		li {
+			position: relative;
+			z-index: 10;
+
+			.oval {
+				background-color: #FFF;
+				@include border-radius (48px);
+				width: 96px;
+				height: 96px;
+				margin: auto;
+			}
+
+			label {
+				display: block;
+				background-color: rgba(245, 245, 245, 0.88);
+				width: 72%;
+				margin: 8px auto 32px;
+				padding: 8px;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+// Download
+#download {
+	position: relative;
+
+	&::before {
+		@include content-obj;
+		background-image: url('../img/bg-girl.jpg');
+		background-position: 24% 100%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 100%;
+		height: 100%;
+	}
+
+	* {
+		position: relative;
+		z-index: 10;
+		color: #FFF;
+	}
+
+	h2::after {
+		display: none;
+	}
+
+	p {
+		width: 72%;
+	}
+}
+
+
+// Footer
+footer {
+	text-align: center;
+
+	.brands {
+		@include flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+
+		li {
+			@include flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $grey-bg;
+			@include border-radius (32px);
+			width: 64px;
+			height: 64px;
+			margin: 16px auto;
+
+			span {
+				@include text-hidden;
+				background-size: 265px;
+				width: 48px;
+				height: 48px;
+			}
+
+			&.ifood span {
+				background-position: -116px -120px;
+			}
+
+			&.playkids span {
+				background-position: -176px -121px;
+			}
+
+			&.apontador span {
+				background-position: -117px -178px;
+			}
+
+			&.superplayer span {
+				background-position: -175px -178px;
+			}
+		}
+	}
+}
+
+
+// Tablets
+@media (min-width: 768px) {
+	h2 {
+		margin-bottom: 40px;
+	}
+
+	.wrapper {
+		max-width: 720px;
+		margin: auto;
+	}
+
+	#services {
+		.cards-group {
+			flex-flow: row wrap;
+			justify-content: space-between;
+			overflow: inherit;
+		}
+
+		.cards-serv_cover,
+		.cards-serv_legend {
+			width: 220px;
+		}
+
+		.cards-serv.recharge .cards-serv_cover,
+		.cards-serv.recharge .cards-serv_legend {
+			margin-left: 8px;
+		}
+
+		.cards-serv.news .cards-serv_cover,
+		.cards-serv.news .cards-serv_legend {
+			margin-right: 8px;
+		}
+	}
+
+	#cashback {
+		p {
+			width: 64%;
+		}
+
+		.how-to {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			position: relative;
+
+			&::before {
+				top: 70px;
+				width: 64%;
+				height: 8px;
+			}
+
+			li {
+				.oval {
+					margin: 24px auto 32px;
+					transform: scale(1.32);
+				}
+
+				label {
+					width: 88%;
+				}
+			}
+		}
+	}
+
+	#wallet {
+		.wrapper {
+			padding-left: 40%;
+		}
+	}
+
+	#download {
+		&::before {
+			background-position: -200% 100%;
+		}
+
+		p {
+			width: 320px;
+		}
+	}
+
+	footer {
+		.wrapper {
+			@include flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+
+			.brands li {
+				margin-left: 24px;
+				transform: scale(1.24);
+			}
+		}
+	}
+}
+
+
+// Desktop
+@media (min-width: 1024px) {
+	h2,
+	#services h2 {
+		&::after {
+			@include align-hor (0%);
+		}
+	}
+
+	.wrapper {
+		max-width: 800px;
+	}
+
+	#services {
+		h2 {
+			text-align: left;
+		}
+
+		.cards-serv_cover,
+		.cards-serv_legend {
+			width: 240px;
+			margin: auto;
+		}
+
+		.cards-serv.recharge .cards-serv_cover,
+		.cards-serv.recharge .cards-serv_legend {
+			margin-left: 0;
+		}
+
+		.cards-serv.news .cards-serv_cover,
+		.cards-serv.news .cards-serv_legend {
+			margin-right: 0;
+		}
+	}
+
+	#wallet {
+		.wrapper {
+			padding-left: 32%;
+		}
+	}
+}
