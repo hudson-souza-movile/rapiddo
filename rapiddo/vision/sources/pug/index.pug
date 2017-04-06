@@ -48,7 +48,7 @@ html(lang='pt-br')
                         li(class=className)
                             .illustration
                             .oval
-                                .icon.sprite
+                                span.sprite
                             block
 
                     +cashback-steps('app')
@@ -82,7 +82,7 @@ html(lang='pt-br')
                 ul.brands
                     mixin footer-brands(brand, className)
                         li(class=className)
-                            span(title= brand).logo.sprite= brand
+                            span(title= brand).sprite= brand
 
                     +footer-brands('iFood', 'ifood')
                     +footer-brands('PlayKids', 'playkids')

@@ -2,12 +2,15 @@
 @import "_variables";
 
 * {
-	@include border-box;
 	margin: 0;
 	padding: 0;
 	outline: none;
 	list-style: none;
 	-webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+	@include border-box;
 }
 
 body {
@@ -51,6 +54,7 @@ h3 {
 }
 
 p {
+	margin-bottom: 1em;
 	font-size: 1em;
 }
 
@@ -73,7 +77,7 @@ img {
 	display: inline-block;
 	background-image: url('../img/sprite.png');
 	background-repeat: no-repeat;
-	background-size: 335px;
+	background-size: 316px;
 }
 
 .wrapper {
@@ -140,7 +144,7 @@ footer {
 			h3 {
 				position: absolute;
 				z-index: 10;
-				bottom: 16px;
+				bottom: 20px;
 				left: 16px;
 				margin: 0;
 				color: #FFF;
@@ -168,12 +172,39 @@ footer {
 		&.news .cards-serv_legend {
 			margin-right: 16px;
 		}
+
+		// Icons
+		&.recharge .cards-serv_icon {
+			background-position: 0px -116px;
+		}
+
+		&.taxi .cards-serv_icon {
+			background-position: -58px -116px;
+		}
+
+		&.bills .cards-serv_icon {
+			background-position: -116px -116px;
+		}
+
+		&.pizza .cards-serv_icon {
+			background-position: 0px -174px;
+		}
+
+		&.music .cards-serv_icon {
+			background-position: -58px -174px;
+		}
+
+		&.news .cards-serv_icon {
+			background-position: -116px -174px;
+		}
 	}
 }
 
 
 //Cashback
 #cashback {
+	padding-bottom: 40px;
+
 	.how-to {
 		&::before {
 			@include content-obj;
@@ -195,9 +226,32 @@ footer {
 			.oval {
 				background-color: #FFF;
 				@include border-radius (48px);
-				width: 96px;
-				height: 96px;
+				width: 80px;
+				height: 80px;
 				margin: auto;
+
+				span {
+					@include content-obj;
+					width: 80px;
+					height: 80px;
+				}
+			}
+
+			// Icons
+			&.app span {
+				background-position: 0 -232px;
+			}
+
+			&.stamp span {
+				background-position: -180px -232px;
+				width: 136px;
+				height: 136px;
+				margin: -26px;
+				transform: scale(0.72);
+			}
+
+			&.wallet span {
+				background-position: -90px -232px;
 			}
 
 			label {
@@ -213,14 +267,34 @@ footer {
 }
 
 
+// Wallet
+#wallet {
+	padding-top: 160px;
+
+	.wrapper {
+		position: relative;
+
+		&::before {
+			@include content-obj;
+			top: -240px;
+			background-image: url('../img/wallet.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: calc(100% - 32px);
+			height: 400px;
+		}
+	}
+}
+
+
 // Download
 #download {
 	position: relative;
 
 	&::before {
 		@include content-obj;
-		background-image: url('../img/bg-girl.jpg');
-		background-position: 24% 100%;
+		background-image: url('../img/bg-girl.png');
+		background-position: 32% 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 100%;
@@ -240,12 +314,27 @@ footer {
 	p {
 		width: 72%;
 	}
+
+	.badge {
+		@include text-hidden;
+		background-position: -176px -116px;
+		width: 140px;
+		height: 42px;
+	}
 }
 
 
 // Footer
 footer {
 	text-align: center;
+
+	.logo {
+		@include text-hidden;
+		background-position: -109px 0;
+		width: 99px;
+		height: 32px;
+		margin-bottom: -10px;
+	}
 
 	.brands {
 		@include flex;
@@ -256,172 +345,38 @@ footer {
 			@include flex;
 			justify-content: center;
 			align-items: center;
-			background-color: $grey-bg;
+			background-color: #FFF;
 			@include border-radius (32px);
 			width: 64px;
 			height: 64px;
 			margin: 16px auto;
 
+			// Icons
 			span {
 				@include text-hidden;
-				background-size: 265px;
-				width: 48px;
-				height: 48px;
+				width: 64px;
+				height: 64px;
+				transform: scale(0.88);
 			}
 
 			&.ifood span {
-				background-position: -116px -120px;
+				background-position: 0 -42px;
 			}
 
 			&.playkids span {
-				background-position: -176px -121px;
+				background-position: -74px -42px;
 			}
 
 			&.apontador span {
-				background-position: -117px -178px;
+				background-position: -148px -42px;
 			}
 
 			&.superplayer span {
-				background-position: -175px -178px;
+				background-position: -222px -42px;
 			}
 		}
 	}
 }
 
-
-// Tablets
-@media (min-width: 768px) {
-	h2 {
-		margin-bottom: 40px;
-	}
-
-	.wrapper {
-		max-width: 720px;
-		margin: auto;
-	}
-
-	#services {
-		.cards-group {
-			flex-flow: row wrap;
-			justify-content: space-between;
-			overflow: inherit;
-		}
-
-		.cards-serv_cover,
-		.cards-serv_legend {
-			width: 220px;
-		}
-
-		.cards-serv.recharge .cards-serv_cover,
-		.cards-serv.recharge .cards-serv_legend {
-			margin-left: 8px;
-		}
-
-		.cards-serv.news .cards-serv_cover,
-		.cards-serv.news .cards-serv_legend {
-			margin-right: 8px;
-		}
-	}
-
-	#cashback {
-		p {
-			width: 64%;
-		}
-
-		.how-to {
-			flex-flow: row nowrap;
-			justify-content: space-between;
-			position: relative;
-
-			&::before {
-				top: 70px;
-				width: 64%;
-				height: 8px;
-			}
-
-			li {
-				.oval {
-					margin: 24px auto 32px;
-					transform: scale(1.32);
-				}
-
-				label {
-					width: 88%;
-				}
-			}
-		}
-	}
-
-	#wallet {
-		.wrapper {
-			padding-left: 40%;
-		}
-	}
-
-	#download {
-		&::before {
-			background-position: -200% 100%;
-		}
-
-		p {
-			width: 320px;
-		}
-	}
-
-	footer {
-		.wrapper {
-			@include flex;
-			flex-flow: row nowrap;
-			justify-content: space-between;
-			align-items: center;
-
-			.brands li {
-				margin-left: 24px;
-				transform: scale(1.24);
-			}
-		}
-	}
-}
-
-
-// Desktop
-@media (min-width: 1024px) {
-	h2,
-	#services h2 {
-		&::after {
-			@include align-hor (0%);
-		}
-	}
-
-	.wrapper {
-		max-width: 800px;
-	}
-
-	#services {
-		h2 {
-			text-align: left;
-		}
-
-		.cards-serv_cover,
-		.cards-serv_legend {
-			width: 240px;
-			margin: auto;
-		}
-
-		.cards-serv.recharge .cards-serv_cover,
-		.cards-serv.recharge .cards-serv_legend {
-			margin-left: 0;
-		}
-
-		.cards-serv.news .cards-serv_cover,
-		.cards-serv.news .cards-serv_legend {
-			margin-right: 0;
-		}
-	}
-
-	#wallet {
-		.wrapper {
-			padding-left: 32%;
-		}
-	}
-}
+// Media Queries
+@import "_media-queries";

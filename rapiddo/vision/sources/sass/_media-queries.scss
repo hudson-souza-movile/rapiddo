@@ -1,0 +1,178 @@
+// main: main.scss
+
+// Tablets
+@media (min-width: 768px) {
+	h2 {
+		margin-bottom: 40px;
+	}
+
+	.wrapper {
+		max-width: 720px;
+		margin: auto;
+	}
+
+	#services {
+		.cards-group {
+			flex-flow: row wrap;
+			justify-content: space-between;
+			overflow: inherit;
+		}
+
+		.cards-serv_cover,
+		.cards-serv_legend {
+			width: 220px;
+		}
+
+		.cards-serv.recharge .cards-serv_cover,
+		.cards-serv.recharge .cards-serv_legend {
+			margin-left: 8px;
+		}
+
+		.cards-serv.news .cards-serv_cover,
+		.cards-serv.news .cards-serv_legend {
+			margin-right: 8px;
+		}
+	}
+
+	#cashback {
+		padding-bottom: 120px;
+
+		p {
+			width: 64%;
+		}
+
+		.how-to {
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			position: relative;
+
+			&::before {
+				top: 70px;
+				width: 64%;
+				height: 8px;
+			}
+
+			li {
+				.oval {
+					margin: 24px auto 32px;
+					transform: scale(1.32);
+				}
+
+				label {
+					width: 88%;
+				}
+			}
+		}
+	}
+
+	#wallet {
+		padding-top: 80px;
+
+		.wrapper {
+			padding-left: 40%;
+			text-align: right;
+
+			&::before {
+				top: -200px;
+				left: -80px;
+			}
+		}
+
+		h2::after {
+			right: 0;
+		}
+	}
+
+	#download {
+		&::before {
+			background-position: 100% 40%;
+		}
+
+		p {
+			width: 320px;
+		}
+	}
+
+	footer {
+		.wrapper {
+			@include flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+			padding-top: 40px;
+			padding-bottom: 40px;
+
+			.brands li {
+				background-color: $grey-bg;
+				margin-left: 24px;
+				transform: scale(1.24);
+
+				span {
+					transform: scale(0.72);
+				}
+			}
+		}
+	}
+}
+
+
+// Desktop
+@media (min-width: 1024px) {
+	#services h2,
+	#cashback h2 {
+		&::after {
+			@include align-hor (0%);
+		}
+	}
+
+	.wrapper {
+		max-width: 800px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+
+	#services {
+		h2 {
+			text-align: left;
+		}
+
+		.cards-serv_cover,
+		.cards-serv_legend {
+			width: 240px;
+			margin: auto;
+		}
+
+		.cards-serv.recharge .cards-serv_cover,
+		.cards-serv.recharge .cards-serv_legend {
+			margin-left: 0;
+		}
+
+		.cards-serv.news .cards-serv_cover,
+		.cards-serv.news .cards-serv_legend {
+			margin-right: 0;
+		}
+	}
+
+	#wallet {
+		.wrapper {
+			padding-left: 320px;
+
+			&::before {
+				left: -120px;
+				height: 480px;
+			}
+		}
+	}
+}
+
+
+// Full HD
+@media (min-width: 2000px) {
+	#wallet::before {
+		left: 4%;
+	}
+
+	#download {
+		min-height: 480px;
+	}
+}
