@@ -10,7 +10,8 @@ $green: #27D634;
 $green-dark: #119E1C;
 
 // TYPOGRAPHY
-$base-font: "europa", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600");
+$body-font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 
 // MIXINS
