@@ -10,6 +10,39 @@ html(lang='pt-br')
         link(rel='stylesheet', href='sources/css/main.css')
 
     body
+        // Header
+        header
+            .wrapper
+                .logo.sprite Rapiddo
+                a(href='http://play.google.com', target='_blank').cta Baixar grátis
+
+        // Slideshow
+        section#slideshow
+            .slides-group
+                mixin slides(className)
+                    .slides
+                        // Banner
+                        .banners(class= className)
+                            .wrapper
+                                block
+
+                        // Device
+                        .device
+                            img(src='sources/img/banners/screen-' + className + '.jpg', alt='', border='0')
+
+                +slides('rapiddo')
+                    h1 Tudo em um clique
+                    h2 Serviços e compras em  um só aplicativo
+
+                +slides('music')
+                    h1 Random quote
+                    h2 Resolva sua vida como num passe de mágica
+
+                +slides('cashback')
+                    h1 Cashback
+                    h2 Resolva sua vida como num passe de mágica
+
+        // Services
         section#services
             .wrapper
                 h2 Serviços
@@ -37,6 +70,7 @@ html(lang='pt-br')
                     +cards-services('Conteúdo', 'news')
                         p 10% do valor da recarga efetuada
 
+        // Cashback
         section#cashback
             .wrapper
                 h2 Economia das suas compras
@@ -46,7 +80,7 @@ html(lang='pt-br')
                 ul.how-to
                     mixin cashback-steps(className)
                         li(class=className)
-                            .illustration
+                            .illustration.sprite
                             .oval
                                 span.sprite
                             block
@@ -58,6 +92,7 @@ html(lang='pt-br')
                     +cashback-steps('wallet')
                         label E assim você acumula mais dinheiro na sua carteira!
 
+        // Wallet
         section#wallet
             .wrapper
                 h2 Dinheiro na sua carteira
@@ -65,12 +100,14 @@ html(lang='pt-br')
                 p Com esta economia, você pode pagar menos na sua próxima compra de recarga, pizza, no seu taxi, etc.
                 h3 Aqui você é dono do seu dinheiro.
 
+        // Download
         section#download
             .wrapper
                 h2 Baixe Grátis
                 p Faça parte do clube, baixe grátis e tenha vantagens exclusivas Rapiddo.
                 a(href='http://play.google.com', target='_blank').badge.sprite GooglePlay
 
+        // Footer
         footer
             .wrapper
                 p 
@@ -88,6 +125,20 @@ html(lang='pt-br')
                     +footer-brands('PlayKids', 'playkids')
                     +footer-brands('Apontador', 'apontador')
                     +footer-brands('Superplayer', 'superplayer')
+
+        // Scripts
+        script(src='sources/js/compressed.js', type='text/javascript')
+        script().
+            $('#slideshow .slides-group').before('<div class="slides-nav">').cycle({ 
+                fx:         'fade',
+                rev:        true,
+                speed:      600,
+                timeout:    3200,
+                width:      '100%',
+                height:     'auto',
+                fit:        1,
+                pager:      '.slides-nav'
+            });
 
         script(src='https://use.typekit.net/svw0pdx.js', type='text/javascript')
         script(type='text/javascript').

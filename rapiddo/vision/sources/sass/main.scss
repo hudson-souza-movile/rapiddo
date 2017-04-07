@@ -22,18 +22,31 @@ body {
 	line-height: 132%;
 }
 
+h1, h2, h3 {
+	line-height: 1em;
+}
+
 h1, h3 {
 	font-weight: 700;
 	color: $theblack;
 }
 
+h1 {
+	margin-bottom: 8px;
+	font-size: 1.8em;
+	font-weight: 700;
+	color: #FFF;
+}
+
 h2 {
-	position: relative;
 	margin-bottom: 40px;
-	line-height: 1em;
 	font-size: 1.6em;
 	font-weight: 400;
 	color: $theblack;
+}
+
+section h2 {
+	position: relative;
 
 	&::after {
 		@include content-obj;
@@ -49,7 +62,6 @@ h2 {
 
 h3 {
 	margin: 40px 0 24px;
-	line-height: 1em;
 	font-size: 1.24em;
 }
 
@@ -80,16 +92,6 @@ img {
 	background-size: 316px;
 }
 
-.wrapper {
-	padding: 40px 16px;
-}
-
-#services {
-	.wrapper {
-		padding: 40px 0;
-	}
-}
-
 
 // Zebra Grid
 #services,
@@ -103,6 +105,136 @@ footer {
 	background-image: -webkit-linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
 	background-image: 	 -moz-linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
 	background-image: 		  linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
+}
+
+// Wrapper
+.wrapper {
+	padding: 40px 16px;
+}
+
+#services .wrapper {
+	padding: 40px 0;
+}
+
+
+// Header
+header {
+	position: absolute;
+	z-index: 20;
+	top: 0;
+	width: 100%;
+
+	.wrapper {
+		position: relative;
+		padding: 16px;
+	}
+
+	.logo {
+		@include text-hidden;
+		background-position: 0px 0px;
+		width: 99px;
+		height: 32px;
+	}
+
+	.cta {
+		position: absolute;
+		z-index: 30;
+		top: 214px;
+		@include align-hor(50%);
+		background-color: $green;
+		background-image: -webkit-linear-gradient(-90deg, $green 0%, $green-dark 100%);
+		background-image: 	 -moz-linear-gradient(-90deg, $green 0%, $green-dark 100%);
+		background-image: 		  linear-gradient(-90deg, $green 0%, $green-dark 100%);
+		@include border-radius (4px);
+		@include box-shadow (0 8px 16px 0 rgba(55, 71, 79, 0.32));
+		padding: 14px 24px 16px;
+		font-size: 1.2em;
+		font-weight: 700;
+		color: #FFF;
+	}
+}
+
+
+// Slideshow
+#slideshow {
+	.slides-group {
+		width: 100% !important;
+		min-height: 544px;
+	}
+
+	.slides-nav {
+		position: absolute;
+		z-index: 30;
+		top: 24px;
+		right: 24px;
+		@include flex;
+		flex-flow: row nowrap;
+		text-align: right;
+
+		a {
+			@include text-hidden;
+			background-color: rgba(255, 255, 255, 0.40);
+			@include border-radius (8px);
+			width: 12px;
+			height: 12px;
+			margin-left: 16px;
+
+			&.activeSlide {
+				background-color: #FFF;
+			}
+		}
+	}
+
+	// Banners
+	.banners {
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 240px;
+
+		&.rapiddo {
+			background-image: url('../img/banners/rapiddo_mobile.jpg');
+		}
+
+		&.music {
+			background-image: url('../img/banners/music_mobile.jpg');
+		}
+
+		&.cashback {
+			background-image: url('../img/banners/cashback_mobile.jpg');
+		}
+
+		h1 {
+			margin-top: 40px;
+		}
+
+		h2 {
+			width: 80%;
+			margin-bottom: 0;
+			color: #FFF;
+
+			&::after {
+				display: none;
+			}
+		}
+	}
+
+	// Device
+	.device {
+		background-image: url('../img/device.png');
+		background-position: 50% 0%;
+		background-repeat: no-repeat;
+		background-size: 400px;
+		height: 280px;
+		overflow: hidden;
+		margin-top: 24px;
+		text-align: center;
+
+		img {
+			max-width: 160px;
+			margin-top: 60px;
+		}
+	}
 }
 
 
@@ -223,6 +355,15 @@ footer {
 			position: relative;
 			z-index: 10;
 
+			.illustration {
+				@include content-obj;
+				@include align-hor(50%);
+				top: 32px;
+				z-index: 20;
+				width: 136px;
+				height: 136px;
+			}
+
 			.oval {
 				background-color: #FFF;
 				@include border-radius (48px);
@@ -238,27 +379,49 @@ footer {
 			}
 
 			// Icons
-			&.app span {
-				background-position: 0 -232px;
+			&.app {
+				.illustration {
+					background-position: 0px -322px;
+				}
+
+				span {
+					background-position: 0 -232px;
+				}
 			}
 
-			&.stamp span {
-				background-position: -180px -232px;
-				width: 136px;
-				height: 136px;
-				margin: -26px;
-				transform: scale(0.72);
+			&.stamp {
+				.illustration {
+					display: none;
+				}
+
+				span {
+					background-position: -180px -232px;
+					width: 136px;
+					height: 136px;
+					margin: -26px;
+					transform: scale(0.72);
+				}
+
+				label {
+					margin: 24px auto;
+				}
 			}
 
-			&.wallet span {
-				background-position: -90px -232px;
+			&.wallet {
+				.illustration {
+					background-position: 0px -468px;
+				}
+
+				span {
+					background-position: -90px -232px;
+				}
 			}
 
 			label {
 				display: block;
 				background-color: rgba(245, 245, 245, 0.88);
 				width: 72%;
-				margin: 8px auto 32px;
+				margin: 72px auto 24px;
 				padding: 8px;
 				text-align: center;
 			}
@@ -339,7 +502,7 @@ footer {
 	.brands {
 		@include flex;
 		flex-flow: row nowrap;
-		justify-content: center;
+		justify-content: space-between;
 
 		li {
 			@include flex;
@@ -349,7 +512,6 @@ footer {
 			@include border-radius (32px);
 			width: 64px;
 			height: 64px;
-			margin: 16px auto;
 
 			// Icons
 			span {
