@@ -49,7 +49,7 @@
 
 		// Banners
 		.banners {
-			background-position: 50% 100%;
+			background-position: center;
 			min-height: 320px;
 
 			&.rapiddo {
@@ -201,7 +201,6 @@
 			padding-bottom: 40px;
 
 			.brands li {
-				background-color: $grey-bg;
 				margin-left: 24px;
 				transform: scale(1.24);
 
@@ -317,5 +316,49 @@
 
 	#download {
 		min-height: 480px;
+	}
+}
+
+@media (min-width: 2000px) {
+	header .wrapper,
+	#slideshow .wrapper {
+		max-width: 1440px;
+	}
+
+	header .cta {
+		top: 340px;
+		padding: 40px 56px;
+		font-size: 1.2vw;
+	}
+
+	#slideshow {
+		.slides-group,
+		.banners {
+			min-height: 640px;
+
+			h1, h2 {
+				font-size: 1.2vw;
+			}
+
+			h1 {
+				margin-top: 120px;
+			}
+		}
+
+		.slides-nav {
+			top: 600px;
+		}
+
+		.device {
+			background-size: contain;
+			width: 560px;
+			height: 560px;
+			margin-top: 150px;
+
+			img {
+				max-width: 224px;
+				margin-top: 90px;
+			}
+		}
 	}
 }

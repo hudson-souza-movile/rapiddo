@@ -1,0 +1,58 @@
+doctype html
+html(lang='pt-br')
+    head
+        meta(charset='UTF-8')
+        meta(http-equiv='x-ua-compatible', content='ie=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        title Rapiddo
+
+        // CSS FILES
+        link(rel='stylesheet', href='sources/stylesheets/main.css')
+
+    body
+        // Header
+        header
+            .wrapper
+                .logo.sprite
+                h1 Novo Rapiddo
+                h2 com mais serviços para você e sua empresa resolver seus problemas.
+
+        // Paths
+        section#paths
+            .wrapper
+                a(href='http://entregas.rapiddo.com.br').entregas
+                    .cover
+                        img(src='sources/images/bike.png', alt='')
+                    h3 Motoboy num click
+                    p Você no controle de suas entregas! O serviço que você já conhece e confia, com a mesma qualidade.
+                    .cta
+                        | Fazer cotação da sua entrega
+                        span.sprite
+
+                a(href='http://app.rapiddo.com.br').servicos
+                    .cover
+                        img(src='sources/images/pessoas.png', alt='')
+                    h3 Serviços para você
+                    p Delivery de pizza sem gastar com frete, ouça playlists e fique por dentro das últimas notícias.
+                    .cta
+                        | Conhecer os novos serviços
+                        span.sprite
+
+        // Footer
+        footer
+            .wrapper
+                p 
+                    span.logo.sprite Rapiddo
+                    |  é uma empresa 
+                    strong Movile
+                    | .
+
+                ul.brands
+                    mixin footer-brands(brand, className)
+                        li(class=className)
+                            span(title= brand).sprite= brand
+
+                    +footer-brands('iFood', 'ifood')
+                    +footer-brands('PlayKids', 'playkids')
+                    +footer-brands('Apontador', 'apontador')
+                    +footer-brands('Superplayer', 'superplayer')

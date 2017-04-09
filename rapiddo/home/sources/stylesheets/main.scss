@@ -1,0 +1,283 @@
+// compileCompressed: $1.css
+@import "_variables";
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	list-style: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+*, *::before, *::after {
+	@include border-box;
+}
+
+body {
+	background-color: #FFF;
+	line-height: 132%;
+	font-family: $body-font;
+	font-size: 16px;
+	font-weight: 400;
+	color: $theblack;
+}
+
+h1, h2, h3 {
+	line-height: 132%;
+	font-weight: 600;
+	color: #FFF;
+}
+
+h1 {
+	margin: 24px auto 8px;
+	font-size: 1.4em;
+}
+
+h2 {
+	margin-bottom: 24px;
+	font-size: 1.242em;
+	font-weight: 400;
+}
+
+h3 {
+	margin-bottom: 16px;
+	font-size: 1.12em;
+	color: $theblack;
+}
+
+a,
+a:visited {
+	@include transition (0.4s);
+	color: $theblack;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.sprite {
+	display: inline-block;
+	background-image: url('../images/sprite.png');
+	background-repeat: no-repeat;
+	background-size: 286px;
+}
+
+.wrapper {
+	padding: 16px;
+	text-align: center;
+}
+
+
+// Header
+header {
+	background-color: $orange;
+	background-image: -webkit-linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
+	background-image: 	 -moz-linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
+	background-image: 		  linear-gradient(-90deg, rgba(246, 111, 29, 0) 32%, $orange-dark 100%);
+	min-height: 300px;
+
+	.logo {
+		background-position: 0 0;
+		width: 173px;
+		height: 56px;
+		margin: auto;
+		transform: scale(0.64);
+	}
+}
+
+
+// Paths
+#paths {
+	.entregas,
+	.servicos {
+		@include flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		position: relative;
+	}
+
+	h3 {
+		margin-top: 72px;
+	}
+
+	.servicos {
+		margin-top: 120px;
+	}
+
+	.cover {
+		position: absolute;
+		z-index: 10;
+		top: -100px;
+		@include align-hor (50%);
+		width: 72%;
+		margin: auto;
+	}
+
+	.cta {
+		background-color: $theblack;
+		@include border-radius (24px);
+		line-height: 1.6em;
+		margin-top: 16px;
+		padding: 12px 0;
+		font-weight: 700;
+		color: #FFF;
+	}
+}
+
+
+// Footer
+footer {
+	border-top: 2px solid $grey-bg;
+	margin-top: 24px;
+	padding-top: 16px;
+	font-size: 14px;
+
+	.logo {
+		@include text-hidden;
+		background-position: 0 -66px;
+		width: 99px;
+		height: 32px;
+		margin-bottom: -10px;
+	}
+
+	.brands {
+		@include flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		margin-top: 32px;
+
+		li {
+			@include flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $grey-bg;
+			@include border-radius (32px);
+			width: 64px;
+			height: 64px;
+
+			// Icons
+			span {
+				@include text-hidden;
+				width: 64px;
+				height: 64px;
+				transform: scale(0.72);
+			}
+
+			&.ifood span {
+				background-position: 0 -108px;
+			}
+
+			&.playkids span {
+				background-position: -74px -108px;
+			}
+
+			&.apontador span {
+				background-position: -148px -108px;
+			}
+
+			&.superplayer span {
+				background-position: -222px -108px;
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+  	#paths {
+		h3 {
+			margin-top: 28%;
+		}
+	}
+}
+
+
+// Tablets
+@media (min-width: 764px) {
+	.wrapper {
+		max-width: 720px;
+		margin: auto;
+	}
+
+	header .wrapper {
+		max-width: 56%;
+	}
+
+	#paths .wrapper {
+		@include flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding: 0;
+
+		.entregas,
+		.servicos {
+			flex-basis: 40%;
+			margin: auto;
+
+			.cover {
+				top: -110px;
+			}
+
+			h3 {
+				margin-top: 56px;
+			}
+		}
+
+		a:active,
+		a:hover {
+			color: $grey;
+
+			.cta {
+				background-color: $orange;
+			}
+		}
+	}
+
+	// Footer
+	footer {
+		margin-top: 80px;
+
+		.wrapper {
+			@include flex;
+			flex-flow: row nowrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 24px 16px;
+
+			.brands {
+				margin-top: 0;
+
+				li {
+					margin-left: 24px;
+					transform: scale(1.24);
+
+					span {
+						transform: scale(0.72);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.wrapper {
+		max-width: 960px;
+	}
+
+	header .wrapper {
+		width: 48%;
+	}
+
+	#paths .wrapper {
+		.entregas,
+		.servicos {
+			flex-basis: 32%;
+
+			h3 {
+				margin-top: 72px;
+			}
+		}
+	}
+}

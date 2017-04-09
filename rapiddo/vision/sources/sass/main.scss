@@ -33,14 +33,14 @@ h1, h3 {
 
 h1 {
 	margin-bottom: 8px;
-	font-size: 1.8em;
+	font-size: 1.54em;
 	font-weight: 600;
 	color: #FFF;
 }
 
 h2 {
 	margin-bottom: 40px;
-	font-size: 1.6em;
+	font-size: 1.32em;
 	font-weight: 400;
 	color: $theblack;
 }
@@ -62,7 +62,7 @@ section h2 {
 
 h3 {
 	margin: 40px 0 24px;
-	font-size: 1.24em;
+	font-size: 1.16em;
 }
 
 p {
@@ -187,7 +187,7 @@ header {
 
 	// Banners
 	.banners {
-		background-position: 50% 0%;
+		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
 		min-height: 240px;
@@ -260,7 +260,7 @@ header {
 		flex-flow: column wrap;
 
 		p {
-			margin: 10px 16px 24px;
+			margin: 16px 0;
 		}
 
 		&_cover,
@@ -508,7 +508,7 @@ footer {
 			@include flex;
 			justify-content: center;
 			align-items: center;
-			background-color: #FFF;
+			background-color: $grey-bg;
 			@include border-radius (32px);
 			width: 64px;
 			height: 64px;
@@ -518,7 +518,7 @@ footer {
 				@include text-hidden;
 				width: 64px;
 				height: 64px;
-				transform: scale(0.88);
+				transform: scale(0.72);
 			}
 
 			&.ifood span {
