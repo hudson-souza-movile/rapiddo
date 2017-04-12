@@ -59,7 +59,7 @@ img {
 
 .sprite {
 	display: inline-block;
-	background-image: url('../images/sprite.png');
+	background-image: url('../img/sprite.png');
 	background-repeat: no-repeat;
 	background-size: 286px;
 }
@@ -117,10 +117,11 @@ header {
 
 	.cta {
 		background-color: $theblack;
-		@include border-radius (24px);
+		@include border-radius (64px);
 		line-height: 1.6em;
 		margin-top: 16px;
 		padding: 12px 0;
+		font-size: 0.88em;
 		font-weight: 700;
 		color: #FFF;
 	}
@@ -266,18 +267,53 @@ footer {
 		max-width: 960px;
 	}
 
-	header .wrapper {
-		width: 48%;
+	header {
+		min-height: 360px;
+
+		.wrapper {
+			width: 48%;
+		}
 	}
 
 	#paths .wrapper {
 		.entregas,
 		.servicos {
-			flex-basis: 32%;
+			flex-basis: 40%;
+
+			.cover {
+				top: -176px;
+				width: 88%;
+			}
 
 			h3 {
-				margin-top: 72px;
+				margin-top: 120px;
+			}
+
+			p {
+				padding: 0 8%;
+			}
+
+			.cta {
+				@include flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				align-items: center;
+				padding: 8px 0;
+			}
+
+			.sprite {
+				width: 40px;
+				height: 40px;
+				margin: 0 16px;
 			}
 		}
+	}
+
+	.entregas .sprite {
+		background-position: -246px 0px;
+	}
+
+	.servicos .sprite {
+		background-position: -246px -50px;
 	}
 }
