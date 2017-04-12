@@ -253,9 +253,6 @@ header {
 	}
 
 	.cards-serv {
-		@include flex;
-		flex-flow: column wrap;
-
 		p {
 			margin: 16px 0 32px;
 		}
