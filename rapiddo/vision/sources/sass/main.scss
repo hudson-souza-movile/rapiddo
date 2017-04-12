@@ -248,7 +248,8 @@ header {
 		@include flex;
 		flex-flow: row nowrap;
 		flex: 0 0 240px;
-		overflow: auto
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
 	}
 
 	.cards-serv {
@@ -256,7 +257,7 @@ header {
 		flex-flow: column wrap;
 
 		p {
-			margin: 16px 0;
+			margin: 16px 0 32px;
 		}
 
 		&_cover,
@@ -272,7 +273,7 @@ header {
 			h3 {
 				position: absolute;
 				z-index: 10;
-				bottom: 20px;
+				bottom: 12px;
 				left: 16px;
 				margin: 0;
 				color: #FFF;
