@@ -200,6 +200,10 @@ header {
 			background-image: url('../img/banners/cashback_mobile.jpg');
 		}
 
+		&.campanha {
+			background-image: url('../img/banners/campanha_mobile.jpg');
+		}
+
 		h1 {
 			margin-top: 40px;
 		}
@@ -426,14 +430,13 @@ header {
 
 // Wallet
 #wallet {
-	padding-top: 160px;
-
 	.wrapper {
 		position: relative;
+		padding-top: 56%;
 
 		&::before {
 			@include content-obj;
-			top: -240px;
+			top: -16%;
 			background-image: url('../img/wallet.png');
 			background-repeat: no-repeat;
 			background-size: contain;

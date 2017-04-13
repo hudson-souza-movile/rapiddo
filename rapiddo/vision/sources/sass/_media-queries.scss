@@ -45,6 +45,12 @@
 
 		.slides {
 			position: relative;
+
+			&:first-child {
+				.device {
+					display: none;
+				}
+			}
 		}
 
 		// Banners
@@ -62,6 +68,10 @@
 
 			&.cashback {
 				background-image: url('../img/banners/cashback.jpg');
+			}
+
+			&.campanha {
+				background-image: url('../img/banners/campanha.jpg');
 			}
 
 			h1 {
@@ -163,9 +173,8 @@
 
 	// Wallet
 	#wallet {
-		padding-top: 80px;
-
 		.wrapper {
+			padding-top: 80px;
 			padding-left: 40%;
 			text-align: right;
 
