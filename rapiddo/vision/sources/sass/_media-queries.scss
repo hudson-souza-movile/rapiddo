@@ -93,6 +93,13 @@
 				margin-top: 60px;
 			}
 		}
+
+		.slides:first-child {
+			.device {
+				background-size: contain;
+				background-position: 0 0;
+			}
+		}
 	}
 
 	// Services
