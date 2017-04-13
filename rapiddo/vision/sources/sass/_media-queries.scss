@@ -2,6 +2,12 @@
 
 // Tablets
 @media (min-width: 768px) {
+	.modal {
+		.close {
+			padding: 4% 0;
+		}
+	}
+	
 	h2 {
 		margin-bottom: 40px;
 	}
@@ -17,7 +23,7 @@
 		}
 
 		.cta {
-			top: 220px;
+			top: 248px;
 			@include align-hor (0%);
 			margin-left: 16px;
 		}
@@ -240,7 +246,7 @@
 	}
 
 	header .cta {
-		top: 280px;
+		top: 300px;
 	}
 
 	// Slideshow
