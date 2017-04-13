@@ -170,7 +170,7 @@ header {
 	.cta {
 		position: absolute;
 		z-index: 30;
-		top: 214px;
+		top: 254px;
 		@include align-hor(50%);
 		background-color: $green;
 		background-image: -webkit-linear-gradient(-90deg, $green 0%, $green-dark 100%);
@@ -190,7 +190,7 @@ header {
 #slideshow {
 	.slides-group {
 		width: 100% !important;
-		min-height: 544px;
+		min-height: 584px;
 	}
 
 	.slides-nav {
@@ -221,7 +221,7 @@ header {
 		background-position: center top;
 		background-repeat: no-repeat;
 		background-size: cover;
-		min-height: 240px;
+		min-height: 280px;
 
 		&.rapiddo {
 			background-image: url('../img/banners/rapiddo_mobile.jpg');
@@ -287,7 +287,7 @@ header {
 
 	.slides:first-child {
 		.device {
-			background-image: url('../img/boneco.png');
+			background-image: url('../img/boneco_mobile.png');
 			background-size: 320px;
 			background-position: 0px 40px;
 

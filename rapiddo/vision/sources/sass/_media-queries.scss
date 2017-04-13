@@ -7,7 +7,7 @@
 			padding: 4% 0;
 		}
 	}
-	
+
 	h2 {
 		margin-bottom: 40px;
 	}
@@ -79,7 +79,7 @@
 			}
 
 			h2 {
-				width: 40%;
+				width: 48%;
 			}
 		}
 
@@ -102,6 +102,7 @@
 
 		.slides:first-child {
 			.device {
+				background-image: url('../img/boneco.png');
 				background-size: contain;
 				background-position: 0 0;
 			}
