@@ -235,6 +235,18 @@ header {
 			margin-top: 60px;
 		}
 	}
+
+	.slides:first-child {
+		.device {
+			background-image: url('../img/boneco.png');
+			background-size: 320px;
+			background-position: 0px 40px;
+
+			img {
+				display: none;
+			}
+		}
+	}
 }
 
 
