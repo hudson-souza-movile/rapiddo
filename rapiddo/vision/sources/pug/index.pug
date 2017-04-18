@@ -48,14 +48,19 @@ html(lang='pt-br')
             a(href='').close
                 span.sprite
             iframe(id='video', src='https://www.youtube.com/embed/86XrBf1nruE?rel=0&amp;controls=0&amp;showinfo=0', frameborder='0', onReady='onPlayerReady', allowfullscreen)
-        // Header
-        header
-            .wrapper
-                .logo.sprite Rapiddo
-                a(href='http://play.google.com', target='_blank', onclick='ga("send", "event", "Download GooglePlay", "click", "Header");').cta Baixar grátis
+
+        .old-delivery
+            a(href='http://entregas.rapiddo.com.br') Procurando por entregas?
+                span clique aqui
 
         // Slideshow
         section#slideshow
+            // Header
+            header
+                .wrapper
+                    .logo.sprite Rapiddo
+                    a(href='http://play.google.com', target='_blank', onclick='ga("send", "event", "Download GooglePlay", "click", "Header");').cta Baixar grátis
+
             .slides-group
                 mixin slides(className)
                     .slides
@@ -102,6 +107,8 @@ html(lang='pt-br')
                             block
 
                 .cards-group
+                    +cards-services('Entregas', 'delivery')
+                        p Motoboy para entregas expressas de documentos e encomendas.
                     +cards-services('Recarga', 'recharge')
                         p Recarga com qualquer operadora e com 10% do valor de volta.
                     +cards-services('Táxi', 'taxi')

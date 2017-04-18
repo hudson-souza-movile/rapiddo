@@ -17,6 +17,27 @@
 		margin: auto;
 	}
 
+	.old-delivery {
+		padding: 24px;
+		font-size: 1em;
+		text-align: center;
+
+		a:hover span, a:active span {
+			background-color: $orange-dark;
+		}
+
+		a::before {
+			@include content-obj;
+			top: -12px;
+			left: -72px;
+			background-image: url('../img/bike.png');
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 64px;
+			height: 64px;
+		}
+	}
+
 	header {
 		.wrapper {
 			padding-top: 40px;
@@ -123,8 +144,8 @@
 			width: 220px;
 		}
 
-		.cards-serv.recharge .cards-serv_cover,
-		.cards-serv.recharge .cards-serv_legend {
+		.cards-serv.delivery .cards-serv_cover,
+		.cards-serv.delivery .cards-serv_legend {
 			margin-left: 8px;
 		}
 

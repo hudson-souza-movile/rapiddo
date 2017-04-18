@@ -147,6 +147,29 @@ footer {
 	padding: 40px 0;
 }
 
+.old-delivery {
+	background-color: white;
+	padding: 12px 8px;
+	font-size: 0.88em;
+	text-align: center;
+
+	a {
+		@include transition (0.4s);
+		position: relative;
+		font-weight: 700;
+		color: $orange;
+
+		span {
+			display: inline-block;
+			background-color: $orange;
+			@include border-radius (4px);
+			margin-left: 12px;
+			padding: 8px 12px;
+			color: white;
+		}
+	}
+}
+
 
 // Header
 header {
@@ -188,6 +211,8 @@ header {
 
 // Slideshow
 #slideshow {
+	position: relative;
+
 	.slides-group {
 		width: 100% !important;
 		min-height: 584px;
@@ -354,8 +379,8 @@ header {
 			}
 		}
 
-		&.recharge .cards-serv_cover,
-		&.recharge .cards-serv_legend {
+		&.delivery .cards-serv_cover,
+		&.delivery .cards-serv_legend {
 			margin-left: 16px;
 		}
 
@@ -365,6 +390,10 @@ header {
 		}
 
 		// Icons
+		&.delivery .cards-serv_icon {
+			background-position: -174px -174px;
+		}
+
 		&.recharge .cards-serv_icon {
 			background-position: 0px -116px;
 		}
