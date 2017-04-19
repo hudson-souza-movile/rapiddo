@@ -134,24 +134,34 @@
 	#services {
 		.cards-group {
 			flex-flow: row wrap;
-			justify-content: space-between;
+			justify-content: center;
 			align-items: flex-start;
 			overflow: inherit;
+			font-size: 0.8em;
 		}
 
 		.cards-serv_cover,
 		.cards-serv_legend {
-			width: 220px;
+			width: 160px;
 		}
 
-		.cards-serv.delivery .cards-serv_cover,
-		.cards-serv.delivery .cards-serv_legend {
-			margin-left: 8px;
+		.cards-serv_cover {
+			height: 64px;
+
+			h3 {
+				bottom: 4px;
+				left: 12px;
+			}
+
+			.cards-serv_icon {
+				right: 4px;
+				transform: scale(0.8);
+			}
 		}
 
-		.cards-serv.news .cards-serv_cover,
-		.cards-serv.news .cards-serv_legend {
-			margin-right: 8px;
+		.cards-serv p {
+			line-height: 1.32em;
+			margin: 12px 0 32px;
 		}
 	}
 
@@ -254,7 +264,6 @@
 
 // Desktop
 @media (min-width: 1024px) {
-	#services h2,
 	#cashback h2 {
 		&::after {
 			@include align-hor (0%);
@@ -293,28 +302,6 @@
 		}
 	}
 
-	// Services
-	#services {
-		h2 {
-			text-align: left;
-		}
-
-		.cards-serv_cover,
-		.cards-serv_legend {
-			width: 240px;
-			margin: auto;
-		}
-
-		.cards-serv.recharge .cards-serv_cover,
-		.cards-serv.recharge .cards-serv_legend {
-			margin-left: 0;
-		}
-
-		.cards-serv.news .cards-serv_cover,
-		.cards-serv.news .cards-serv_legend {
-			margin-right: 0;
-		}
-	}
 
 	// Cashback
 	#cashback .how-to li {
