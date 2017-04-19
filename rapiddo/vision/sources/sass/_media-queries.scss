@@ -18,9 +18,9 @@
 	}
 
 	.old-delivery {
-		padding: 24px;
+		padding: 24px 24%;
 		font-size: 1em;
-		text-align: center;
+		text-align: right;
 
 		a:hover span, a:active span {
 			background-color: $orange-dark;
@@ -41,6 +41,12 @@
 	header {
 		.wrapper {
 			padding-top: 40px;
+		}
+
+		.logo {
+			position: relative;
+			top: -100px;
+			background-position: -110px 0px;
 		}
 
 		.cta {
@@ -95,10 +101,6 @@
 				background-image: url('../img/banners/campanha.jpg');
 			}
 
-			h1 {
-				margin-top: 80px;
-			}
-
 			h2 {
 				width: 48%;
 			}
@@ -138,6 +140,16 @@
 			align-items: flex-start;
 			overflow: inherit;
 			font-size: 0.8em;
+
+			.delivery .cards-serv_cover,
+			.delivery .cards-serv_legend {
+				margin-left: 8px;
+			}
+
+			.news .cards-serv_cover,
+			.news .cards-serv_legend {
+				margin-right: 8px;
+			}
 		}
 
 		.cards-serv_cover,
@@ -265,6 +277,8 @@
 // Desktop
 @media (min-width: 1024px) {
 	#cashback h2 {
+		text-align: left;
+
 		&::after {
 			@include align-hor (0%);
 		}
@@ -299,6 +313,22 @@
 			width: 400px;
 			height: 400px;
 			margin-top: 50px;
+		}
+	}
+
+	#services {
+		.cards-group {
+			width: 1024px;
+			margin-left: -112px;
+		}
+
+		.cards-serv_cover,
+		.cards-serv_legend {
+			width: 200px;
+		}
+
+		.cards-serv_cover {
+			height: 80px;
 		}
 	}
 

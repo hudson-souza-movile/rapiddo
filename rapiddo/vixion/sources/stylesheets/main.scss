@@ -1,0 +1,25 @@
+// compileCompressed: $1.css
+
+/* Rapiddo v3 */
+@import "_variables";
+
+* {
+	@include border-box;
+	margin: 0;
+}
+
+*:hover {
+	@include transition(0.4s);
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	font-family: $body-font;
+	font-size: $body-font-size;
+	line-height: 1;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+}

@@ -1,0 +1,57 @@
+// main: main.scss
+
+// COLORS
+$theblack: #37474F;
+$grey: #727E84;
+$grey-bg: #F5F5F5;
+$orange: #F66F1D;
+$orange-dark: #F64806;
+$green: #27D634;
+$green-dark: #119E1C;
+
+// TYPOGRAPHY
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,600");
+$body-font: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$body-font-size: 16px;
+
+
+// MIXINS
+@mixin transition ($time) {
+	-webkit-transition: all ease-in-out $time;
+	-ms-transition: all ease-in-out $time;
+	-o-transition: all ease-in-out $time;
+	transition: all ease-in-out $time;
+}
+
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin border-radius ($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin text-hidden {
+	display: inline-block;
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin box-shadow ($specs) {
+	-webkit-box-shadow: $specs;
+	-moz-box-shadow: $specs;
+	box-shadow: $specs;
+}
