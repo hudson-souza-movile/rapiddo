@@ -134,6 +134,8 @@
 
 	// Services
 	#services {
+		margin-bottom: 120px;
+
 		// .cards-group {
 		// 	flex-flow: row wrap;
 		// 	justify-content: center;
@@ -208,7 +210,7 @@
 
 	// Cashback
 	#cashback {
-		padding-bottom: 120px;
+		// padding-bottom: 120px;
 
 		p {
 			width: 64%;
@@ -259,7 +261,7 @@
 			text-align: right;
 
 			&::before {
-				top: -240px;
+				top: -160px;
 				left: -80px;
 			}
 		}
@@ -393,7 +395,7 @@
 			padding-left: 320px;
 
 			&::before {
-				left: -120px;
+				left: -160px;
 				height: 480px;
 			}
 		}

@@ -92,25 +92,6 @@ html(lang='pt-br')
                     h1 Economize em suas compras
                     h2 Você recebe 10% de volta em qualquer compra que fizer
 
-        // Cashback
-        section#cashback
-            .wrapper
-                h2 Como funciona?
-                ul.how-to
-                    mixin cashback-steps(className)
-                        li(class=className)
-                            .illustration.sprite
-                            .oval
-                                span.sprite
-                            block
-
-                    +cashback-steps('app')
-                        label Você usa nossos serviços disponíveis no aplicativo
-                    +cashback-steps('stamp')
-                        label Recarga, táxi e pizza dão até 10% do valor de volta
-                    +cashback-steps('wallet')
-                        label E assim você acumula mais dinheiro na sua carteira!
-
         // Services
         section#services
             .wrapper
@@ -140,6 +121,28 @@ html(lang='pt-br')
                         p Escute suas bandas favoritas, na ordem que quiser.
                     +cards-services('Notícias', 'news')
                         p Saiba os principais fatos do Brasil e do mundo.
+
+        // Cashback
+        section#cashback
+            .wrapper
+                h2 Economia em suas compras
+                p Com o Rapiddo, o preço é o mesmo que você vê por ai, com a vantagem de receber 10% do valor da compra de volta.
+
+                h3 Como funciona?
+                ul.how-to
+                    mixin cashback-steps(className)
+                        li(class=className)
+                            .illustration.sprite
+                            .oval
+                                span.sprite
+                            block
+
+                    +cashback-steps('app')
+                        label Você usa nossos serviços disponíveis no aplicativo
+                    +cashback-steps('stamp')
+                        label Recarga, táxi e pizza dão até 10% do valor de volta
+                    +cashback-steps('wallet')
+                        label E assim você acumula mais dinheiro na sua carteira!
 
         // Wallet
         section#wallet

@@ -125,7 +125,7 @@ body.video-open {
 
 
 // Zebra Grid
-#services,
+#cashback,
 #wallet,
 footer {
 	background-color: #FFF;
@@ -326,6 +326,8 @@ header {
 
 // Services
 #services {
+	margin-bottom: 40px;
+	
 	h2 {
 		text-align: center;
 
@@ -487,7 +489,7 @@ header {
 
 //Cashback
 #cashback {
-	padding-bottom: 40px;
+	// padding-bottom: 40px;
 
 	.how-to {
 		&::before {
@@ -517,7 +519,7 @@ header {
 			}
 
 			.oval {
-				background-color: #FFF;
+				background-color: $grey-bg;
 				@include border-radius (48px);
 				width: 80px;
 				height: 80px;
@@ -571,7 +573,7 @@ header {
 
 			label {
 				display: block;
-				background-color: rgba(245, 245, 245, 0.88);
+				background-color: rgba(255, 255, 255, 0.88);
 				width: 72%;
 				margin: 72px auto 24px;
 				padding: 8px;
