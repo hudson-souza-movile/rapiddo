@@ -134,46 +134,75 @@
 
 	// Services
 	#services {
+		// .cards-group {
+		// 	flex-flow: row wrap;
+		// 	justify-content: center;
+		// 	align-items: flex-start;
+		// 	overflow: inherit;
+		// 	font-size: 0.8em;
+		//
+		// 	.delivery .cards-serv_cover,
+		// 	.delivery .cards-serv_legend {
+		// 		margin-left: 8px;
+		// 	}
+		//
+		// 	.news .cards-serv_cover,
+		// 	.news .cards-serv_legend {
+		// 		margin-right: 8px;
+		// 	}
+		// }
+		//
+		// .cards-serv_cover,
+		// .cards-serv_legend {
+		// 	width: 160px;
+		// }
+		//
+		// .cards-serv_cover {
+		// 	height: 64px;
+		//
+		// 	h3 {
+		// 		bottom: 4px;
+		// 		left: 12px;
+		// 	}
+		//
+		// 	.cards-serv_icon {
+		// 		right: 4px;
+		// 		transform: scale(0.8);
+		// 	}
+		// }
+		//
+		// .cards-serv p {
+		// 	line-height: 1.32em;
+		// 	margin: 12px 0 32px;
+		// }
+
 		.cards-group {
 			flex-flow: row wrap;
-			justify-content: center;
-			align-items: flex-start;
-			overflow: inherit;
-			font-size: 0.8em;
-
-			.delivery .cards-serv_cover,
-			.delivery .cards-serv_legend {
-				margin-left: 8px;
-			}
-
-			.news .cards-serv_cover,
-			.news .cards-serv_legend {
-				margin-right: 8px;
-			}
+			justify-content: space-between;
 		}
 
-		.cards-serv_cover,
-		.cards-serv_legend {
-			width: 160px;
-		}
+		.cards-services {
+			margin-bottom: 24px;
 
-		.cards-serv_cover {
-			height: 64px;
-
-			h3 {
-				bottom: 4px;
-				left: 12px;
+			.cover, .legend {
+				width: 170px;
+				margin: 0;
 			}
 
-			.cards-serv_icon {
-				right: 4px;
-				transform: scale(0.8);
+			&.delivery,
+			&.news {
+				.cover, .legend {
+					margin: 0;
+				}
 			}
-		}
 
-		.cards-serv p {
-			line-height: 1.32em;
-			margin: 12px 0 32px;
+			&.delivery,
+			&.recharge,
+			&.food {
+				.cover, .legend {
+					width: 230px;
+				}
+			}
 		}
 	}
 
@@ -316,21 +345,35 @@
 		}
 	}
 
-	#services {
-		.cards-group {
-			width: 1024px;
-			margin-left: -112px;
+	#services .cards-services {
+		.cover, .legend {
+			width: 190px;
 		}
 
-		.cards-serv_cover,
-		.cards-serv_legend {
-			width: 200px;
-		}
-
-		.cards-serv_cover {
-			height: 80px;
+		&.delivery,
+		&.recharge,
+		&.food {
+			.cover, .legend {
+				width: 256px;
+			}
 		}
 	}
+
+	// #services {
+	// 	.cards-group {
+	// 		width: 1024px;
+	// 		margin-left: -112px;
+	// 	}
+	//
+	// 	.cards-serv_cover,
+	// 	.cards-serv_legend {
+	// 		width: 200px;
+	// 	}
+	//
+	// 	.cards-serv_cover {
+	// 		height: 80px;
+	// 	}
+	// }
 
 
 	// Cashback

@@ -337,7 +337,6 @@ header {
 	.cards-group {
 		@include flex;
 		flex-flow: row nowrap;
-		flex: 0 0 240px;
 		overflow: auto;
 		-webkit-overflow-scrolling: touch;
 	}
@@ -416,6 +415,71 @@ header {
 
 		&.news .cards-serv_icon {
 			background-position: -116px -174px;
+		}
+	}
+
+	.cards-services {
+		.cover,
+		.legend {
+			position: relative;
+			width: 200px;
+			margin: 0 8px;
+		}
+
+		.cover span {
+			@include content-obj;
+			bottom: 16px;
+			left: 16px;
+			background-color: white;
+			@include border-radius (32px);
+			width: 64px;
+			height: 64px;
+		}
+
+		&.delivery .cover,
+		&.delivery .legend {
+			margin-left: 16px;
+		}
+
+		&.news .cover,
+		&.news .legend {
+			margin-right: 16px;
+		}
+
+		&.music .cover span {
+			background-color: black;
+			background-position: -148px -698px;
+		}
+
+		&.delivery .cover span {
+			background-color: #F57F17;
+			background-position: -222px -698px;
+		}
+
+		&.food .cover span {
+			background-color: #BC2026;
+			background-position: -74px -698px;
+		}
+
+		&.taxi .cover span {
+			background-color: #F7D20F;
+			background-position: 0px -698px;
+		}
+
+		&.recharge .cover span {
+			background-position: -148px -624px;
+		}
+
+		&.bills .cover span {
+			background-position: -0px -624px;
+		}
+
+		&.news .cover span {
+			background-position: -74px -624px;
+		}
+
+		h3 {
+			margin: 16px 0 8px;
 		}
 	}
 }
@@ -595,7 +659,7 @@ footer {
 			@include flex;
 			justify-content: center;
 			align-items: center;
-			background-color: $grey-bg;
+			// background-color: $grey-bg;
 			@include border-radius (32px);
 			width: 64px;
 			height: 64px;
@@ -606,6 +670,9 @@ footer {
 				width: 64px;
 				height: 64px;
 				transform: scale(0.72);
+				-webkit-filter: grayscale(1);
+				-moz-filter: grayscale(1);
+				filter: grayscale(1);
 			}
 
 			&.ifood span {

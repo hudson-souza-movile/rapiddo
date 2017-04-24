@@ -98,12 +98,12 @@ html(lang='pt-br')
                 h2 Serviços
 
                 mixin cards-services(name, className)
-                    .cards-serv(class= className)
-                        .cards-serv_cover
+                    .cards-services(class= className)
+                        .cover
+                            span.sprite
+                            img(src='sources/img/cover/' + className + '.png', alt='', border='0')        
+                        .legend
                             h3= name
-                            .cards-serv_icon.sprite
-                            img(src='sources/img/services/' + className + '.png', alt='', border='0')
-                        .cards-serv_legend
                             block
 
                 .cards-group
@@ -111,12 +111,12 @@ html(lang='pt-br')
                         p Motoboy para entregas expressas de documentos e encomendas.
                     +cards-services('Recarga', 'recharge')
                         p Recarga com qualquer operadora com 10% de volta mais bônus.
-                    +cards-services('Táxi', 'taxi')
-                        p Peça taxi, rápido e simples, e com 10% do valor de volta.
+                    +cards-services('Pizza', 'food')
+                        p Receba pizza em casa e com 10% do valor de volta.
                     +cards-services('Pagamentos', 'bills')
                         p Pague suas contas de água, luz, telefone e outros.
-                    +cards-services('Pizza', 'pizza')
-                        p Receba pizza em casa e com 10% do valor de volta.
+                    +cards-services('Táxi', 'taxi')
+                        p Peça taxi, rápido e simples, e com 10% do valor de volta.
                     +cards-services('Música', 'music')
                         p Escute suas bandas favoritas, na ordem que quiser.
                     +cards-services('Notícias', 'news')
