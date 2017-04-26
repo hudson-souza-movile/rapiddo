@@ -161,21 +161,21 @@ html(lang='pt-br')
         // Footer
         footer
             .wrapper
-                p 
+                p
                     span.logo.sprite Rapiddo
                     |  é uma empresa 
                     strong Movile
                     | .
 
-                ul.brands
-                    mixin footer-brands(brand, className)
-                        li(class=className)
-                            span(title= brand).sprite= brand
-
-                    +footer-brands('iFood', 'ifood')
-                    +footer-brands('PlayKids', 'playkids')
-                    +footer-brands('Apontador', 'apontador')
-                    +footer-brands('Superplayer', 'superplayer')
+                //- ul.brands
+                //-     mixin footer-brands(brand, className)
+                //-         li(class=className)
+                //-             span(title= brand).sprite= brand
+                //- 
+                //-     +footer-brands('iFood', 'ifood')
+                //-     +footer-brands('PlayKids', 'playkids')
+                //-     +footer-brands('Apontador', 'apontador')
+                //-     +footer-brands('Superplayer', 'superplayer')
 
         // Scripts
         script(src='sources/js/compressed.js', type='text/javascript')
