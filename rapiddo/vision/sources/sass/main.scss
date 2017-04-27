@@ -488,6 +488,26 @@ header {
 		h3 {
 			margin: 16px 0 8px;
 		}
+
+		.soon {
+			position: absolute;
+			right: 16px;
+			bottom: 16px;
+			background-color: rgba(255, 255, 255, 0.88);
+			@include border-radius (32px);
+			padding: 6px 10px;
+			font-size: 12px;
+		}
+
+		&.delivery,
+		&.recharge,
+		&.food,
+		&.music,
+		&.news {
+			.soon {
+				display: none;
+			}
+		}
 	}
 }
 
