@@ -45,12 +45,12 @@ html(lang='pt-br')
     body
         // Video
         .modal
-            a(href='').close
+            a(href='javascript:').close
                 span.sprite
-            iframe(id='video', src='https://www.youtube.com/embed/86XrBf1nruE?rel=0&amp;controls=0&amp;showinfo=0', frameborder='0', onReady='onPlayerReady', allowfullscreen)
+            iframe(id='video', src='https://www.youtube.com/embed/86XrBf1nruE?rel=0&amp;controls=0&amp;showinfo=0', frameborder='30px', onReady='onPlayerReady', allowfullscreen)
 
         .old-delivery
-            a(href='http://entregas.rapiddo.com.br', target='_blank') Procurando por entregas?
+            a(href='http://entregas.rapiddo.com.br', target='_blank', onclick='ga("send", "event", "Entregas Button", "click", "top");') Procurando por entregas?
                 span clique aqui
 
         // Slideshow
@@ -59,7 +59,7 @@ html(lang='pt-br')
             header
                 .wrapper
                     .logo.sprite Rapiddo
-                    a(href='https://play.google.com/store/apps/details?id=com.movile.rapiddo', target='_blank', onclick='ga("send", "event", "Download GooglePlay", "click", "Header");').cta Baixar grátis
+                    a(href='https://play.google.com/store/apps/details?id=com.movile.rapiddo', target='_blank', onclick='ga("send", "event", "Banner button", "click", "Header");').cta Baixar grátis
 
             .slides-group
                 mixin slides(className)
@@ -76,7 +76,7 @@ html(lang='pt-br')
                 +slides('campanha')
                     h1 Ganhe dinheiro de volta
                     h2 A cada compra e use em diversos serviços no aplicativo
-                    //- a(href='#').play
+                    a(href='#').play
                         span.sprite
                         | Ver como funciona
 
@@ -158,7 +158,7 @@ html(lang='pt-br')
             .wrapper
                 h2 Baixe Grátis
                 p Faça parte do clube, baixe grátis e tenha vantagens exclusivas Rapiddo.
-                a(href='https://play.google.com/store/apps/details?id=com.movile.rapiddo', target='_blank', onclick='ga("send", "event", "Download GooglePlay", "click", "Footer");').badge.sprite GooglePlay
+                a(href='https://play.google.com/store/apps/details?id=com.movile.rapiddo', target='_blank', onclick='ga("send", "event", "Footer Button", "click", "Footer");').badge.sprite GooglePlay
 
         // Footer
         footer
@@ -198,3 +198,8 @@ html(lang='pt-br')
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-93185721-14', 'auto');
             ga('send', 'pageview');
+
+
+
+
+

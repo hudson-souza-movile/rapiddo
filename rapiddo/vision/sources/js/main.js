@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.campanha .play').click(function() {
         $('body').addClass('video-open');
         $('#video').attr('src', 'https://www.youtube.com/embed/86XrBf1nruE?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1');
-        videoFull();
+        // videoFull();
 
         return false;
     })
@@ -24,7 +24,7 @@ $(document).ready(function() {
         })
     }
 
-    $(window).resize(function(){
-        videoFull();
-    });
+    // $(window).resize(function(){
+    //     videoFull();
+    // });
 });

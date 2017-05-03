@@ -100,6 +100,12 @@ img {
 	width: 100%;
 	height: 100%;
 
+	iframe {
+		width: 100%;
+		height: 100%;
+		border: none;
+	}
+
 	.close {
 		@include content-obj;
 		z-index: 60;
@@ -122,6 +128,7 @@ img {
 }
 
 body.video-open {
+	overflow: hidden;
 	.modal {
 		@include content-obj;
 		z-index: 50;
