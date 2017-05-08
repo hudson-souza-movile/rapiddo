@@ -676,6 +676,12 @@ header {
 footer {
 	text-align: center;
 
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
 	.logo {
 		@include text-hidden;
 		background-position: -109px 0;
@@ -686,7 +692,13 @@ footer {
 
 	p {
 		display: inline-block;
-		margin: auto;
+		// margin: auto;
+	}
+
+	a {
+		font-weight: 700;
+		color: #F66F1D;
+		font-size: 20px;
 	}
 
 	.brands {
