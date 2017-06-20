@@ -1,0 +1,881 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: 'open-regular';
+  src: url("../fonts/OpenSans.eot");
+  src: url("../fonts/OpenSans.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'open-extrabold';
+  src: url("../fonts/OpenSans-Extrabold.eot");
+  src: url("../fonts/OpenSans-Extrabold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'open-bold';
+  src: url("../fonts/OpenSans-Bold.eot");
+  src: url("../fonts/OpenSans-Bold.woff") format("woff");
+}
+
+body {
+  font-family: 'open-regular';
+}
+
+body strong {
+  font-family: 'open-bold';
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+header h1 {
+  background: url("../images/logo-novo-footer.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  height: 110px;
+  font-size: 0px;
+}
+
+header .movile {
+  text-align: right;
+  padding: 20px 0px;
+}
+
+header .movile p {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000000;
+}
+
+header .movile p small{
+  padding: 25px 20px;
+}
+
+header .movile a {
+  padding: 10px 16px;
+  color: #ffffff;
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+header .movile div.buttom-top {
+  margin: 5px 7px;
+  /*background-color: #21b92c;*/
+  border-radius: 13px;
+  color: #ffffff;
+  display: inline-block;
+  vertical-align: middle;
+  background: #20b52b; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #20b52b, #40d752); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right #20b52b, #40d752); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right #20b52b, #40d752); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #20b52b, #40d752); /* Standard syntax */
+}
+
+
+header .movile img {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+section .show-mobile {
+  display: none;
+}
+
+section .banner-bg {
+  position: relative;
+  background-color: #fff7e4;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
+section .banner-bg picture {
+  float: right;
+}
+
+section .banner-bg .banner-text {
+  position: absolute;
+  margin-top: 50px;
+  top: 0;
+}
+
+section .banner-bg .banner-text strong {
+  color: #36464d;
+  font-size: 40px;
+  font-family: 'open-extrabold';
+}
+
+section .banner-bg .banner-text strong span {
+  color: #fa6c10;
+}
+
+section .banner-bg .banner-text p {
+  padding: 25px 0px;
+  color: #36464d;
+  font-size: 14px;
+  font-style: italic;
+}
+
+section .banner-bg .banner-text .button-banner {
+  margin: 100px 0px 15px;
+}
+
+section .banner-bg .banner-text .button-banner a {
+  color: #ffffff;
+  font-size: 30px;
+  font-family: 'open-extrabold';
+  padding: 9px 10px;
+  background-color: #fa6c10;
+}
+
+section .banner-bg .banner-text .button-banner a:hover {
+  text-decoration: none;
+}
+
+section .banner-bg .banner-text .and {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+section .banner-bg .banner-text .and strong {
+  font-size: 14px;
+}
+
+section .banner-bg .banner-text .and i.android-icon {
+  background: url("../images/android.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+
+section .banner-bg .banner-text .and i.apple-icon {
+  background: url("../images/apple.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+
+section .banner2-bg {
+  background: linear-gradient(#ff9000, #ff4b0e);
+  position: relative;
+}
+
+section .banner2-bg picture {
+  float: right;
+}
+
+section .banner2-bg .banner-text {
+  position: absolute;
+  top: 0px;
+}
+
+section .banner2-bg .banner-text h3 {
+  margin-top: 20px;
+  font-size: 30px;
+  font-family: 'open-extrabold';
+  color: #ffffff;
+}
+
+section .banner2-bg .banner-text .banner-logos div {
+  text-align: center;
+}
+
+section .banner2-bg .banner-text .banner-logos div img {
+  display: inline-block;
+  margin: 20px 0px 10px;
+}
+
+section .banner2-bg .banner-text p {
+  padding: 25px 0px;
+  color: #36464d;
+  font-size: 28px;
+}
+
+section .banner2-bg .banner-text .button-banner {
+  display: inline-block;
+  margin-top: 40px;
+}
+
+section .banner2-bg .banner-text .button-banner a {
+  color: #fa6c10;
+  font-size: 30px;
+  font-family: 'open-extrabold';
+  padding: 9px 10px;
+  background-color: #ffea00;
+}
+
+section .banner2-bg .banner-text .button-banner a:hover {
+  text-decoration: none;
+}
+
+section .banner2-bg .banner-text .and {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+section .banner2-bg .banner-text .and strong {
+  font-size: 14px;
+}
+
+section .banner2-bg .banner-text .and i.android-icon {
+  background: url("../images/android2.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+
+section .banner2-bg .banner-text .and i.apple-icon {
+  background: url("../images/apple2.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
+
+section .slick-prev {
+  background: url("../images/left.png") center center no-repeat;
+  width: 30px;
+  height: 30px;
+  border: 0px;
+  box-sizing: inherit;
+  padding: 0px;
+  position: absolute;
+  z-index: 999;
+  font-size: 0px;
+  top: 50%;
+  left: 3%;
+}
+
+section .slick-prev:focus {
+  padding: 0px;
+  border: 0px;
+  box-sizing: inherit;
+  outline: inherit;
+}
+
+section .slick-next {
+  background: url("../images/right.png") center center no-repeat;
+  width: 30px;
+  height: 30px;
+  border: 0px;
+  box-sizing: inherit;
+  padding: 0px;
+  position: absolute;
+  z-index: 999;
+  font-size: 0px;
+  top: 50%;
+  right: 3%;
+}
+
+section .slick-next:focus {
+  padding: 0px;
+  border: 0px;
+  box-sizing: inherit;
+  outline: inherit;
+}
+
+.video .vide-text {
+  padding: 130px 10px;
+}
+
+.video .vide-text strong {
+  font-weight: bold;
+  font-size: 43px;
+  color: #fa6c10;
+  margin: 10px 0px;
+  display: inline-block;
+}
+
+.video .vide-text p strong {
+  font-size: 19px;
+  color: #fa6c10;
+  text-transform: uppercase;
+  line-height: 25px;
+}
+
+.video .vide-text span {
+  font-size: 16px;
+  color: #36464d;
+}
+
+.passos {
+  background: #f74b1c; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #f74b1c , #ff9b00); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #f74b1c, #ff9b00); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #f74b1c, #ff9b00); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #f74b1c , #ff9b00); /* Standard syntax */
+
+  font-size: 16px;
+  color: #ffffff;
+  padding-top: 40px;
+  margin-top: 70px;
+}
+
+.passos .passos-ctr {
+  position: relative;
+}
+
+.passos p {
+  padding: 5px 0px;
+}
+
+.passos .google-play-footer {
+  margin: 30px 0px;
+}
+
+.passos .devices {
+  position: absolute;
+  left: 70px;
+  top: -92px;
+}
+
+.logo-footer {
+  padding: 80px 0px 60px;
+  text-align: center;
+  
+}
+
+.logo-footer strong{
+  color: #494949;
+  font-size: 33px;
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  padding: 30px 0px 20px;
+}
+
+footer h5{
+  font-size: 23px;
+  font-family: 'open-extrabold';
+}
+
+footer p{
+  padding: 25px 0px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+footer img{
+  display: inline-block;
+  width: 60%;
+}
+
+footer .footer-logos {
+  display: inline-block;
+  width: 100%;
+  padding-top: 30px;
+}
+footer .footer-logos i.ifood{
+  background: url("../images/ifood.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+}
+footer .footer-logos i.playkids{
+  background: url("../images/playkids.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+}
+footer .footer-logos i.apontador{
+  background: url("../images/apontador.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+}
+footer .footer-logos i.superplay{
+  background: url("../images/superplay.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 90px;
+  height: 90px;
+}
+
+
+footer .footer-logos span{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 7px 5px;
+}
+
+footer .footer-logos img{
+  display: inline-block;
+  width: 140px;
+  vertical-align: middle
+}
+
+footer i.android-icon{
+   
+  background: url("../images/android2.png") center center no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+}
+
+footer .new-footer{
+  position: relative;
+  display: inline-block;
+  padding: 50px 0px;
+}
+
+footer .new-footer strong{
+  font-size: 24px;
+}
+
+footer .new-footer .celular{
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  right: 0px;
+  z-index: 9999;
+}
+
+footer .box-footer-new1 .footer-texto{
+  color: #ffffff;
+  padding: 40px 20px 120px 20px;
+  text-align: left;
+  width: 50%;
+
+}
+
+footer .box-footer-new2 .footer-texto{
+  color: #ffffff;
+  padding: 140px 20px 20px 20px;
+  text-align: right;
+  width: 50%;
+  float: right;
+}
+
+
+footer .new-footer .box-footer-new1{
+  background: #0064dd; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #0064dd , #4bb0e2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #0064dd, #4bb0e2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #0064dd, #4bb0e2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #0064dd , #4bb0e2); /* Standard syntax */
+  border-radius: 10px;
+
+}
+
+footer .new-footer .box-footer-new2{
+  background: #40d752; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #40d752 , #20b52b); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #40d752, #20b52b); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #40d752, #20b52b); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #40d752 , #20b52b); /* Standard syntax */
+  border-radius: 10px;
+
+}
+
+footer .new-footer-content{
+  position: absolute;
+  color: #ffffff;
+  z-index: 9999;
+  bottom: 1%;
+  left: 5px;
+  width: 60%;
+  padding: 20px 15px;
+  text-align: left;
+}
+
+footer .faq {
+     display: inline-block;
+}
+
+footer .faq a{
+  color: #f66f1d;
+  font-size: 16px;
+  padding: 35px 0px;
+  display: block;
+}
+
+.slick-slide img{
+  display: inline-block;
+  padding: 5px;
+}
+
+.box-mobile{
+  display: none;
+  width: 100%;
+  padding: 20px 0px;
+}
+small{
+  display: inline-block;
+  width: 100%;
+  padding: 25px 0px;
+}
+
+.right-text{
+  float: right;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 1220px) {
+  section .banner-bg .banner-text strong {
+    font-size: 30px;
+  }
+  section .banner-bg .banner-text .button-banner {
+    margin: 80px 0px 15px;
+  }
+  .hidden-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  section .banner2-bg .banner-text .banner-logos div img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1170px) {
+  section .banner2-bg .banner-text h3 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 1010px) {
+  section .banner-bg .banner-text {
+    margin-top: 25px;
+  }
+  .passos{
+
+      margin-top: 20px;
+  }
+
+  .passos .passos-ctr {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .right-text{
+    float: inherit!important;
+  }
+  .passos .devices {
+    position: inherit;
+    display: inline-block;
+    top: 0px!important;
+    left: 0px!important;
+  }
+  .logo-footer {
+    text-align: center;
+  }
+  .logo-footer{
+    padding: 50px 0px 30px!important;
+  }
+}
+
+@media (max-width: 991px) {
+  section .banner-bg .banner-text strong {
+    font-size: 25px;
+  }
+  section .banner-bg .banner-text strong span {
+    color: #fa6c10;
+  }
+  section .banner-bg .banner-text p {
+    padding: 20px 0px;
+    font-size: 14px;
+    font-style: italic;
+  }
+  section .banner-bg .banner-text .button-banner {
+    margin: 20px 0px 35px;
+  }
+  section .banner-bg .banner-text .button-banner a {
+    font-size: 23px;
+    padding: 9px 10px;
+  }
+  section .banner-bg .banner-text .and img{
+    display: block;
+    margin: 10px 0px;
+    width: 150px;
+  }
+  section .banner-bg .banner-text .show-mobile {
+    display: block;
+    margin: 10px 10px;
+  }
+  section .banner2-bg {
+    text-align: center;
+  }
+  section .banner2-bg picture {
+    float: none;
+  }
+  section .banner2-bg picture img {
+    display: inline-block;
+  }
+  section .banner2-bg .banner-text h3 {
+    font-size: 18px;
+  }
+  section .banner2-bg .banner-text .button-banner {
+    margin: 20px 0px 20px;
+  }
+  section .banner2-bg .banner-text .button-banner a {
+    font-size: 23px;
+    padding: 9px 10px;
+  }
+  section .banner2-bg .banner-text .banner-logos div img {
+    width: 30%;
+  }
+  section .banner2-bg .banner-text .and {
+    margin: 0px;
+  }
+  .video .vide-text {
+    padding: 30px 10px;
+  }
+
+  .btn-lft{
+      float: none!important;
+      margin-right: 0px!important;
+  }
+
+  .new-footer{
+    display: none!important;
+  }
+
+  .box-mobile{
+    display: block!important;
+  }
+  .text-hidden-mobile{
+    display: none;
+  }
+
+}
+
+@media (max-width: 767px) {
+  header h1 {
+    margin-top: 10px;
+    height: 40px;
+  }
+  header .container {
+    text-align: center;
+  }
+  header .container .movile {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .slick-slide img{
+    /*display: block!important;*/
+    padding: 5px;
+  }
+
+
+  footer .footer-logos span{
+    display: block!important;
+    }
+
+    header .movile p small{
+      padding: 15px 20px!important;
+      font-size: 14px!important;
+    }
+
+
+    footer img{
+      display: inline-block;
+      width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+  .hidden-mobile{
+    display: none!important;
+  }
+  section .banner-bg .banner-text {
+    width: 100%;
+  }
+  section .banner-bg .banner-text h3 strong {
+    font-size: 20px !important;
+  }
+  section .banner-bg .banner-text h3 strong span {
+    color: #fa6c10;
+  }
+  section .banner-bg .banner-text p {
+    padding: 20px 0px;
+    font-size: 14px !important;
+  }
+  section .banner-bg .banner-text .button-banner {
+    margin: 20px 0px 35px;
+  }
+  section .banner-bg .banner-text .button-banner a {
+    font-size: 19px !important;
+    padding: 9px 10px;
+  }
+  section .banner-bg .banner-text .and {
+    /*display: none;*/
+  }
+  section .banner-bg .banner-text .show-mobile {
+    display: block;
+  }
+  section .banner2-bg .col-xs-9 {
+    width: 100%;
+  }
+  section .banner2-bg .and {
+    /*display: none;*/
+  }
+  section .banner2-bg .show-mobile {
+    display: block;
+    margin: 5px auto;
+  }
+  section .slick-arrow {
+    display: none !important;
+  }
+  header h1 {
+    width: 35%!important;
+    background-size: contain;
+  }
+  .logo-footer img {
+    width: 50%;
+  }
+  footer {
+    padding: 10px 5px;
+  }
+
+  .slick-slide img{
+    display: inherit!important;
+  }
+
+  .mobile-banner-2{
+    width: 100%; 
+    height: 457px;
+  }
+
+  .mobile-and a{
+    display: block; 
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  section .banner2-bg .banner-text h3 {
+    font-size: 18px;
+  }
+  section .banner2-bg .banner-text .button-banner {
+    margin: 20px 0px 35px;
+  }
+  section .banner2-bg .banner-text .button-banner a {
+    font-size: 23px;
+    padding: 9px 10px;
+  }
+  section .banner2-bg .banner-text .banner-logos div img {
+    width: 44%;
+  }
+  section .banner2-bg .banner-text .and {
+    margin: 0px;
+  }
+}
+
+@media (max-width: 420px) {
+  header h1 {
+    width: 100%;
+  }
+  section .banner-bg .banner-text h3 strong {
+    font-size: 25px;
+  }
+  section .banner-bg .banner-text p {
+    font-size: 14px;
+  }
+  section .banner-bg .banner-text .button-banner a {
+    font-size: 22px;
+  }
+  section .banner-bg .banner-text .and {
+    /*display: none;*/
+  }
+}
+
+/*# sourceMappingURL=theme.css.map */
+
+.texto-banner{
+   padding: 0px 0px; 
+   color: #36464d; 
+   font-size: 17px; 
+   
+}
+.btn-lft{
+    float: left;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    section .banner-bg .banner-text p {
+    padding: 10px 0px;
+    font-size: 14px;
+}
+    .texto-banner{
+       padding: 0px 0px; color: #36464d; font-size: 17px; 
+    }
+    .btn-lft{
+        float: none;
+        margin-right: 0px;
+    }
+    section .banner-bg .banner-text .button-banner {
+    margin: 5px 0px 35px;
+}
+.video .vide-text strong {
+    font-weight: bold;
+    font-size: 35px;
+    color: #fa6c10;
+    margin: 10px 0px;
+    display: inline-block;
+}
+}
+
